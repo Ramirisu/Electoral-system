@@ -61,6 +61,14 @@ const COLUMNS = [
         Header: 'Total Seats',
         accessor: 'total_seats',
     },
+    {
+        Header: 'Overhang Seats',
+        accessor: 'overhang_seats',
+        Cell: ({ value }) => {
+            if (value > 0) { return "+" + value; }
+            return "-";
+        }
+    },
 ];
 
 export const Table = ({ data, updateData }) => {
