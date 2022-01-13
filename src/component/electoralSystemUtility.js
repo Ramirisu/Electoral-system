@@ -14,7 +14,7 @@ const refreshData = (data) => {
     return data;
 }
 
-export const electionModelTaiwan2008 = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD) => {
+export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THREASHOLD) {
 
     data = refreshData(data);
 
@@ -46,15 +46,14 @@ export const electionModelTaiwan2008 = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD)
     return data;
 }
 
-export const electionModelGermany = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD) => {
+export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THREASHOLD) {
 
     data = refreshData(data);
 
-    const QUALIFIED_PROPORTIONAL_VOTE =
-        data
-            .map(obj => obj.proportional_vote)
-            .filter(value => value >= QUALIFIED_THREASHOLD)
-            .reduce((prev, curr) => prev + curr);
+    const QUALIFIED_PROPORTIONAL_VOTE = data
+        .map(obj => obj.proportional_vote)
+        .filter(value => value >= QUALIFIED_THREASHOLD)
+        .reduce((prev, curr) => prev + curr);
 
     data.forEach(obj => {
         if (obj.proportional_vote >= QUALIFIED_THREASHOLD) {

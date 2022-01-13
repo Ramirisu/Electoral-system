@@ -1,14 +1,14 @@
 import './App.css';
-import { ElectionMethod } from './component/ElectionMethod';
+import { ElectoralSystem } from './component/ElectoralSystem';
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>Legislative Election</h1>
+        <h1>Electoral System Survey</h1>
       </header>
       <body>
-        <ElectionMethod />
+        <ElectoralSystem />
       </body>
     </div>
   );
