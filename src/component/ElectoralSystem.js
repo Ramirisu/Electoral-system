@@ -23,10 +23,10 @@ const getElectoralSystemByIndex = (index) => {
 export const ElectoralSystem = () => {
 
     const TOTAL_SEATS = 113;
-    const QUALIFIED_THREASHOLD = 0.05;
+    const QUALIFIED_THRESHOLD = 0.05;
 
     const [electoralSystemIndex, setElectoralSystemIndex] = React.useState(0);
-    const initialData = getElectoralSystemByIndex(electoralSystemIndex)(useMemo(() => TW2020, []), TOTAL_SEATS, QUALIFIED_THREASHOLD);
+    const initialData = getElectoralSystemByIndex(electoralSystemIndex)(useMemo(() => TW2020, []), TOTAL_SEATS, QUALIFIED_THRESHOLD);
     const [data, setData] = React.useState(initialData);
 
     const updateData = (rowIndex, columnId, value) => {
@@ -41,7 +41,7 @@ export const ElectoralSystem = () => {
                 return row;
             })
         );
-        setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, TOTAL_SEATS, QUALIFIED_THREASHOLD));
+        setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, TOTAL_SEATS, QUALIFIED_THRESHOLD));
     }
 
     return (<div>
@@ -49,7 +49,7 @@ export const ElectoralSystem = () => {
         <select onChange={e => {
             const index = e.target.value;
             setElectoralSystemIndex(index);
-            setData(old => getElectoralSystemByIndex(index)(old, TOTAL_SEATS, QUALIFIED_THREASHOLD));
+            setData(old => getElectoralSystemByIndex(index)(old, TOTAL_SEATS, QUALIFIED_THRESHOLD));
         }}>
             {ELECTORAL_SYSTEMS.map((obj, index) => (
                 <option key={index} value={index}>
