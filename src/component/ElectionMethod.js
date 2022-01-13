@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { electionModelTaiwan2008, electionModelGermany } from './electionModel';
 import { Table } from "./Table";
 import TW2020 from './tw2020.json';
+import './ElectionMethod.css';
 
 
 const ELECTION_MODELS = [
@@ -44,6 +45,7 @@ export const ElectionMethod = () => {
     }
 
     return (<div>
+        <label>Method</label>
         <select onChange={e => {
             const index = e.target.value;
             setElectionModelIndex(index);
