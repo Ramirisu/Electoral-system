@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { Table } from './component/Table';
+import { ElectionMethod } from './component/ElectionMethod';
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
         <h1>Legislative Election</h1>
       </header>
       <body>
-        <Table />
+        <ElectionMethod />
       </body>
     </div>
   );

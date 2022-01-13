@@ -1,7 +1,5 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useTable, useSortBy } from 'react-table';
-import TW2020 from './tw2020.json';
-import { COLUMNS } from './column';
 import './Table.css';
 
 const EditableCell = ({
@@ -31,24 +29,7 @@ const defaultColumn = {
     Cell: EditableCell,
 };
 
-export const Table = () => {
-
-    const columns = useMemo(() => COLUMNS, []);
-    const [data, setData] = React.useState(useMemo(() => TW2020, []));
-
-    const updateData = (rowIndex, columnId, value) => {
-        setData(old =>
-            old.map((row, index) => {
-                if (index === rowIndex) {
-                    return {
-                        ...old[rowIndex],
-                        [columnId]: value,
-                    };
-                }
-                return row;
-            })
-        );
-    }
+export const Table = ({ columns, data, updateData }) => {
 
     const {
         getTableProps,
