@@ -30,6 +30,8 @@ const COLUMNS = [
     {
         Header: 'Id',
         accessor: 'id',
+        sortDescFirst: true,
+        sortType: 'number',
     },
     {
         Header: 'Party',
@@ -38,28 +40,40 @@ const COLUMNS = [
     {
         Header: 'Proportional Vote (%)',
         accessor: 'proportional_vote_percentage',
+        sortDescFirst: true,
+        sortType: 'number',
         Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {
         Header: 'Qualified Proportional Vote (%)',
         accessor: 'qualified_proportional_vote_percentage',
+        sortDescFirst: true,
+        sortType: 'number',
         Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {
         Header: 'Proportional Seats',
         accessor: 'proportional_seats',
+        sortDescFirst: true,
+        sortType: 'number',
     },
     {
         Header: 'Constituency Seats',
         accessor: 'constituency_seats',
+        sortDescFirst: true,
+        sortType: 'number',
     },
     {
         Header: 'Total Seats',
         accessor: 'total_seats',
+        sortDescFirst: true,
+        sortType: 'number',
     },
     {
         Header: 'Overhang Seats',
         accessor: 'overhang_seats',
+        sortDescFirst: true,
+        sortType: 'number',
         Cell: ({ value }) => {
             if (value > 0) { return "+" + value; }
             return "-";
@@ -68,6 +82,7 @@ const COLUMNS = [
     {
         Header: 'Total Seats %',
         accessor: 'total_seats_percentage',
+        sortDescFirst: true,
         Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
 ];
