@@ -36,13 +36,13 @@ const COLUMNS = [
         accessor: 'full_name',
     },
     {
-        Header: 'Proportional Vote (0.0 - 1.0)',
-        accessor: 'proportional_vote',
+        Header: 'Proportional Vote (%)',
+        accessor: 'proportional_vote_percentage',
         Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {
         Header: 'Qualified Proportional Vote (%)',
-        accessor: 'qualified_proportional_vote',
+        accessor: 'qualified_proportional_vote_percentage',
         Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {

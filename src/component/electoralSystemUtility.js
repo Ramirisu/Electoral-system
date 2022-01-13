@@ -3,7 +3,7 @@ const refreshData = (data) => {
     data = JSON.parse(JSON.stringify(data));
 
     data.forEach(obj => {
-        obj.qualified_proportional_vote = 0.0;
+        obj.qualified_proportional_vote_percentage = 0.0;
         obj.remaining_proportional_seats = 0;
         obj.expected_proportional_seats = 0;
         obj.proportional_seats = 0;
@@ -15,25 +15,36 @@ const refreshData = (data) => {
     return data;
 }
 
+const calculateProportionalVotePercentage = (data) => {
+    const TOTAL_VOTES = data.map(obj => obj.proportional_votes).reduce((prev, curr) => prev + curr);
+    data.forEach(obj => { obj.proportional_vote_percentage = obj.proportional_votes / TOTAL_VOTES });
+    return data;
+}
+
 export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
 
     data = refreshData(data);
 
+    calculateProportionalVotePercentage(data);
+
     const PROPORTIONAL_SEATS = TOTAL_SEATS - data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr);
-    const QUALIFIED_PROPORTIONAL_VOTE = data.map(obj => obj.proportional_vote).filter(value => value >= QUALIFIED_THRESHOLD).reduce((prev, curr) => prev + curr);
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
+        .map(obj => obj.proportional_vote_percentage)
+        .filter(value => value >= QUALIFIED_THRESHOLD)
+        .reduce((prev, curr) => prev + curr);
 
     // calculate qualified proportional vote
     data.forEach(obj => {
-        if (obj.proportional_vote >= QUALIFIED_THRESHOLD) {
-            obj.qualified_proportional_vote = obj.proportional_vote / QUALIFIED_PROPORTIONAL_VOTE;
+        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD) {
+            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
         } else {
-            obj.qualified_proportional_vote = 0;
+            obj.qualified_proportional_vote_percentage = 0;
         }
     });
 
     // calculate proportional seats
     data.forEach(obj => {
-        const proportional_seats = obj.qualified_proportional_vote * PROPORTIONAL_SEATS;
+        const proportional_seats = obj.qualified_proportional_vote_percentage * PROPORTIONAL_SEATS;
         obj.proportional_seats = Math.floor(proportional_seats);
         obj.remaining_proportional_seats = proportional_seats - obj.proportional_seats;
     });
@@ -59,24 +70,26 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     data = refreshData(data);
 
-    const QUALIFIED_PROPORTIONAL_VOTE = data
-        .map(obj => obj.proportional_vote)
+    calculateProportionalVotePercentage(data);
+
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
+        .map(obj => obj.proportional_vote_percentage)
         .filter(value => value >= QUALIFIED_THRESHOLD)
         .reduce((prev, curr) => prev + curr);
 
     // calculate qualified proportional vote
     data.forEach(obj => {
-        if (obj.proportional_vote >= QUALIFIED_THRESHOLD) {
-            obj.qualified_proportional_vote = obj.proportional_vote / QUALIFIED_PROPORTIONAL_VOTE;
+        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD) {
+            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
         } else {
-            obj.qualified_proportional_vote = 0;
+            obj.qualified_proportional_vote_percentage = 0;
         }
 
     });
 
     // calculate proportional seats
     data.forEach(obj => {
-        const expected_proportional_seats = obj.qualified_proportional_vote * TOTAL_SEATS;
+        const expected_proportional_seats = obj.qualified_proportional_vote_percentage * TOTAL_SEATS;
         obj.expected_proportional_seats = Math.floor(expected_proportional_seats);
         obj.remaining_proportional_seats = expected_proportional_seats - obj.expected_proportional_seats;
     });
@@ -111,32 +124,34 @@ export function electoralSystemGermany2017(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     data = refreshData(data);
 
-    const QUALIFIED_PROPORTIONAL_VOTE = data
-        .map(obj => obj.proportional_vote)
+    calculateProportionalVotePercentage(data);
+
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
+        .map(obj => obj.proportional_vote_percentage)
         .filter(value => value >= QUALIFIED_THRESHOLD)
         .reduce((prev, curr) => prev + curr);
 
     // calculate qualified proportional vote
     data.forEach(obj => {
-        if (obj.proportional_vote >= QUALIFIED_THRESHOLD) {
-            obj.qualified_proportional_vote = obj.proportional_vote / QUALIFIED_PROPORTIONAL_VOTE;
+        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD) {
+            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
         } else {
-            obj.qualified_proportional_vote = 0;
+            obj.qualified_proportional_vote_percentage = 0;
         }
 
     });
 
     // calculate proportional seats
     const NEW_TOTAL_SEATS = Math.ceil(Math.max.apply(Math, data.map(obj => {
-        if (obj.qualified_proportional_vote !== 0) {
-            return obj.constituency_seats / obj.qualified_proportional_vote;
+        if (obj.qualified_proportional_vote_percentage !== 0) {
+            return obj.constituency_seats / obj.qualified_proportional_vote_percentage;
         }
         return 0;
     })));
 
     data.forEach(obj => {
-        obj.expected_proportional_seats = Math.floor(obj.qualified_proportional_vote * TOTAL_SEATS);
-        const new_expected_proportional_seats = obj.qualified_proportional_vote * NEW_TOTAL_SEATS;
+        obj.expected_proportional_seats = Math.floor(obj.qualified_proportional_vote_percentage * TOTAL_SEATS);
+        const new_expected_proportional_seats = obj.qualified_proportional_vote_percentage * NEW_TOTAL_SEATS;
         obj.new_expected_proportional_seats = Math.floor(new_expected_proportional_seats);
         obj.remaining_proportional_seats = new_expected_proportional_seats - obj.new_expected_proportional_seats;
     });

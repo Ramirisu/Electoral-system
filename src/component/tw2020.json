@@ -3,70 +3,70 @@
         "id": 1,
         "name": "KMT",
         "full_name": "Kuomintang",
-        "proportional_vote": 0.3336,
+        "proportional_votes": 4723504,
         "constituency_seats": 25
     },
     {
         "id": 16,
         "name": "DPP",
         "full_name": "Democratic Progressive Party",
-        "proportional_vote": 0.3398,
+        "proportional_votes": 4811241,
         "constituency_seats": 48
     },
     {
         "id": 74,
         "name": "NP",
         "full_name": "New Party",
-        "proportional_vote": 0.0104,
+        "proportional_votes": 147373,
         "constituency_seats": 0
     },
     {
         "id": 79,
         "name": "GP",
         "full_name": "Green Party Taiwan",
-        "proportional_vote": 0.0241,
+        "proportional_votes": 341465,
         "constituency_seats": 0
     },
     {
         "id": 90,
         "name": "PFP",
         "full_name": "People First Party",
-        "proportional_vote": 0.0364,
+        "proportional_votes": 518921,
         "constituency_seats": 0
     },
     {
         "id": 106,
         "name": "NPSU",
         "full_name": "Non-Partisan Solidarity Union",
-        "proportional_vote": 0.0000,
+        "proportional_votes": 0,
         "constituency_seats": 0
     },
     {
         "id": 267,
         "name": "NPP",
         "full_name": "New Power Party",
-        "proportional_vote": 0.0776,
+        "proportional_votes": 1098100,
         "constituency_seats": 0
     },
     {
         "id": 303,
         "name": "TSP",
         "full_name": "Taiwan Statebuilding Party",
-        "proportional_vote": 0.0316,
+        "proportional_votes": 447286,
         "constituency_seats": 1
     },
     {
         "id": 350,
         "name": "TPP",
         "full_name": "Taiwan People's Party",
-        "proportional_vote": 0.1122,
+        "proportional_votes": 1588806,
         "constituency_seats": 0
     },
     {
         "id": 9999,
         "name": "Independent",
         "full_name": "Independent",
-        "proportional_vote": 0.0000,
+        "proportional_votes": 0,
         "constituency_seats": 5
     }
 ]
