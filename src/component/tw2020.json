@@ -1,61 +1,71 @@
 [
     {
-        "id": 16,
-        "party": "DPP",
-        "proportional_vote": 0.3398,
-        "constituency_seats": 48
-    },
-    {
         "id": 1,
-        "party": "KMT",
+        "name": "KMT",
+        "full_name": "Kuomintang",
         "proportional_vote": 0.3336,
         "constituency_seats": 25
     },
     {
-        "id": 350,
-        "party": "TMD",
-        "proportional_vote": 0.1122,
-        "constituency_seats": 0
-    },
-    {
-        "id": 267,
-        "party": "NPP",
-        "proportional_vote": 0.0776,
-        "constituency_seats": 0
-    },
-    {
-        "id": 90,
-        "party": "PFP",
-        "proportional_vote": 0.0364,
-        "constituency_seats": 0
-    },
-    {
-        "id": 303,
-        "party": "TSP",
-        "proportional_vote": 0.0316,
-        "constituency_seats": 1
+        "id": 16,
+        "name": "DPP",
+        "full_name": "Democratic Progressive Party",
+        "proportional_vote": 0.3398,
+        "constituency_seats": 48
     },
     {
         "id": 74,
-        "party": "NP",
+        "name": "NP",
+        "full_name": "New Party",
         "proportional_vote": 0.0104,
         "constituency_seats": 0
     },
     {
         "id": 79,
-        "party": "GP",
+        "name": "GP",
+        "full_name": "Green Party Taiwan",
         "proportional_vote": 0.0241,
         "constituency_seats": 0
     },
     {
+        "id": 90,
+        "name": "PFP",
+        "full_name": "People First Party",
+        "proportional_vote": 0.0364,
+        "constituency_seats": 0
+    },
+    {
         "id": 106,
-        "party": "NPSU",
+        "name": "NPSU",
+        "full_name": "Non-Partisan Solidarity Union",
         "proportional_vote": 0.0000,
         "constituency_seats": 0
     },
     {
+        "id": 267,
+        "name": "NPP",
+        "full_name": "New Power Party",
+        "proportional_vote": 0.0776,
+        "constituency_seats": 0
+    },
+    {
+        "id": 303,
+        "name": "TSP",
+        "full_name": "Taiwan Statebuilding Party",
+        "proportional_vote": 0.0316,
+        "constituency_seats": 1
+    },
+    {
+        "id": 350,
+        "name": "TPP",
+        "full_name": "Taiwan People's Party",
+        "proportional_vote": 0.1122,
+        "constituency_seats": 0
+    },
+    {
         "id": 9999,
-        "party": "Independent",
+        "name": "Independent",
+        "full_name": "Independent",
         "proportional_vote": 0.0000,
         "constituency_seats": 5
     }

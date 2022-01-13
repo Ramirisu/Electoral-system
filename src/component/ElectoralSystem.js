@@ -7,11 +7,11 @@ import './ElectoralSystem.css';
 
 const ELECTORAL_SYSTEMS = [
     {
-        name: 'Taiwan (2008) (MMM)',
+        name: 'Taiwan (2008 ~ ) (MMM)',
         handler: electoralSystemTaiwan2008
     },
     {
-        name: 'Germany (1949) (MMPR)',
+        name: 'Germany (1949 ~ 2016) (MMPR)',
         handler: electoralSystemGermany1949
     },
 ];

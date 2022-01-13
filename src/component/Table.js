@@ -33,7 +33,7 @@ const COLUMNS = [
     },
     {
         Header: 'Party',
-        accessor: 'party',
+        accessor: 'full_name',
     },
     {
         Header: 'Proportional Vote (0.0 - 1.0)',
