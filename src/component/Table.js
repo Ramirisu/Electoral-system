@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import './Table.css';
+
 
 const EditableCell = ({
     value: initialValue,
@@ -15,7 +16,7 @@ const EditableCell = ({
     }
 
     const onBlur = () => {
-        updateData(index, id, value)
+        updateData(index, id, parseFloat(value))
     }
 
     React.useEffect(() => {
@@ -29,7 +30,42 @@ const defaultColumn = {
     Cell: EditableCell,
 };
 
-export const Table = ({ columns, data, updateData }) => {
+const COLUMNS = [
+    {
+        Header: 'Id',
+        accessor: 'id',
+    },
+    {
+        Header: 'Party',
+        accessor: 'party',
+    },
+    {
+        Header: 'Proportional Votes (%)',
+        accessor: 'proportional_vote',
+        Cell: EditableCell,
+    },
+    {
+        Header: 'Qualified Proportional Votes (%)',
+        accessor: 'qualified_proportional_vote',
+        Cell: ({ value }) => { return (100 * value).toFixed(2); },
+    },
+    {
+        Header: 'Proportional Seats',
+        accessor: 'proportional_seats',
+    },
+    {
+        Header: 'Constituency Seats',
+        accessor: 'constituency_seats',
+    },
+    {
+        Header: 'Total Seats',
+        accessor: 'total_seats',
+    },
+];
+
+export const Table = ({ data, updateData }) => {
+
+    const columns = useMemo(() => COLUMNS, []);
 
     const {
         getTableProps,
@@ -40,7 +76,7 @@ export const Table = ({ columns, data, updateData }) => {
     } = useTable({
         columns,
         data,
-        defaultColumn,
+        // defaultColumn,
         updateData,
     }, useSortBy);
 
