@@ -1,0 +1,62 @@
+[
+    {
+        "id": 16,
+        "party": "DPP",
+        "proportional_vote": 0.3398,
+        "constituency_seats": 48
+    },
+    {
+        "id": 1,
+        "party": "KMT",
+        "proportional_vote": 0.3336,
+        "constituency_seats": 25
+    },
+    {
+        "id": 350,
+        "party": "TMD",
+        "proportional_vote": 0.1122,
+        "constituency_seats": 0
+    },
+    {
+        "id": 267,
+        "party": "NPP",
+        "proportional_vote": 0.0776,
+        "constituency_seats": 0
+    },
+    {
+        "id": 90,
+        "party": "PFP",
+        "proportional_vote": 0.0364,
+        "constituency_seats": 0
+    },
+    {
+        "id": 303,
+        "party": "TSP",
+        "proportional_vote": 0.0316,
+        "constituency_seats": 1
+    },
+    {
+        "id": 74,
+        "party": "NP",
+        "proportional_vote": 0.0104,
+        "constituency_seats": 0
+    },
+    {
+        "id": 79,
+        "party": "GP",
+        "proportional_vote": 0.0241,
+        "constituency_seats": 0
+    },
+    {
+        "id": 106,
+        "party": "NPSU",
+        "proportional_vote": 0.0000,
+        "constituency_seats": 0
+    },
+    {
+        "id": 9999,
+        "party": "Independent",
+        "proportional_vote": 0.0000,
+        "constituency_seats": 5
+    }
+]
