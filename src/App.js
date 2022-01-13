@@ -7,9 +7,7 @@ function App() {
       <header>
         <h1>Electoral System Survey</h1>
       </header>
-      <body>
-        <ElectoralSystem />
-      </body>
+      <ElectoralSystem />
     </div>
   );
 }
