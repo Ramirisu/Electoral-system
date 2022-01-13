@@ -1,5 +1,22 @@
 
+const refreshData = (data) => {
+    data = JSON.parse(JSON.stringify(data));
+
+    data.forEach(obj => {
+        obj.qualified_proportional_vote = 0.0;
+        obj.remaining_proportional_seats = 0;
+        obj.expected_proportional_seats = 0;
+        obj.proportional_seats = 0;
+        obj.total_seats = 0;
+        obj.overhang_seats = 0;
+    })
+
+    return data;
+}
+
 export const electionModelTaiwan2008 = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD) => {
+
+    data = refreshData(data);
 
     const PROPORTIONAL_SEATS = TOTAL_SEATS - data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr);
     const QUALIFIED_PROPORTIONAL_VOTE = data.map(obj => obj.proportional_vote).filter(value => value >= QUALIFIED_THREASHOLD).reduce((prev, curr) => prev + curr);
@@ -30,6 +47,8 @@ export const electionModelTaiwan2008 = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD)
 }
 
 export const electionModelGermany = (data, TOTAL_SEATS, QUALIFIED_THREASHOLD) => {
+
+    data = refreshData(data);
 
     const QUALIFIED_PROPORTIONAL_VOTE =
         data
