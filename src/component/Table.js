@@ -23,7 +23,7 @@ const EditableCell = ({
         setValue(initialValue)
     }, [initialValue])
 
-    return <input value={value} onChange={onChange} onBlur={onBlur} />;
+    return <input className='editable-cell' value={value} onChange={onChange} onBlur={onBlur} />;
 };
 
 const defaultColumn = {
@@ -40,12 +40,12 @@ const COLUMNS = [
         accessor: 'party',
     },
     {
-        Header: 'Proportional Votes (%)',
+        Header: 'Proportional Vote (0.0 - 1.0)',
         accessor: 'proportional_vote',
         Cell: EditableCell,
     },
     {
-        Header: 'Qualified Proportional Votes (%)',
+        Header: 'Qualified Proportional Vote (%)',
         accessor: 'qualified_proportional_vote',
         Cell: ({ value }) => { return (100 * value).toFixed(2); },
     },
