@@ -4,10 +4,51 @@ import TW2020 from './tw2020.json';
 import { COLUMNS } from './column';
 import './Table.css';
 
+const EditableCell = ({
+    value: initialValue,
+    row: { index },
+    column: { id },
+    updateData,
+}) => {
+    const [value, setValue] = React.useState(initialValue);
+
+    const onChange = e => {
+        setValue(e.target.value)
+    }
+
+    const onBlur = () => {
+        updateData(index, id, value)
+    }
+
+    React.useEffect(() => {
+        setValue(initialValue)
+    }, [initialValue])
+
+    return <input value={value} onChange={onChange} onBlur={onBlur} />;
+};
+
+const defaultColumn = {
+    Cell: EditableCell,
+};
+
 export const Table = () => {
 
     const columns = useMemo(() => COLUMNS, []);
-    const data = useMemo(() => TW2020, []);
+    const [data, setData] = React.useState(useMemo(() => TW2020, []));
+
+    const updateData = (rowIndex, columnId, value) => {
+        setData(old =>
+            old.map((row, index) => {
+                if (index === rowIndex) {
+                    return {
+                        ...old[rowIndex],
+                        [columnId]: value,
+                    };
+                }
+                return row;
+            })
+        );
+    }
 
     const {
         getTableProps,
@@ -17,7 +58,9 @@ export const Table = () => {
         prepareRow,
     } = useTable({
         columns,
-        data
+        data,
+        defaultColumn,
+        updateData,
     }, useSortBy);
 
     return (
