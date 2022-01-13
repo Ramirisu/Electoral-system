@@ -26,10 +26,6 @@ const EditableCell = ({
     return <input className='editable-cell' value={value} onChange={onChange} onBlur={onBlur} />;
 };
 
-const defaultColumn = {
-    Cell: EditableCell,
-};
-
 const COLUMNS = [
     {
         Header: 'Id',
@@ -42,12 +38,12 @@ const COLUMNS = [
     {
         Header: 'Proportional Vote (0.0 - 1.0)',
         accessor: 'proportional_vote',
-        Cell: EditableCell,
+        Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {
         Header: 'Qualified Proportional Vote (%)',
         accessor: 'qualified_proportional_vote',
-        Cell: ({ value }) => { return (100 * value).toFixed(2); },
+        Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
     },
     {
         Header: 'Proportional Seats',
@@ -84,7 +80,6 @@ export const Table = ({ data, updateData }) => {
     } = useTable({
         columns,
         data,
-        // defaultColumn,
         updateData,
     }, useSortBy);
 
