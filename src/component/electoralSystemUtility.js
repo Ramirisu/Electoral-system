@@ -9,6 +9,7 @@ const refreshData = (data) => {
         obj.proportional_seats = 0;
         obj.total_seats = 0;
         obj.overhang_seats = 0;
+        obj.total_seats_percentage = 0.0;
     })
 
     return data;
@@ -41,7 +42,10 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
         data[index].remaining_proportional_seats--;
     }
 
-    data.forEach(obj => { obj.total_seats = obj.proportional_seats + obj.constituency_seats; });
+    data.forEach(obj => {
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
+    });
 
     return data;
 }
@@ -85,6 +89,7 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
         obj.overhang_seats = obj.total_seats - obj.expected_proportional_seats;
     });
 

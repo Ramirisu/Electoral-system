@@ -65,6 +65,11 @@ const COLUMNS = [
             return "-";
         }
     },
+    {
+        Header: 'Total Seats %',
+        accessor: 'total_seats_percentage',
+        Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
+    },
 ];
 
 export const Table = ({ data, updateData }) => {
