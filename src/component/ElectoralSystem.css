@@ -5,6 +5,10 @@ label {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 select {
@@ -12,6 +16,10 @@ select {
   font-size: large;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   width: 20%;
 }
 

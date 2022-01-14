@@ -4,6 +4,10 @@ import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystem
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './taiwan_legislative_election.json';
 import './ElectoralSystem.css';
 
+const formatPercentage = (value) => {
+    return (100 * parseFloat(value)).toFixed(2) + ' %';
+}
+
 const EditableCell = ({
     value: initialValue,
     row: { index },
@@ -95,14 +99,14 @@ export const ElectoralSystem = () => {
             accessor: 'proportional_vote_percentage',
             sortDescFirst: true,
             sortType: 'number',
-            Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
+            Cell: ({ value }) => formatPercentage(value),
         },
         {
             Header: 'Qualified Proportional Vote (%)',
             accessor: 'qualified_proportional_vote_percentage',
             sortDescFirst: true,
             sortType: 'number',
-            Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
+            Cell: ({ value }) => formatPercentage(value),
         },
         {
             Header: 'Proportional Seats',
@@ -136,7 +140,7 @@ export const ElectoralSystem = () => {
             Header: 'Total Seats %',
             accessor: 'total_seats_percentage',
             sortDescFirst: true,
-            Cell: ({ value }) => { return (100 * value).toFixed(2) + " %"; },
+            Cell: ({ value }) => formatPercentage(value),
         },
     ];
 
@@ -183,9 +187,9 @@ export const ElectoralSystem = () => {
         </select>
         <table {...getTableProps()}>
             <thead>
-                {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
+                {headerGroups.map(group => (
+                    <tr {...group.getHeaderGroupProps()}>
+                        {group.headers.map(column => (
                             <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render('Header')}</th>
                         ))}
                     </tr>
@@ -204,9 +208,9 @@ export const ElectoralSystem = () => {
                 })}
             </tbody>
             <tfoot>
-                {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
+                {headerGroups.map(group => (
+                    <tr {...group.getHeaderGroupProps()}>
+                        {group.headers.map(column => (
                             <th {...column.getHeaderProps()}>{column.render('Header')}</th>
                         ))}
                     </tr>
