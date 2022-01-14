@@ -79,7 +79,7 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     // calculate qualified proportional vote
     data.forEach(obj => {
-        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD) {
+        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3) {
             obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
         } else {
             obj.qualified_proportional_vote_percentage = 0;
@@ -133,7 +133,7 @@ export function electoralSystemGermany2017(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     // calculate qualified proportional vote
     data.forEach(obj => {
-        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.always_qualified_on_proportional_votes) {
+        if (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes) {
             obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
         } else {
             obj.qualified_proportional_vote_percentage = 0;
