@@ -127,7 +127,7 @@ export const ElectoralSystem = () => {
             Cell: ({ value }) => formatPercentage(value),
         },
         {
-            Header: 'Qualified Proportional Vote (%)',
+            Header: 'Qualified PV (%)',
             accessor: 'qualified_proportional_vote_percentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
@@ -151,18 +151,18 @@ export const ElectoralSystem = () => {
             sortType: sortTypeHandler,
         },
         {
+            Header: 'Total Seats (%)',
+            accessor: 'total_seats_percentage',
+            sortDescFirst: true,
+            sortType: sortTypeHandler,
+            Cell: ({ value }) => formatPercentage(value),
+        },
+        {
             Header: 'Overhang Seats',
             accessor: 'overhang_seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => (value > 0) ? "+" + value : "-",
-        },
-        {
-            Header: 'Total Seats %',
-            accessor: 'total_seats_percentage',
-            sortDescFirst: true,
-            sortType: sortTypeHandler,
-            Cell: ({ value }) => formatPercentage(value),
         },
     ];
 
