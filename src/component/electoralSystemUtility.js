@@ -48,16 +48,6 @@ const calculateProportionalSeatsByDHondt = (data, SEATS) => {
     }
 }
 
-const calculateProportionalSeatsByWebsterSaintLague = (data, SEATS) => {
-    let divider = Array(data.length).fill(1.0);
-    for (let i = 0; i < SEATS; ++i) {
-        const votes = data.map((obj, index) => obj.qualified_proportional_vote_percentage > 0 ? obj.proportional_votes / divider[index] : 0);
-        const index = votes.indexOf(Math.max(...votes));
-        divider[index] += 2;
-        data[index].expected_proportional_seats++;
-    }
-}
-
 const removeSummary = (data) => {
     for (let i = 0; i < data.length; ++i) {
         if (data[i].is_summary) {
@@ -222,9 +212,11 @@ export function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     });
 
-    calculateProportionalSeatsByWebsterSaintLague(data, TOTAL_SEATS);
-
-    data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
+    // calculate proportional seats
+    data.forEach(obj => {
+        obj.expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS);
+        obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
+    });
 
     // calculate total seats
     data.forEach(obj => {

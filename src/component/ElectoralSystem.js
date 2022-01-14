@@ -45,7 +45,7 @@ const ELECTORAL_SYSTEMS = [
         handler: electoralSystemGermany1949,
     },
     {
-        name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Laguë)',
+        name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Laguë/Schepers)',
         handler: electoralSystemGermany2009,
     },
     {

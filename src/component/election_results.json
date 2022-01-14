@@ -605,5 +605,56 @@
                 "constituency_seats": 45
             }
         ]
+    },
+    {
+        "name": "2005 German Federal Election",
+        "year": 2005,
+        "total_seats": 598,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 47287988,
+        "data": [
+            {
+                "id": "-",
+                "name": "CDU",
+                "full_name": "Christian Democratic Union",
+                "proportional_votes": 13136740,
+                "constituency_seats": 106
+            },
+            {
+                "id": "-",
+                "name": "SPD",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 16194665,
+                "constituency_seats": 145
+            },
+            {
+                "id": "-",
+                "name": "FDP",
+                "full_name": "Free Democratic Party",
+                "proportional_votes": 4648144,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "DIE LINKE",
+                "full_name": "The Left",
+                "proportional_votes": 4118194,
+                "constituency_seats": 3
+            },
+            {
+                "id": "-",
+                "name": "GRUNE",
+                "full_name": "Alliance 90/The Greens",
+                "proportional_votes": 3838326,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "CSU",
+                "full_name": "Christian Social Union",
+                "proportional_votes": 3494309,
+                "constituency_seats": 44
+            }
+        ]
     }
 ]
