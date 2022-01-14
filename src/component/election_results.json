@@ -417,7 +417,7 @@
             },
             {
                 "id": "-",
-                "name": "GRUNE",
+                "name": "GRÜNE",
                 "full_name": "Alliance 90/The Greens",
                 "proportional_votes": 6852206,
                 "constituency_seats": 16
@@ -428,6 +428,13 @@
                 "full_name": "Christian Social Union",
                 "proportional_votes": 2402827,
                 "constituency_seats": 45
+            },
+            {
+                "id": "-",
+                "name": "FREIE WÄHLER",
+                "full_name": "Free Voters",
+                "proportional_votes": 1127784,
+                "constituency_seats": 0
             },
             {
                 "id": "-",
@@ -483,7 +490,7 @@
             },
             {
                 "id": "-",
-                "name": "GRUNE",
+                "name": "GRÜNE",
                 "full_name": "Alliance 90/The Greens",
                 "proportional_votes": 4158400,
                 "constituency_seats": 1
@@ -494,6 +501,13 @@
                 "full_name": "Christian Social Union",
                 "proportional_votes": 2869688,
                 "constituency_seats": 46
+            },
+            {
+                "id": "-",
+                "name": "FREIE WÄHLER",
+                "full_name": "Free Voters",
+                "proportional_votes": 463292,
+                "constituency_seats": 0
             }
         ]
     },
@@ -541,7 +555,7 @@
             },
             {
                 "id": "-",
-                "name": "GRUNE",
+                "name": "GRÜNE",
                 "full_name": "Alliance 90/The Greens",
                 "proportional_votes": 3694057,
                 "constituency_seats": 1
@@ -552,6 +566,13 @@
                 "full_name": "Christian Social Union",
                 "proportional_votes": 3243569,
                 "constituency_seats": 45
+            },
+            {
+                "id": "-",
+                "name": "FREIE WÄHLER",
+                "full_name": "Free Voters",
+                "proportional_votes": 423977,
+                "constituency_seats": 0
             }
         ]
     },
@@ -592,7 +613,7 @@
             },
             {
                 "id": "-",
-                "name": "GRUNE",
+                "name": "GRÜNE",
                 "full_name": "Alliance 90/The Greens",
                 "proportional_votes": 4643272,
                 "constituency_seats": 1
@@ -643,7 +664,7 @@
             },
             {
                 "id": "-",
-                "name": "GRUNE",
+                "name": "GRÜNE",
                 "full_name": "Alliance 90/The Greens",
                 "proportional_votes": 3838326,
                 "constituency_seats": 1
