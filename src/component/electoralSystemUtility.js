@@ -38,9 +38,38 @@ const calculateProportionalSeatsByLargestRemainderMethod = (data, SEATS) => {
     }
 }
 
+const removeSummary = (data) => {
+    for (let i = 0; i < data.length; ++i) {
+        if (data[i].is_summary) {
+            data.splice(i, 1);
+        }
+    }
+
+    return data;
+}
+
+const getSummary = (data) => {
+    return {
+        is_summary: true,
+        id: '-',
+        name: 'Summary',
+        full_name: 'Summary',
+        proportional_votes: data.map(obj => obj.proportional_votes).reduce((prev, curr) => prev + curr),
+        proportional_vote_percentage: data.map(obj => obj.proportional_vote_percentage).reduce((prev, curr) => prev + curr),
+        qualified_proportional_vote_percentage: data.map(obj => obj.qualified_proportional_vote_percentage).reduce((prev, curr) => prev + curr),
+        expected_proportional_seats: data.map(obj => obj.expected_proportional_seats).reduce((prev, curr) => prev + curr),
+        proportional_seats: data.map(obj => obj.proportional_seats).reduce((prev, curr) => prev + curr),
+        constituency_seats: data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr),
+        total_seats: data.map(obj => obj.total_seats).reduce((prev, curr) => prev + curr),
+        overhang_seats: data.map(obj => obj.overhang_seats).reduce((prev, curr) => prev + curr),
+        total_seats_percentage: data.map(obj => obj.total_seats_percentage).reduce((prev, curr) => prev + curr),
+    };
+}
+
 export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
+    removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
@@ -68,12 +97,15 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
         obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
     });
 
+    data.push(getSummary(data));
+
     return data;
 }
 
 export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
+    removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
@@ -103,12 +135,15 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
         obj.overhang_seats = obj.total_seats - obj.expected_proportional_seats;
     });
 
+    data.push(getSummary(data));
+
     return data;
 }
 
 export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
+    removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
@@ -165,6 +200,8 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
         obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS;
         obj.overhang_seats = obj.total_seats - obj.expected_proportional_seats;
     });
+
+    data.push(getSummary(data));
 
     return data;
 }

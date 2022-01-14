@@ -84,53 +84,69 @@ export const ElectoralSystem = () => {
         setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, ...Object.values(electoralSystemParameter)));
     }
 
+    const sortTypeHandler = (rowA, rowB, columnId, desc) => {
+        // always sort summary row as last one
+        if (rowA.original['is_summary']) {
+            return desc ? -1 : 1;
+        }
+        if (rowB.original['is_summary']) {
+            return desc ? 1 : -1;
+        }
+
+        // sort others
+        if (rowA.original[columnId] === rowB.original[columnId]) {
+            return 0;
+        }
+        return (rowA.original[columnId] > rowB.original[columnId]) ? 1 : -1;
+    };
+
     const COLUMNS = [
         {
             Header: 'Id',
             accessor: 'id',
-            sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
         },
         {
             Header: 'Party',
             accessor: 'full_name',
+            sortType: sortTypeHandler,
         },
         {
             Header: 'Proportional Vote (%)',
             accessor: 'proportional_vote_percentage',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
             Cell: ({ value }) => formatPercentage(value),
         },
         {
             Header: 'Qualified Proportional Vote (%)',
             accessor: 'qualified_proportional_vote_percentage',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
             Cell: ({ value }) => formatPercentage(value),
         },
         {
             Header: 'Constituency Seats',
             accessor: 'constituency_seats',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
         }, {
             Header: 'Proportional Seats',
             accessor: 'proportional_seats',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
         },
         {
             Header: 'Total Seats',
             accessor: 'total_seats',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
         },
         {
             Header: 'Overhang Seats',
             accessor: 'overhang_seats',
             sortDescFirst: true,
-            sortType: 'number',
+            sortType: sortTypeHandler,
             Cell: ({ value }) => {
                 if (value > 0) { return "+" + value; }
                 return "-";
@@ -140,6 +156,7 @@ export const ElectoralSystem = () => {
             Header: 'Total Seats %',
             accessor: 'total_seats_percentage',
             sortDescFirst: true,
+            sortType: sortTypeHandler,
             Cell: ({ value }) => formatPercentage(value),
         },
     ];
