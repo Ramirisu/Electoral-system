@@ -41,10 +41,24 @@
                 "constituency_seats": 0
             },
             {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 50435,
+                "constituency_seats": 0
+            },
+            {
                 "id": 106,
                 "name": "NPSU",
                 "full_name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 0,
+                "constituency_seats": 0
+            },
+            {
+                "id": 113,
+                "name": "CUPP",
+                "full_name": "Chinese Unification Promotion Party",
+                "proportional_votes": 32966,
                 "constituency_seats": 0
             },
             {
@@ -62,10 +76,24 @@
                 "constituency_seats": 1
             },
             {
+                "id": 348,
+                "name": "FA",
+                "full_name": "Formosa Alliance",
+                "proportional_votes": 29324,
+                "constituency_seats": 0
+            },
+            {
                 "id": 350,
                 "name": "TPP",
                 "full_name": "Taiwan People's Party",
                 "proportional_votes": 1588806,
+                "constituency_seats": 0
+            },
+            {
+                "id": 352,
+                "name": "TAPA",
+                "full_name": "Taiwan Action Party Alliance",
+                "proportional_votes": 143617,
                 "constituency_seats": 0
             },
             {
@@ -105,13 +133,6 @@
                 "constituency_seats": 0
             },
             {
-                "id": 79,
-                "name": "GP",
-                "full_name": "Green Party Taiwan",
-                "proportional_votes": 308106,
-                "constituency_seats": 0
-            },
-            {
                 "id": 90,
                 "name": "PFP",
                 "full_name": "People First Party",
@@ -133,18 +154,139 @@
                 "constituency_seats": 3
             },
             {
-                "id": 303,
-                "name": "TSP",
-                "full_name": "Taiwan Statebuilding Party",
-                "proportional_votes": 0,
+                "id": 281,
+                "name": "GSDC",
+                "full_name": "Green-Social Democratic Coalition",
+                "proportional_votes": 308106,
                 "constituency_seats": 0
             },
             {
-                "id": 350,
-                "name": "TPP",
-                "full_name": "Taiwan People's Party",
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
                 "proportional_votes": 0,
+                "constituency_seats": 1
+            }
+        ]
+    },
+    {
+        "name": "Taiwan 2012 Legislative Election",
+        "year": 2012,
+        "total_seats": 113,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 5863379,
+                "constituency_seats": 48
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 4556526,
+                "constituency_seats": 27
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 195960,
                 "constituency_seats": 0
+            },
+            {
+                "id": 79,
+                "name": "GP",
+                "full_name": "Green Party Taiwan",
+                "proportional_votes": 229566,
+                "constituency_seats": 0
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 722089,
+                "constituency_seats": 1
+            },
+            {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 1178896,
+                "constituency_seats": 0
+            },
+            {
+                "id": 106,
+                "name": "NPSU",
+                "full_name": "Non-Partisan Solidarity Union",
+                "proportional_votes": 0,
+                "constituency_seats": 2
+            },
+            {
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 1
+            }
+        ]
+    },
+    {
+        "name": "Taiwan 2008 Legislative Election",
+        "year": 2008,
+        "total_seats": 113,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 5010801,
+                "constituency_seats": 61
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 3610106,
+                "constituency_seats": 13
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 386660,
+                "constituency_seats": 0
+            },
+            {
+                "id": 79,
+                "name": "GP",
+                "full_name": "Green Party Taiwan",
+                "proportional_votes": 58473,
+                "constituency_seats": 0
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 0,
+                "constituency_seats": 1
+            },
+            {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 344887,
+                "constituency_seats": 0
+            },
+            {
+                "id": 106,
+                "name": "NPSU",
+                "full_name": "Non-Partisan Solidarity Union",
+                "proportional_votes": 68527,
+                "constituency_seats": 3
             },
             {
                 "id": 9999,
