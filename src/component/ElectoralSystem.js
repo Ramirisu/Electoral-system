@@ -28,6 +28,7 @@ const getElectoralSystemByIndex = (index) => {
 export const ElectoralSystem = () => {
 
     const TW_LEGISLATIVE_ELECTION_DATA = useMemo(() => TW_LEGISLATIVE_ELECTION_DATA_JSON, []);
+    const getElectionByIndex = (index) => TW_LEGISLATIVE_ELECTION_DATA[index].data;
     const getElectoralSystemParameter = (index) => {
         return {
             total_seats: TW_LEGISLATIVE_ELECTION_DATA[index].total_seats,
@@ -35,11 +36,11 @@ export const ElectoralSystem = () => {
         };
     }
 
-    const [currentSelectedDataIndex, setCurrentSelectedIndex] = React.useState(1);
+    const [currentSelectedDataIndex, setCurrentSelectedDataIndex] = React.useState(0);
     const [electoralSystemParameter, setElectoralSystemParameter] = React.useState(getElectoralSystemParameter(currentSelectedDataIndex));
     const [electoralSystemIndex, setElectoralSystemIndex] = React.useState(0);
     const [data, setData] = React.useState(
-        getElectoralSystemByIndex(electoralSystemIndex)(TW_LEGISLATIVE_ELECTION_DATA[currentSelectedDataIndex].data, ...Object.values(electoralSystemParameter))
+        getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(currentSelectedDataIndex), ...Object.values(electoralSystemParameter))
     );
 
     const updateData = (rowIndex, columnId, value) => {
@@ -58,6 +59,19 @@ export const ElectoralSystem = () => {
     }
 
     return (<div>
+        <label>Election</label>
+        <select onChange={e => {
+            const index = e.target.value;
+            setCurrentSelectedDataIndex(index);
+            setElectoralSystemParameter(getElectoralSystemParameter(currentSelectedDataIndex));
+            setData(getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(index), ...Object.values(electoralSystemParameter)));
+        }}>
+            {TW_LEGISLATIVE_ELECTION_DATA.map((obj, index) => (
+                <option key={index} value={index}>
+                    {obj.name}
+                </option>
+            ))}
+        </select>
         <label>Electoral System</label>
         <select onChange={e => {
             const index = e.target.value;
