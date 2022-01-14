@@ -298,6 +298,71 @@
         ]
     },
     {
+        "name": "German 2021 Federal Election",
+        "year": 2021,
+        "total_seats": 598,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": "-",
+                "name": "CDU",
+                "full_name": "Christian Democratic Union",
+                "proportional_votes": 8775471,
+                "constituency_seats": 98
+            },
+            {
+                "id": "-",
+                "name": "SPD",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 11955434,
+                "constituency_seats": 121
+            },
+            {
+                "id": "-",
+                "name": "AfD",
+                "full_name": "Alternative for Germany",
+                "proportional_votes": 4803902,
+                "constituency_seats": 16
+            },
+            {
+                "id": "-",
+                "name": "FDP",
+                "full_name": "Free Democratic Party",
+                "proportional_votes": 5319952,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "DIE LINKE",
+                "full_name": "The Left",
+                "proportional_votes": 2270906,
+                "constituency_seats": 3
+            },
+            {
+                "id": "-",
+                "name": "GRUNE",
+                "full_name": "Alliance 90/The Greens",
+                "proportional_votes": 6852206,
+                "constituency_seats": 16
+            },
+            {
+                "id": "-",
+                "name": "CSU",
+                "full_name": "Christian Social Union",
+                "proportional_votes": 2402827,
+                "constituency_seats": 45
+            },
+            {
+                "id": "-",
+                "name": "SSW",
+                "full_name": "South Schleswig Voters' Association",
+                "proportional_votes": 55578,
+                "constituency_seats": 0,
+                "always_qualified_on_proportional_votes": true
+            }
+        ]
+    },
+    {
         "name": "German 2017 Federal Election",
         "year": 2017,
         "total_seats": 598,
