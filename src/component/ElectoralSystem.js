@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
-import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
+import { electoralSystemGermany1949, electoralSystemGermany2009, electoralSystemGermany2013, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 
@@ -43,6 +43,10 @@ const ELECTORAL_SYSTEMS = [
     {
         name: 'Germany (1949 ~ 2008) (MMPR) (Hare quota)',
         handler: electoralSystemGermany1949,
+    },
+    {
+        name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Lague)',
+        handler: electoralSystemGermany2009,
     },
     {
         name: 'Germany (2013 ~ Present) (MMPR)',
@@ -178,7 +182,7 @@ export const ElectoralSystem = () => {
 
     return (<div>
         <label>Election</label>
-        <select onChange={e => {
+        <select className='electionselect' onChange={e => {
             const index = e.target.value;
             setCurrentSelectedDataIndex(index);
             const electoralSystemParameter = getElectoralSystemParameter(index);
@@ -192,7 +196,7 @@ export const ElectoralSystem = () => {
             ))}
         </select>
         <label>Electoral System</label>
-        <select onChange={e => {
+        <select className='electoralsystemselect' onChange={e => {
             const index = e.target.value;
             setElectoralSystemIndex(index);
             setData(old => getElectoralSystemByIndex(index)(old, ...Object.values(electoralSystemParameter)));
