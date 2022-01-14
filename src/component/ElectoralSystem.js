@@ -63,7 +63,8 @@ export const ElectoralSystem = () => {
         <select onChange={e => {
             const index = e.target.value;
             setCurrentSelectedDataIndex(index);
-            setElectoralSystemParameter(getElectoralSystemParameter(currentSelectedDataIndex));
+            const electoralSystemParameter = getElectoralSystemParameter(index);
+            setElectoralSystemParameter(electoralSystemParameter);
             setData(getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(index), ...Object.values(electoralSystemParameter)));
         }}>
             {TW_LEGISLATIVE_ELECTION_DATA.map((obj, index) => (

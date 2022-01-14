@@ -296,5 +296,62 @@
                 "constituency_seats": 1
             }
         ]
+    },
+    {
+        "name": "German 2017 Federal Election",
+        "year": 2017,
+        "total_seats": 598,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": "-",
+                "name": "CDU",
+                "full_name": "Christian Democratic Union",
+                "proportional_votes": 12447656,
+                "constituency_seats": 185
+            },
+            {
+                "id": "-",
+                "name": "SPD",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 9539381,
+                "constituency_seats": 59
+            },
+            {
+                "id": "-",
+                "name": "AfD",
+                "full_name": "Alternative for Germany",
+                "proportional_votes": 5878115,
+                "constituency_seats": 3
+            },
+            {
+                "id": "-",
+                "name": "FDP",
+                "full_name": "Free Democratic Party",
+                "proportional_votes": 4999449,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "DIE LINKE",
+                "full_name": "The Left",
+                "proportional_votes": 4297270,
+                "constituency_seats": 5
+            },
+            {
+                "id": "-",
+                "name": "GRUNE",
+                "full_name": "Alliance 90/The Greens",
+                "proportional_votes": 4158400,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "CSU",
+                "full_name": "Christian Social Union",
+                "proportional_votes": 2869688,
+                "constituency_seats": 46
+            }
+        ]
     }
 ]
