@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
-import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystemTaiwan2008, } from './electoralSystemUtility';
+import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 
@@ -33,11 +33,15 @@ const EditableCell = ({
 
 const ELECTORAL_SYSTEMS = [
     {
-        name: 'Taiwan (2008 ~ Present) (MMM)',
+        name: 'Taiwan (2008 ~ Present) (MMM) (Hare quota)',
         handler: electoralSystemTaiwan2008,
     },
     {
-        name: 'Germany (1949 ~ 2012) (MMPR)',
+        name: 'Japan (1994 ~ Present) (MMM) (D\'Hondt)',
+        handler: electoralSystemJapan1994,
+    },
+    {
+        name: 'Germany (1949 ~ 2008) (MMPR) (Hare quota)',
         handler: electoralSystemGermany1949,
     },
     {
