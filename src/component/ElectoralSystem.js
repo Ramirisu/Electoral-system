@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystemTaiwan2008, } from './electoralSystemUtility';
-import TW_LEGISLATIVE_ELECTION_DATA_JSON from './taiwan_legislative_election.json';
+import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 
 const formatPercentage = (value) => {

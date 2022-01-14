@@ -420,8 +420,8 @@
         ]
     },
     {
-        "name": "German 2014 Federal Election",
-        "year": 2014,
+        "name": "German 2013 Federal Election",
+        "year": 2013,
         "total_seats": 598,
         "qualified_threshold": 0.05,
         "data": [
