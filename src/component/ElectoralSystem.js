@@ -110,14 +110,13 @@ export const ElectoralSystem = () => {
             Cell: ({ value }) => formatPercentage(value),
         },
         {
-            Header: 'Proportional Seats',
-            accessor: 'proportional_seats',
-            sortDescFirst: true,
-            sortType: 'number',
-        },
-        {
             Header: 'Constituency Seats',
             accessor: 'constituency_seats',
+            sortDescFirst: true,
+            sortType: 'number',
+        }, {
+            Header: 'Proportional Seats',
+            accessor: 'proportional_seats',
             sortDescFirst: true,
             sortType: 'number',
         },
