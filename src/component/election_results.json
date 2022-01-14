@@ -482,5 +482,56 @@
                 "constituency_seats": 45
             }
         ]
+    },
+    {
+        "name": "German 2009 Federal Election",
+        "year": 2009,
+        "total_seats": 598,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 43371190,
+        "data": [
+            {
+                "id": "-",
+                "name": "CDU",
+                "full_name": "Christian Democratic Union",
+                "proportional_votes": 11828277,
+                "constituency_seats": 173
+            },
+            {
+                "id": "-",
+                "name": "SPD",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 9990488,
+                "constituency_seats": 64
+            },
+            {
+                "id": "-",
+                "name": "FDP",
+                "full_name": "Free Democratic Party",
+                "proportional_votes": 6316080,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "DIE LINKE",
+                "full_name": "The Left",
+                "proportional_votes": 5155933,
+                "constituency_seats": 16
+            },
+            {
+                "id": "-",
+                "name": "GRUNE",
+                "full_name": "Alliance 90/The Greens",
+                "proportional_votes": 4643272,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "CSU",
+                "full_name": "Christian Social Union",
+                "proportional_votes": 2830238,
+                "constituency_seats": 45
+            }
+        ]
     }
 ]
