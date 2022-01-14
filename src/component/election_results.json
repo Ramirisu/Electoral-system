@@ -1,6 +1,6 @@
 [
     {
-        "name": "Taiwan 2020 Legislative Election",
+        "name": "2020 Taiwanese Legislative Election",
         "year": 2020,
         "total_seats": 113,
         "qualified_threshold": 0.05,
@@ -107,7 +107,7 @@
         ]
     },
     {
-        "name": "Taiwan 2016 Legislative Election",
+        "name": "2016 Taiwanese Legislative Election",
         "year": 2016,
         "total_seats": 113,
         "qualified_threshold": 0.05,
@@ -172,7 +172,7 @@
         ]
     },
     {
-        "name": "Taiwan 2012 Legislative Election",
+        "name": "2012 Taiwanese Legislative Election",
         "year": 2012,
         "total_seats": 113,
         "qualified_threshold": 0.05,
@@ -237,7 +237,7 @@
         ]
     },
     {
-        "name": "Taiwan 2008 Legislative Election",
+        "name": "2008 Taiwanese Legislative Election",
         "year": 2008,
         "total_seats": 113,
         "qualified_threshold": 0.05,
@@ -302,7 +302,7 @@
         ]
     },
     {
-        "name": "German 2021 Federal Election",
+        "name": "2021 German Federal Election",
         "year": 2021,
         "total_seats": 598,
         "qualified_threshold": 0.05,
@@ -368,7 +368,7 @@
         ]
     },
     {
-        "name": "German 2017 Federal Election",
+        "name": "2017 German Federal Election",
         "year": 2017,
         "total_seats": 598,
         "qualified_threshold": 0.05,
@@ -426,7 +426,7 @@
         ]
     },
     {
-        "name": "German 2013 Federal Election",
+        "name": "2013 German Federal Election",
         "year": 2013,
         "total_seats": 598,
         "qualified_threshold": 0.05,
@@ -484,7 +484,7 @@
         ]
     },
     {
-        "name": "German 2009 Federal Election",
+        "name": "2009 German Federal Election",
         "year": 2009,
         "total_seats": 598,
         "qualified_threshold": 0.05,
