@@ -418,5 +418,62 @@
                 "constituency_seats": 46
             }
         ]
+    },
+    {
+        "name": "German 2014 Federal Election",
+        "year": 2014,
+        "total_seats": 598,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": "-",
+                "name": "CDU",
+                "full_name": "Christian Democratic Union",
+                "proportional_votes": 14921877,
+                "constituency_seats": 191
+            },
+            {
+                "id": "-",
+                "name": "SPD",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 11252215,
+                "constituency_seats": 58
+            },
+            {
+                "id": "-",
+                "name": "AfD",
+                "full_name": "Alternative for Germany",
+                "proportional_votes": 2056985,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "FDP",
+                "full_name": "Free Democratic Party",
+                "proportional_votes": 2083533,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "name": "DIE LINKE",
+                "full_name": "The Left",
+                "proportional_votes": 3755699,
+                "constituency_seats": 4
+            },
+            {
+                "id": "-",
+                "name": "GRUNE",
+                "full_name": "Alliance 90/The Greens",
+                "proportional_votes": 3694057,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "CSU",
+                "full_name": "Christian Social Union",
+                "proportional_votes": 3243569,
+                "constituency_seats": 45
+            }
+        ]
     }
 ]
