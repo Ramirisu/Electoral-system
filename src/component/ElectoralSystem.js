@@ -123,7 +123,7 @@ export const ElectoralSystem = () => {
             accessor: 'qualified_proportional_vote_percentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => formatPercentage(value),
+            Cell: ({ value }) => (value > 0) ? formatPercentage(value) : '-',
         },
         {
             Header: 'Constituency Seats',
@@ -147,10 +147,7 @@ export const ElectoralSystem = () => {
             accessor: 'overhang_seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => {
-                if (value > 0) { return "+" + value; }
-                return "-";
-            }
+            Cell: ({ value }) => (value > 0) ? "+" + value : "-",
         },
         {
             Header: 'Total Seats %',
