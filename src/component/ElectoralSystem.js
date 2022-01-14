@@ -58,6 +58,7 @@ export const ElectoralSystem = () => {
         return {
             total_seats: TW_LEGISLATIVE_ELECTION_DATA[index].total_seats,
             qualified_threshold: TW_LEGISLATIVE_ELECTION_DATA[index].qualified_threshold,
+            total_proportional_votes: TW_LEGISLATIVE_ELECTION_DATA[index].total_proportional_votes,
         };
     }
 

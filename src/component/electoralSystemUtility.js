@@ -15,17 +15,16 @@ const refreshData = (data) => {
     return data;
 }
 
-const calculateProportionalVotePercentage = (data) => {
-    const TOTAL_VOTES = data.map(obj => obj.proportional_votes).reduce((prev, curr) => prev + curr);
-    data.forEach(obj => { obj.proportional_vote_percentage = obj.proportional_votes / TOTAL_VOTES });
+const calculateProportionalVotePercentage = (data, TOTAL_PROPORTIONAL_VOTES) => {
+    data.forEach(obj => { obj.proportional_vote_percentage = obj.proportional_votes / TOTAL_PROPORTIONAL_VOTES });
     return data;
 }
 
-export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
+export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
 
-    calculateProportionalVotePercentage(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const PROPORTIONAL_SEATS = TOTAL_SEATS - data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr);
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
@@ -67,11 +66,11 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
     return data;
 }
 
-export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
+export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
 
-    calculateProportionalVotePercentage(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
         .map(obj => obj.proportional_vote_percentage)
@@ -122,11 +121,11 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     return data;
 }
 
-export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
+export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
 
-    calculateProportionalVotePercentage(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
         .map(obj => obj.proportional_vote_percentage)
