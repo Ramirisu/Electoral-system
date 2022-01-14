@@ -58,6 +58,7 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
         data[index].remaining_proportional_seats--;
     }
 
+    // calculate total seats
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
@@ -111,6 +112,7 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
         }
     });
 
+    // calculate total seats
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
@@ -142,12 +144,12 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     });
 
     // calculate proportional seats
-    const NEW_TOTAL_SEATS = Math.ceil(Math.max.apply(Math, data.map(obj => {
+    const NEW_TOTAL_SEATS = Math.ceil(Math.max(TOTAL_SEATS, Math.max.apply(Math, data.map(obj => {
         if (obj.qualified_proportional_vote_percentage !== 0) {
             return obj.constituency_seats / obj.qualified_proportional_vote_percentage;
         }
         return 0;
-    })));
+    }))));
 
     data.forEach(obj => {
         obj.expected_proportional_seats = Math.floor(obj.qualified_proportional_vote_percentage * TOTAL_SEATS);
@@ -173,6 +175,7 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
         }
     });
 
+    // calculate total seats
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS;
