@@ -20,6 +20,24 @@ const calculateProportionalVotePercentage = (data, TOTAL_PROPORTIONAL_VOTES) => 
     return data;
 }
 
+const calculateProportionalSeatsByLargestRemainderMethod = (data, SEATS) => {
+    // integer
+    data.forEach(obj => {
+        const expected_proportional_seats = obj.qualified_proportional_vote_percentage * SEATS;
+        obj.expected_proportional_seats = Math.floor(expected_proportional_seats);
+        obj.remaining_proportional_seats = expected_proportional_seats - obj.expected_proportional_seats;
+    });
+
+    // fractional remainder
+    const remaining_seats = SEATS - data.map(obj => obj.expected_proportional_seats).reduce((prev, curr) => prev + curr);
+    for (let i = 0; i < remaining_seats; i++) {
+        const max_remaining_proportional_seats = Math.max.apply(Math, data.map(obj => obj.remaining_proportional_seats));
+        const index = data.findIndex(obj => obj.remaining_proportional_seats === max_remaining_proportional_seats);
+        data[index].expected_proportional_seats++;
+        data[index].remaining_proportional_seats--;
+    }
+}
+
 export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
@@ -41,24 +59,11 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
         }
     });
 
-    // calculate proportional seats
-    data.forEach(obj => {
-        const proportional_seats = obj.qualified_proportional_vote_percentage * PROPORTIONAL_SEATS;
-        obj.proportional_seats = Math.floor(proportional_seats);
-        obj.remaining_proportional_seats = proportional_seats - obj.proportional_seats;
-    });
-
-    // calculate remaining proportional seats
-    const remaining_seats = PROPORTIONAL_SEATS - data.map(obj => obj.proportional_seats).reduce((prev, curr) => prev + curr);
-    for (let i = 0; i < remaining_seats; i++) {
-        const max_remaining_proportional_seats = Math.max.apply(Math, data.map(obj => obj.remaining_proportional_seats));
-        const index = data.findIndex(obj => obj.remaining_proportional_seats === max_remaining_proportional_seats);
-        data[index].proportional_seats++;
-        data[index].remaining_proportional_seats--;
-    }
+    calculateProportionalSeatsByLargestRemainderMethod(data, PROPORTIONAL_SEATS);
 
     // calculate total seats
     data.forEach(obj => {
+        obj.proportional_seats = obj.expected_proportional_seats;
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
     });
@@ -87,29 +92,9 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     });
 
-    // calculate proportional seats
-    data.forEach(obj => {
-        const expected_proportional_seats = obj.qualified_proportional_vote_percentage * TOTAL_SEATS;
-        obj.expected_proportional_seats = Math.floor(expected_proportional_seats);
-        obj.remaining_proportional_seats = expected_proportional_seats - obj.expected_proportional_seats;
-    });
+    calculateProportionalSeatsByLargestRemainderMethod(data, TOTAL_SEATS);
 
-    // calculate remaining proportional seats
-    const remaining_seats = TOTAL_SEATS - data.map(obj => obj.expected_proportional_seats).reduce((prev, curr) => prev + curr);
-    for (let i = 0; i < remaining_seats; i++) {
-        const max_remaining_proportional_seats = Math.max.apply(Math, data.map(obj => obj.remaining_proportional_seats));
-        const index = data.findIndex(obj => obj.remaining_proportional_seats === max_remaining_proportional_seats);
-        data[index].expected_proportional_seats++;
-        data[index].remaining_proportional_seats--;
-    }
-
-    data.forEach(obj => {
-        if (obj.expected_proportional_seats < obj.constituency_seats) {
-            obj.proportional_seats = 0;
-        } else {
-            obj.proportional_seats = obj.expected_proportional_seats - obj.constituency_seats;
-        }
-    });
+    data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
 
     // calculate total seats
     data.forEach(obj => {
