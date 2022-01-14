@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Taiwan 2020 Legislative Election",
+        "year": 2020,
+        "total_seats": 113,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 4723504,
+                "constituency_seats": 25
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 4811241,
+                "constituency_seats": 48
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 147373,
+                "constituency_seats": 0
+            },
+            {
+                "id": 79,
+                "name": "GP",
+                "full_name": "Green Party Taiwan",
+                "proportional_votes": 341465,
+                "constituency_seats": 0
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 518921,
+                "constituency_seats": 0
+            },
+            {
+                "id": 106,
+                "name": "NPSU",
+                "full_name": "Non-Partisan Solidarity Union",
+                "proportional_votes": 0,
+                "constituency_seats": 0
+            },
+            {
+                "id": 267,
+                "name": "NPP",
+                "full_name": "New Power Party",
+                "proportional_votes": 1098100,
+                "constituency_seats": 0
+            },
+            {
+                "id": 303,
+                "name": "TSP",
+                "full_name": "Taiwan Statebuilding Party",
+                "proportional_votes": 447286,
+                "constituency_seats": 1
+            },
+            {
+                "id": 350,
+                "name": "TPP",
+                "full_name": "Taiwan People's Party",
+                "proportional_votes": 1588806,
+                "constituency_seats": 0
+            },
+            {
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 5
+            }
+        ]
+    },
+    {
+        "name": "Taiwan 2016 Legislative Election",
+        "year": 2016,
+        "total_seats": 113,
+        "qualified_threshold": 0.05,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 3280949,
+                "constituency_seats": 24
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 5370953,
+                "constituency_seats": 50
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 510074,
+                "constituency_seats": 0
+            },
+            {
+                "id": 79,
+                "name": "GP",
+                "full_name": "Green Party Taiwan",
+                "proportional_votes": 308106,
+                "constituency_seats": 0
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 794838,
+                "constituency_seats": 0
+            },
+            {
+                "id": 106,
+                "name": "NPSU",
+                "full_name": "Non-Partisan Solidarity Union",
+                "proportional_votes": 77672,
+                "constituency_seats": 1
+            },
+            {
+                "id": 267,
+                "name": "NPP",
+                "full_name": "New Power Party",
+                "proportional_votes": 744315,
+                "constituency_seats": 3
+            },
+            {
+                "id": 303,
+                "name": "TSP",
+                "full_name": "Taiwan Statebuilding Party",
+                "proportional_votes": 0,
+                "constituency_seats": 0
+            },
+            {
+                "id": 350,
+                "name": "TPP",
+                "full_name": "Taiwan People's Party",
+                "proportional_votes": 0,
+                "constituency_seats": 0
+            },
+            {
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 1
+            }
+        ]
+    }
+]

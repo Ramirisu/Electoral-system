@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { electoralSystemGermany1949, electoralSystemGermany2017, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import { Table } from "./Table";
-import TW2020 from './tw2020.json';
+import TW_LEGISLATIVE_ELECTION_DATA_JSON from './taiwan_legislative_election.json';
 import './ElectoralSystem.css';
+
 
 
 const ELECTORAL_SYSTEMS = [
@@ -26,12 +27,20 @@ const getElectoralSystemByIndex = (index) => {
 
 export const ElectoralSystem = () => {
 
-    const TOTAL_SEATS = 113;
-    const QUALIFIED_THRESHOLD = 0.05;
+    const TW_LEGISLATIVE_ELECTION_DATA = useMemo(() => TW_LEGISLATIVE_ELECTION_DATA_JSON, []);
+    const getElectoralSystemParameter = (index) => {
+        return {
+            total_seats: TW_LEGISLATIVE_ELECTION_DATA[index].total_seats,
+            qualified_threshold: TW_LEGISLATIVE_ELECTION_DATA[index].qualified_threshold,
+        };
+    }
 
+    const [currentSelectedDataIndex, setCurrentSelectedIndex] = React.useState(1);
+    const [electoralSystemParameter, setElectoralSystemParameter] = React.useState(getElectoralSystemParameter(currentSelectedDataIndex));
     const [electoralSystemIndex, setElectoralSystemIndex] = React.useState(0);
-    const initialData = getElectoralSystemByIndex(electoralSystemIndex)(useMemo(() => TW2020, []), TOTAL_SEATS, QUALIFIED_THRESHOLD);
-    const [data, setData] = React.useState(initialData);
+    const [data, setData] = React.useState(
+        getElectoralSystemByIndex(electoralSystemIndex)(TW_LEGISLATIVE_ELECTION_DATA[currentSelectedDataIndex].data, ...Object.values(electoralSystemParameter))
+    );
 
     const updateData = (rowIndex, columnId, value) => {
         setData(old =>
@@ -45,7 +54,7 @@ export const ElectoralSystem = () => {
                 return row;
             })
         );
-        setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, TOTAL_SEATS, QUALIFIED_THRESHOLD));
+        setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, ...Object.values(electoralSystemParameter)));
     }
 
     return (<div>
@@ -53,7 +62,7 @@ export const ElectoralSystem = () => {
         <select onChange={e => {
             const index = e.target.value;
             setElectoralSystemIndex(index);
-            setData(old => getElectoralSystemByIndex(index)(old, TOTAL_SEATS, QUALIFIED_THRESHOLD));
+            setData(old => getElectoralSystemByIndex(index)(old, ...Object.values(electoralSystemParameter)));
         }}>
             {ELECTORAL_SYSTEMS.map((obj, index) => (
                 <option key={index} value={index}>
