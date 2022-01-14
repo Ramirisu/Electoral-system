@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { electoralSystemGermany1949, electoralSystemGermany2017, electoralSystemTaiwan2008, } from './electoralSystemUtility';
+import { electoralSystemGermany1949, electoralSystemGermany2013, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import { Table } from "./Table";
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './taiwan_legislative_election.json';
 import './ElectoralSystem.css';
@@ -12,12 +12,12 @@ const ELECTORAL_SYSTEMS = [
         handler: electoralSystemTaiwan2008,
     },
     {
-        name: 'Germany (1949 ~ 2016) (MMPR)',
+        name: 'Germany (1949 ~ 2012) (MMPR)',
         handler: electoralSystemGermany1949,
     },
     {
-        name: 'Germany (2017 ~ Present) (MMPR)',
-        handler: electoralSystemGermany2017,
+        name: 'Germany (2013 ~ Present) (MMPR)',
+        handler: electoralSystemGermany2013,
     },
 ];
 

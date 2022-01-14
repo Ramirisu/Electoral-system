@@ -120,7 +120,7 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     return data;
 }
 
-export function electoralSystemGermany2017(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
+export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD) {
 
     data = refreshData(data);
 
