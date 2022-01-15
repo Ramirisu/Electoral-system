@@ -223,8 +223,8 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     // total seats
     data.forEach(obj => {
-        obj.proportional_seats = obj.expected_proportional_seats - obj.constituency_seats;
-        obj.total_seats = obj.expected_proportional_seats;
+        obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.overhang_seats = obj.total_seats - obj.original_expected_proportional_seats;
     });
 
