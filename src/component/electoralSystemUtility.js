@@ -28,24 +28,6 @@ const calculateQualifiedProportionalVotePercentage = (data, QUALIFIED_PROPORTION
     return data;
 }
 
-const calculateProportionalSeatsByHareQuota = (data, SEATS) => {
-    // integer
-    data.forEach(obj => {
-        const expected_proportional_seats = obj.qualified_proportional_vote_percentage * SEATS;
-        obj.expected_proportional_seats = Math.floor(expected_proportional_seats);
-        obj.remaining_proportional_seats = expected_proportional_seats - obj.expected_proportional_seats;
-    });
-
-    // fractional remainder
-    const remaining_seats = SEATS - _.sum(data.map(obj => obj.expected_proportional_seats));
-    for (let i = 0; i < remaining_seats; i++) {
-        const max_remaining_proportional_seats = Math.max(...data.map(obj => obj.remaining_proportional_seats));
-        const index = data.findIndex(obj => obj.remaining_proportional_seats === max_remaining_proportional_seats);
-        data[index].expected_proportional_seats++;
-        data[index].remaining_proportional_seats--;
-    }
-}
-
 const calculateProportionalSeatsByDHondt = (data, SEATS) => {
     let divider = Array(data.length).fill(1.0);
     for (let i = 0; i < SEATS; ++i) {
@@ -100,7 +82,8 @@ function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    calculateProportionalSeatsByHareQuota(data, PROPORTIONAL_SEATS);
+    seatsAllocating.hareQuota(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {
@@ -153,7 +136,8 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    calculateProportionalSeatsByHareQuota(data, TOTAL_SEATS);
+    seatsAllocating.hareQuota(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), TOTAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
 
