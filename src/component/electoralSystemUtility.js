@@ -169,21 +169,19 @@ function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    data.forEach(obj => {
-        obj.expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS);
-        obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
-    });
+    seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), TOTAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {
+        obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
-    });
-
-    const NEW_TOTAL_SEATS = _.sum(data.map(obj => obj.total_seats));
-    data.forEach(obj => {
-        obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS;
         obj.overhang_seats = obj.total_seats - obj.expected_proportional_seats;
     });
+
+    // constituency seats that didn't participate proportional seats allocation should be counted for calculating the total seats percentage
+    const NEW_TOTAL_SEATS = _.sum(data.map(obj => obj.total_seats));
+    data.forEach(obj => { obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS; });
 
     data.push(getSummary(data));
 
