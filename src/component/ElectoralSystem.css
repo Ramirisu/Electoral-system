@@ -59,6 +59,38 @@ table th {
   color: white;
 }
 
+.header-party {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #101010;
+  color: white;
+}
+
+.header-proportionalvotepercentage {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.header-seats {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #046dAA;
+  color: white;
+}
+
+.header-totalseats {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #f0f000;
+  color: black;
+}
+
 .editable-cell {
   text-align: right;
 }

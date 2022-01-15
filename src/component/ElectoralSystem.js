@@ -112,23 +112,27 @@ export const ElectoralSystem = () => {
         {
             Header: 'Id',
             accessor: 'id',
+            className: 'header-party',
             sortType: sortTypeHandler,
         },
         {
             Header: 'Party',
             accessor: 'full_name',
+            className: 'header-party',
             sortType: sortTypeHandler,
         },
         {
             Header: 'Proportional Vote (%)',
             accessor: 'proportional_vote_percentage',
+            className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => formatPercentage(value),
         },
         {
-            Header: 'Qualified PV (%)',
+            Header: 'Qualified (%)',
             accessor: 'qualified_proportional_vote_percentage',
+            className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => (value > 0) ? formatPercentage(value) : '-',
@@ -136,34 +140,41 @@ export const ElectoralSystem = () => {
         {
             Header: 'Constituency Seats',
             accessor: 'constituency_seats',
+            className: 'header-seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-        }, {
+        },
+        {
             Header: 'Proportional Seats',
             accessor: 'proportional_seats',
+            className: 'header-seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
         },
         {
             Header: 'Total Seats',
             accessor: 'total_seats',
+            className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
         },
         {
-            Header: 'Total Seats (%)',
-            accessor: 'total_seats_percentage',
-            sortDescFirst: true,
-            sortType: sortTypeHandler,
-            Cell: ({ value }) => formatPercentage(value),
-        },
-        {
-            Header: 'Overhang Seats',
+            Header: 'Overhang',
             accessor: 'overhang_seats',
+            className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => (value > 0) ? "+" + value : "-",
         },
+        {
+            Header: 'Total Seats (%)',
+            accessor: 'total_seats_percentage',
+            className: 'header-totalseats',
+            sortDescFirst: true,
+            sortType: sortTypeHandler,
+            Cell: ({ value }) => formatPercentage(value),
+        },
+
     ];
 
     const columns = useMemo(() => COLUMNS, []);
@@ -212,7 +223,12 @@ export const ElectoralSystem = () => {
                 {headerGroups.map(group => (
                     <tr {...group.getHeaderGroupProps()}>
                         {group.headers.map(column => (
-                            <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render('Header')}</th>
+                            <th {...column.getHeaderProps([
+                                column.getSortByToggleProps(),
+                                {
+                                    className: column.className,
+                                    style: column.style,
+                                }])}>{column.render('Header')}</th>
                         ))}
                     </tr>
                 ))}
@@ -233,7 +249,12 @@ export const ElectoralSystem = () => {
                 {headerGroups.map(group => (
                     <tr {...group.getHeaderGroupProps()}>
                         {group.headers.map(column => (
-                            <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                            <th {...column.getHeaderProps([
+                                {
+                                    className: column.className,
+                                    style: column.style,
+                                }
+                            ])}>{column.render('Header')}</th>
                         ))}
                     </tr>
                 ))}

@@ -5,6 +5,7 @@ const refreshData = (data) => {
     data.forEach(obj => {
         obj.qualified_proportional_vote_percentage = 0.0;
         obj.remaining_proportional_seats = 0;
+        obj.original_expected_proportional_seats = 0;
         obj.expected_proportional_seats = 0;
         obj.proportional_seats = 0;
         obj.total_seats = 0;
