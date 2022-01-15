@@ -21,6 +21,11 @@ const calculateProportionalVotePercentage = (data, TOTAL_PROPORTIONAL_VOTES) => 
     return data;
 }
 
+const calculateQualifiedProportionalVotePercentage = (data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified) => {
+    data.filter(obj => isQualified(obj)).forEach(obj => { obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE; });
+    return data;
+}
+
 const calculateProportionalSeatsByHareQuota = (data, SEATS) => {
     // integer
     data.forEach(obj => {
@@ -93,19 +98,13 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
         .map(obj => obj.proportional_vote_percentage)
         .reduce((prev, curr) => prev + curr);
 
-    // calculate qualified proportional vote
-    data.forEach(obj => {
-        if (isQualified(obj)) {
-            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
-        } else {
-            obj.qualified_proportional_vote_percentage = 0;
-        }
-    });
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
+    // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr);
     calculateProportionalSeatsByHareQuota(data, PROPORTIONAL_SEATS);
 
-    // calculate total seats
+    // total seats
     data.forEach(obj => {
         obj.proportional_seats = obj.expected_proportional_seats;
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
@@ -124,28 +123,16 @@ export function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD,
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
-    const isQualified = (obj) => {
-        return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD;
-    }
+    const isQualified = (obj) => { return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD; }
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage).reduce((prev, curr) => prev + curr);
 
-    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
-        .filter(obj => isQualified(obj))
-        .map(obj => obj.proportional_vote_percentage)
-        .reduce((prev, curr) => prev + curr);
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
-    // calculate qualified proportional vote
-    data.forEach(obj => {
-        if (isQualified(obj)) {
-            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
-        } else {
-            obj.qualified_proportional_vote_percentage = 0;
-        }
-    });
-
+    // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - data.map(obj => obj.constituency_seats).reduce((prev, curr) => prev + curr);
     calculateProportionalSeatsByDHondt(data, PROPORTIONAL_SEATS);
 
-    // calculate total seats
+    // total seats
     data.forEach(obj => {
         obj.proportional_seats = obj.expected_proportional_seats;
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
@@ -164,29 +151,17 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
-    const isQualified = (obj) => {
-        return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3;
-    }
+    const isQualified = (obj) => { return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3; };
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage).reduce((prev, curr) => prev + curr);
 
-    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
-        .filter(obj => isQualified(obj))
-        .map(obj => obj.proportional_vote_percentage)
-        .reduce((prev, curr) => prev + curr);
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
-    // calculate qualified proportional vote
-    data.forEach(obj => {
-        if (isQualified(obj)) {
-            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
-        } else {
-            obj.qualified_proportional_vote_percentage = 0;
-        }
-    });
-
+    // proportional seats
     calculateProportionalSeatsByHareQuota(data, TOTAL_SEATS);
 
     data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
 
-    // calculate total seats
+    // total seats
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
     });
@@ -209,31 +184,18 @@ export function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
-    const isQualified = (obj) => {
-        return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3;
-    }
+    const isQualified = (obj) => { return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3; };
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage).reduce((prev, curr) => prev + curr);
 
-    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
-        .filter(obj => isQualified(obj))
-        .map(obj => obj.proportional_vote_percentage)
-        .reduce((prev, curr) => prev + curr);
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
-    // calculate qualified proportional vote
-    data.forEach(obj => {
-        if (isQualified(obj)) {
-            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
-        } else {
-            obj.qualified_proportional_vote_percentage = 0;
-        }
-    });
-
-    // calculate proportional seats
+    // proportional seats
     data.forEach(obj => {
         obj.expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS);
         obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
     });
 
-    // calculate total seats
+    // total seats
     data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
     });
@@ -256,30 +218,17 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
-    const isQualified = (obj) => {
-        return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes;
-    }
+    const isQualified = (obj) => { return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes; }
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage).reduce((prev, curr) => prev + curr);
 
-    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = data
-        .filter(obj => isQualified(obj))
-        .map(obj => obj.proportional_vote_percentage)
-        .reduce((prev, curr) => prev + curr);
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
-    // calculate qualified proportional vote
-    data.forEach(obj => {
-        if (isQualified(obj)) {
-            obj.qualified_proportional_vote_percentage = obj.proportional_vote_percentage / QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE;
-        } else {
-            obj.qualified_proportional_vote_percentage = 0;
-        }
-    });
-
-    // calculate proportional seats
+    // proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
     const NEW_TOTAL_SEATS = Math.ceil(Math.max(TOTAL_SEATS, ...data.map(obj => obj.qualified_proportional_vote_percentage > 0 ? obj.constituency_seats / obj.qualified_proportional_vote_percentage : 0)));
     calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
 
-    // calculate total seats
+    // total seats
     data.forEach(obj => {
         obj.proportional_seats = obj.expected_proportional_seats - obj.constituency_seats;
         obj.total_seats = obj.expected_proportional_seats;
