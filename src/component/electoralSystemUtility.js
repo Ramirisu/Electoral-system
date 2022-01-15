@@ -83,7 +83,7 @@ const getSummary = (data) => {
     };
 }
 
-export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -113,7 +113,7 @@ export function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD
     return data;
 }
 
-export function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -140,7 +140,7 @@ export function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD,
     return data;
 }
 
-export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -172,7 +172,7 @@ export function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     return data;
 }
 
-export function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -213,7 +213,7 @@ const getNewTotalSeatsWithCompensationGermany2013 = (data, NUM_OF_ALLOWED_OVERHA
     ));
 }
 
-export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -242,7 +242,7 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     return data;
 }
 
-export function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -270,3 +270,12 @@ export function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     return data;
 }
+
+export const electoralSystem = {
+    taiwan2008: electoralSystemTaiwan2008,
+    japan1994: electoralSystemJapan1994,
+    germany1949: electoralSystemGermany1949,
+    germany2009: electoralSystemGermany2009,
+    germany2013: electoralSystemGermany2013,
+    germany2021: electoralSystemGermany2021,
+};
