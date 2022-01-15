@@ -188,14 +188,6 @@ function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     return data;
 }
 
-const getNewTotalSeatsWithCompensationGermany2013 = (data, NUM_OF_ALLOWED_OVERHANG_SEATS, TOTAL_SEATS) => {
-    const isQualified = (obj => obj.qualified_proportional_vote_percentage > 0.0 && obj.constituency_seats > NUM_OF_ALLOWED_OVERHANG_SEATS);
-    return Math.ceil(Math.max(
-        TOTAL_SEATS,
-        ...data.filter(obj => isQualified(obj)).map(obj => (obj.constituency_seats - NUM_OF_ALLOWED_OVERHANG_SEATS) / obj.qualified_proportional_vote_percentage)
-    ));
-}
-
 function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
@@ -208,8 +200,10 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
-    const NEW_TOTAL_SEATS_WITH_COMPENSATION = getNewTotalSeatsWithCompensationGermany2013(data, 0, TOTAL_SEATS);
+    const NEW_TOTAL_SEATS_WITH_COMPENSATION = Math.ceil(Math.max(
+        TOTAL_SEATS,
+        ...data.filter(obj => obj.qualified_proportional_vote_percentage > 0.0).map(obj => obj.constituency_seats / obj.qualified_proportional_vote_percentage)
+    ))
     seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), NEW_TOTAL_SEATS_WITH_COMPENSATION)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
@@ -242,9 +236,10 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
 
     // proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
-    const NEW_TOTAL_SEATS_WITH_COMPENSATION = getNewTotalSeatsWithCompensationGermany2013(data, 3, TOTAL_SEATS);
-    seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), NEW_TOTAL_SEATS_WITH_COMPENSATION)
-        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
+    seatsAllocating.saintLagueMinSeats(
+        data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0),
+        data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? Math.max(0, obj.constituency_seats - 3) : 0),
+        TOTAL_SEATS).forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {

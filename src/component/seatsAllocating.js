@@ -43,7 +43,22 @@ const saintLague = (votes, TOTAL_SEATS) => {
     return seats;
 }
 
+const saintLagueMinSeats = (votes, minSeats, TOTAL_SEATS) => {
+    const TOTAL_VOTES = _.sum(votes);
+    const INITIAL_DIVISOR = Math.ceil(TOTAL_VOTES / Math.max(1, TOTAL_SEATS - votes.length));
+
+    let seats = votes.map(value => Math.round(value / INITIAL_DIVISOR));
+    for (let divisor = INITIAL_DIVISOR - 1;
+        _.sum(seats) < TOTAL_SEATS || seats.map((value, index) => value < minSeats[index]).reduce((prev, curr) => prev || curr);
+        divisor--) {
+        seats = votes.map(value => Math.round(value / divisor));
+    }
+
+    return seats;
+}
+
 export const seatsAllocating = {
     hareQuota,
-    saintLague
+    saintLague,
+    saintLagueMinSeats,
 };
