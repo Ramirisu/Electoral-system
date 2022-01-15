@@ -3,49 +3,27 @@ import { useTable, useSortBy } from 'react-table';
 import { electoralSystemGermany1949, electoralSystemGermany2009, electoralSystemGermany2013, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
+import _ from 'lodash';
 
 const formatPercentage = (value) => {
     return (100 * parseFloat(value)).toFixed(2) + ' %';
 }
 
 const ELECTORAL_SYSTEMS = [
-    {
-        name: 'Taiwan (2008 ~ Present) (MMM)',
-        handler: electoralSystemTaiwan2008,
-    },
-    {
-        name: 'Japan (1994 ~ Present) (MMM)',
-        handler: electoralSystemJapan1994,
-    },
-    {
-        name: 'Germany (1949 ~ 2008) (MMPR)',
-        handler: electoralSystemGermany1949,
-    },
-    {
-        name: 'Germany (2009 ~ 2012) (MMPR)',
-        handler: electoralSystemGermany2009,
-    },
-    {
-        name: 'Germany (2013 ~ Present) (MMPR)',
-        handler: electoralSystemGermany2013,
-    },
+    { name: 'Taiwan (2008 ~ Present) (MMM)', handler: electoralSystemTaiwan2008, },
+    { name: 'Japan (1994 ~ Present) (MMM)', handler: electoralSystemJapan1994, },
+    { name: 'Germany (1949 ~ 2008) (MMPR)', handler: electoralSystemGermany1949, },
+    { name: 'Germany (2009 ~ 2012) (MMPR)', handler: electoralSystemGermany2009, },
+    { name: 'Germany (2013 ~ Present) (MMPR)', handler: electoralSystemGermany2013, },
 ];
 
-const getElectoralSystemByIndex = (index) => {
-    return ELECTORAL_SYSTEMS[index].handler;
-}
+const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
 
 export const ElectoralSystem = () => {
 
     const TW_LEGISLATIVE_ELECTION_DATA = useMemo(() => TW_LEGISLATIVE_ELECTION_DATA_JSON, []);
     const getElectionByIndex = (index) => TW_LEGISLATIVE_ELECTION_DATA[index].data;
-    const getElectoralSystemParameter = (index) => {
-        return {
-            total_seats: TW_LEGISLATIVE_ELECTION_DATA[index].total_seats,
-            qualified_threshold: TW_LEGISLATIVE_ELECTION_DATA[index].qualified_threshold,
-            total_proportional_votes: TW_LEGISLATIVE_ELECTION_DATA[index].total_proportional_votes,
-        };
-    }
+    const getElectoralSystemParameter = (index) => { return _.pick(TW_LEGISLATIVE_ELECTION_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
 
     const [currentSelectedDataIndex, setCurrentSelectedDataIndex] = React.useState(0);
     const [electoralSystemParameter, setElectoralSystemParameter] = React.useState(getElectoralSystemParameter(currentSelectedDataIndex));
@@ -55,19 +33,11 @@ export const ElectoralSystem = () => {
     );
 
     const sortTypeHandler = (rowA, rowB, columnId, desc) => {
-        // always sort summary row as last one
-        if (rowA.original['is_summary']) {
-            return desc ? -1 : 1;
-        }
-        if (rowB.original['is_summary']) {
-            return desc ? 1 : -1;
-        }
-
-        // sort others
-        if (rowA.original[columnId] === rowB.original[columnId]) {
-            return 0;
-        }
-        return (rowA.original[columnId] > rowB.original[columnId]) ? 1 : -1;
+        const fn = (ascending) => (ascending ? 1 : -1);
+        if (rowA.original['is_summary']) { return fn(!desc); }
+        if (rowB.original['is_summary']) { return fn(desc); }
+        if (rowA.original[columnId] === rowB.original[columnId]) { return 0; }
+        return fn(rowA.original[columnId] > rowB.original[columnId]);
     };
 
     const COLUMNS = [
