@@ -26,12 +26,17 @@ export const ElectoralSystem = () => {
     const getElectionByIndex = (index) => TW_LEGISLATIVE_ELECTION_DATA[index].data;
     const getElectoralSystemParameter = (index) => { return _.pick(TW_LEGISLATIVE_ELECTION_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
 
-    const [currentSelectedDataIndex, setCurrentSelectedDataIndex] = React.useState(0);
-    const [electoralSystemParameter, setElectoralSystemParameter] = React.useState(getElectoralSystemParameter(currentSelectedDataIndex));
-    const [electoralSystemIndex, setElectoralSystemIndex] = React.useState(0);
-    const [data, setData] = React.useState(
-        getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(currentSelectedDataIndex), ...Object.values(electoralSystemParameter))
-    );
+    const [state, setState] = React.useState(() => {
+        const selectedDataIndex = 0;
+        const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
+        const selectedElectoralSystemIndex = 0;
+        return {
+            selectedDataIndex,
+            selectedElectoralSystemParameter,
+            selectedElectoralSystemIndex,
+            data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(getElectionByIndex(selectedDataIndex), ...Object.values(selectedElectoralSystemParameter)),
+        };
+    });
 
     const sortTypeHandler = (rowA, rowB, columnId, desc) => {
         const fn = (ascending) => (ascending ? 1 : -1);
@@ -120,17 +125,23 @@ export const ElectoralSystem = () => {
         prepareRow,
     } = useTable({
         columns,
-        data,
+        data: state.data,
     }, useSortBy);
 
     return (<div>
         <label>Election</label>
         <select className='electionselect' onChange={e => {
             const index = e.target.value;
-            setCurrentSelectedDataIndex(index);
-            const electoralSystemParameter = getElectoralSystemParameter(index);
-            setElectoralSystemParameter(electoralSystemParameter);
-            setData(getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(index), ...Object.values(electoralSystemParameter)));
+            setState(old => {
+                const selectedDataIndex = index;
+                const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
+                return {
+                    selectedDataIndex,
+                    selectedElectoralSystemParameter,
+                    selectedElectoralSystemIndex: old.selectedElectoralSystemIndex,
+                    data: getElectoralSystemByIndex(old.selectedElectoralSystemIndex)(getElectionByIndex(selectedDataIndex), ...Object.values(selectedElectoralSystemParameter)),
+                };
+            });
         }}>
             {TW_LEGISLATIVE_ELECTION_DATA.map((obj, index) => (
                 <option key={index} value={index}>
@@ -141,8 +152,15 @@ export const ElectoralSystem = () => {
         <label>Electoral System</label>
         <select className='electoralsystemselect' onChange={e => {
             const index = e.target.value;
-            setElectoralSystemIndex(index);
-            setData(old => getElectoralSystemByIndex(index)(old, ...Object.values(electoralSystemParameter)));
+            setState(old => {
+                const selectedElectoralSystemIndex = index;
+                return {
+                    selectedDataIndex: old.selectedDataIndex,
+                    selectedElectoralSystemParameter: old.selectedElectoralSystemParameter,
+                    selectedElectoralSystemIndex,
+                    data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(getElectionByIndex(old.selectedDataIndex), ...Object.values(old.selectedElectoralSystemParameter)),
+                };
+            })
         }}>
             {ELECTORAL_SYSTEMS.map((obj, index) => (
                 <option key={index} value={index}>
