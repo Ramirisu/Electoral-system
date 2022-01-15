@@ -275,8 +275,8 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     // calculate proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
-    const NEW_TOTAL_SEATS = Math.max(TOTAL_SEATS, ...data.map(obj => obj.qualified_proportional_vote_percentage > 0 && obj.constituency_seats > 0 ? obj.constituency_seats / obj.qualified_proportional_vote_percentage : 0));
-    data.forEach(obj => { obj.expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * NEW_TOTAL_SEATS); });
+    const NEW_TOTAL_SEATS = Math.ceil(Math.max(TOTAL_SEATS, ...data.map(obj => obj.qualified_proportional_vote_percentage > 0 ? obj.constituency_seats / obj.qualified_proportional_vote_percentage : 0)));
+    calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
 
     // calculate total seats
     data.forEach(obj => {

@@ -33,23 +33,23 @@ const EditableCell = ({
 
 const ELECTORAL_SYSTEMS = [
     {
-        name: 'Taiwan (2008 ~ Present) (MMM) (Hare quota)',
+        name: 'Taiwan (2008 ~ Present) (MMM)',
         handler: electoralSystemTaiwan2008,
     },
     {
-        name: 'Japan (1994 ~ Present) (MMM) (D\'Hondt)',
+        name: 'Japan (1994 ~ Present) (MMM)',
         handler: electoralSystemJapan1994,
     },
     {
-        name: 'Germany (1949 ~ 2008) (MMPR) (Hare quota)',
+        name: 'Germany (1949 ~ 2008) (MMPR)',
         handler: electoralSystemGermany1949,
     },
     {
-        name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Laguë/Schepers)',
+        name: 'Germany (2009 ~ 2012) (MMPR)',
         handler: electoralSystemGermany2009,
     },
     {
-        name: 'Germany (2013 ~ Present) (MMPR) (Saint-Laguë/Schepers)',
+        name: 'Germany (2013 ~ Present) (MMPR)',
         handler: electoralSystemGermany2013,
     },
 ];
