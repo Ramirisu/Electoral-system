@@ -8,29 +8,6 @@ const formatPercentage = (value) => {
     return (100 * parseFloat(value)).toFixed(2) + ' %';
 }
 
-const EditableCell = ({
-    value: initialValue,
-    row: { index },
-    column: { id },
-    updateData,
-}) => {
-    const [value, setValue] = React.useState(initialValue);
-
-    const onChange = e => {
-        setValue(e.target.value)
-    }
-
-    const onBlur = () => {
-        updateData(index, id, parseFloat(value))
-    }
-
-    React.useEffect(() => {
-        setValue(initialValue)
-    }, [initialValue])
-
-    return <input className='editable-cell' value={value} onChange={onChange} onBlur={onBlur} />;
-};
-
 const ELECTORAL_SYSTEMS = [
     {
         name: 'Taiwan (2008 ~ Present) (MMM)',
@@ -76,21 +53,6 @@ export const ElectoralSystem = () => {
     const [data, setData] = React.useState(
         getElectoralSystemByIndex(electoralSystemIndex)(getElectionByIndex(currentSelectedDataIndex), ...Object.values(electoralSystemParameter))
     );
-
-    const updateData = (rowIndex, columnId, value) => {
-        setData(old =>
-            old.map((row, index) => {
-                if (index === rowIndex) {
-                    return {
-                        ...old[rowIndex],
-                        [columnId]: value,
-                    };
-                }
-                return row;
-            })
-        );
-        setData(old => getElectoralSystemByIndex(electoralSystemIndex)(old, ...Object.values(electoralSystemParameter)));
-    }
 
     const sortTypeHandler = (rowA, rowB, columnId, desc) => {
         // always sort summary row as last one
@@ -188,7 +150,6 @@ export const ElectoralSystem = () => {
     } = useTable({
         columns,
         data,
-        updateData,
     }, useSortBy);
 
     return (<div>
