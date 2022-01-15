@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { seatsAllocating } from './seatsAllocating';
 
 const refreshData = (data) => {
     data = JSON.parse(JSON.stringify(data));
@@ -227,7 +228,8 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     // proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
     const NEW_TOTAL_SEATS = getNewTotalSeatsWithCompensationGermany2013(data, 0, TOTAL_SEATS);
-    calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
+    seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), NEW_TOTAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {
@@ -256,7 +258,8 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     // proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
     const NEW_TOTAL_SEATS = getNewTotalSeatsWithCompensationGermany2013(data, 3, TOTAL_SEATS);
-    calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
+    seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), NEW_TOTAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {
