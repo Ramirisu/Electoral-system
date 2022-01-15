@@ -205,6 +205,14 @@ export function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOL
     return data;
 }
 
+const getNewTotalSeatsWithCompensationGermany2013 = (data, NUM_OF_ALLOWED_OVERHANG_SEATS, TOTAL_SEATS) => {
+    const isQualified = (obj => obj.qualified_proportional_vote_percentage > 0.0 && obj.constituency_seats > NUM_OF_ALLOWED_OVERHANG_SEATS);
+    return Math.ceil(Math.max(
+        TOTAL_SEATS,
+        ...data.filter(obj => isQualified(obj)).map(obj => (obj.constituency_seats - NUM_OF_ALLOWED_OVERHANG_SEATS) / obj.qualified_proportional_vote_percentage)
+    ));
+}
+
 export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
@@ -218,7 +226,7 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
 
     // proportional seats
     data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
-    const NEW_TOTAL_SEATS = Math.ceil(Math.max(TOTAL_SEATS, ...data.map(obj => obj.qualified_proportional_vote_percentage > 0 ? obj.constituency_seats / obj.qualified_proportional_vote_percentage : 0)));
+    const NEW_TOTAL_SEATS = getNewTotalSeatsWithCompensationGermany2013(data, 0, TOTAL_SEATS);
     calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
 
     // total seats
@@ -226,9 +234,35 @@ export function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOL
         obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.overhang_seats = obj.total_seats - obj.original_expected_proportional_seats;
+        obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS;
     });
 
+    data.push(getSummary(data));
+
+    return data;
+}
+
+export function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+
+    data = refreshData(data);
+    removeSummary(data);
+
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
+
+    const isQualified = (obj) => { return obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes; }
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
+
+    // proportional seats
+    data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
+    const NEW_TOTAL_SEATS = getNewTotalSeatsWithCompensationGermany2013(data, 3, TOTAL_SEATS);
+    calculateProportionalSeatsByHareQuota(data, NEW_TOTAL_SEATS);
+
+    // total seats
     data.forEach(obj => {
+        obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats);
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.overhang_seats = obj.total_seats - obj.original_expected_proportional_seats;
         obj.total_seats_percentage = obj.total_seats / NEW_TOTAL_SEATS;
     });
 

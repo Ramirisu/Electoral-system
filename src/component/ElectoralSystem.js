@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
-import { electoralSystemGermany1949, electoralSystemGermany2009, electoralSystemGermany2013, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
+import { electoralSystemGermany1949, electoralSystemGermany2009, electoralSystemGermany2013, electoralSystemGermany2021, electoralSystemJapan1994, electoralSystemTaiwan2008, } from './electoralSystemUtility';
 import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 import _ from 'lodash';
@@ -14,7 +14,8 @@ const ELECTORAL_SYSTEMS = [
     { name: 'Japan (1994 ~ Present) (MMM)', handler: electoralSystemJapan1994, },
     { name: 'Germany (1949 ~ 2008) (MMPR)', handler: electoralSystemGermany1949, },
     { name: 'Germany (2009 ~ 2012) (MMPR)', handler: electoralSystemGermany2009, },
-    { name: 'Germany (2013 ~ Present) (MMPR)', handler: electoralSystemGermany2013, },
+    { name: 'Germany (2013 ~ 2020) (MMPR)', handler: electoralSystemGermany2013, },
+    { name: 'Germany (2021 ~ Present) (MMPR)', handler: electoralSystemGermany2021, },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
