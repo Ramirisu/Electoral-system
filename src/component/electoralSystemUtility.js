@@ -1,9 +1,7 @@
 import _ from 'lodash';
 import { seatsAllocating } from './seatsAllocating';
 
-const refreshData = (data) => {
-    data = JSON.parse(JSON.stringify(data));
-
+const initData = (data) => {
     data.forEach(obj => {
         obj.qualified_proportional_vote_percentage = 0.0;
         obj.remaining_proportional_seats = 0;
@@ -58,7 +56,7 @@ const getSummary = (data) => {
 
 function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -87,7 +85,7 @@ function electoralSystemTaiwan2008(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL
 
 function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -115,7 +113,7 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_
 
 function electoralSystemSouthKorea2004(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -143,7 +141,7 @@ function electoralSystemSouthKorea2004(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, T
 
 function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -176,7 +174,7 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
 
 function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -207,7 +205,7 @@ function electoralSystemGermany2009(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
 
 function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -243,7 +241,7 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
 
 function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
-    data = refreshData(data);
+    data = initData(data);
     removeSummary(data);
 
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);

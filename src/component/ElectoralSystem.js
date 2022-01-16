@@ -32,7 +32,7 @@ const sortTypeHandler = (rowA, rowB, columnId, desc) => {
 export const ElectoralSystem = () => {
 
     const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
-    const getElectionByIndex = (index) => ELECTION_RESULTS_DATA[index].data;
+    const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
     const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
 
     const [state, setState] = React.useState(() => {
@@ -159,7 +159,7 @@ export const ElectoralSystem = () => {
                     selectedDataIndex: old.selectedDataIndex,
                     selectedElectoralSystemParameter: old.selectedElectoralSystemParameter,
                     selectedElectoralSystemIndex,
-                    data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(getElectionByIndex(old.selectedDataIndex), ...Object.values(old.selectedElectoralSystemParameter)),
+                    data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(_.cloneDeep(old.data), ...Object.values(old.selectedElectoralSystemParameter)),
                 };
             })
         }}>
