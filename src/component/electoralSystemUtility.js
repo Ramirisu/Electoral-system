@@ -200,6 +200,7 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
+    data.forEach(obj => { obj.original_expected_proportional_seats = Math.round(obj.qualified_proportional_vote_percentage * TOTAL_SEATS); });
     const NEW_TOTAL_SEATS_WITH_COMPENSATION = Math.ceil(Math.max(
         TOTAL_SEATS,
         ...data.filter(obj => obj.qualified_proportional_vote_percentage > 0.0).map(obj => obj.constituency_seats / obj.qualified_proportional_vote_percentage)
