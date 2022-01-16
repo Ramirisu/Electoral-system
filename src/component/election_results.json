@@ -8,113 +8,113 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 4723504,
                 "constituency_seats": 25
             },
             {
                 "id": 15,
-                "name": "LP",
-                "full_name": "Labor Party",
+                "short_name": "LP",
+                "name": "Labor Party",
                 "proportional_votes": 19941,
                 "constituency_seats": 0
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 4811241,
                 "constituency_seats": 48
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 147373,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "name": "GP",
-                "full_name": "Green Party Taiwan",
+                "short_name": "GP",
+                "name": "Green Party Taiwan",
                 "proportional_votes": 341465,
                 "constituency_seats": 0
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 518921,
                 "constituency_seats": 0
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 50435,
                 "constituency_seats": 0
             },
             {
                 "id": 106,
-                "name": "NPSU",
-                "full_name": "Non-Partisan Solidarity Union",
+                "short_name": "NPSU",
+                "name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 0,
                 "constituency_seats": 0
             },
             {
                 "id": 113,
-                "name": "CUPP",
-                "full_name": "Chinese Unification Promotion Party",
+                "short_name": "CUPP",
+                "name": "Chinese Unification Promotion Party",
                 "proportional_votes": 32966,
                 "constituency_seats": 0
             },
             {
                 "id": 267,
-                "name": "NPP",
-                "full_name": "New Power Party",
+                "short_name": "NPP",
+                "name": "New Power Party",
                 "proportional_votes": 1098100,
                 "constituency_seats": 0
             },
             {
                 "id": 303,
-                "name": "TSP",
-                "full_name": "Taiwan Statebuilding Party",
+                "short_name": "TSP",
+                "name": "Taiwan Statebuilding Party",
                 "proportional_votes": 447286,
                 "constituency_seats": 1
             },
             {
                 "id": 341,
-                "name": "CPA",
-                "full_name": "Congress Party Alliance",
+                "short_name": "CPA",
+                "name": "Congress Party Alliance",
                 "proportional_votes": 40331,
                 "constituency_seats": 0
             },
             {
                 "id": 348,
-                "name": "FA",
-                "full_name": "Formosa Alliance",
+                "short_name": "FA",
+                "name": "Formosa Alliance",
                 "proportional_votes": 29324,
                 "constituency_seats": 0
             },
             {
                 "id": 350,
-                "name": "TPP",
-                "full_name": "Taiwan People's Party",
+                "short_name": "TPP",
+                "name": "Taiwan People's Party",
                 "proportional_votes": 1588806,
                 "constituency_seats": 0
             },
             {
                 "id": 352,
-                "name": "TAPA",
-                "full_name": "Taiwan Action Party Alliance",
+                "short_name": "TAPA",
+                "name": "Taiwan Action Party Alliance",
                 "proportional_votes": 143617,
                 "constituency_seats": 0
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 5
             }
@@ -129,120 +129,120 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 3280949,
                 "constituency_seats": 24
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 5370953,
                 "constituency_seats": 50
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 510074,
                 "constituency_seats": 0
             },
             {
                 "id": 82,
-                "name": "TAIP",
-                "full_name": "Taiwan Independence Party",
+                "short_name": "TAIP",
+                "name": "Taiwan Independence Party",
                 "proportional_votes": 27496,
                 "constituency_seats": 0
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 794838,
                 "constituency_seats": 0
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 305675,
                 "constituency_seats": 0
             },
             {
                 "id": 106,
-                "name": "NPSU",
-                "full_name": "Non-Partisan Solidarity Union",
+                "short_name": "NPSU",
+                "name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 77672,
                 "constituency_seats": 1
             },
             {
                 "id": 113,
-                "name": "CUPP",
-                "full_name": "Chinese Unification Promotion Party",
+                "short_name": "CUPP",
+                "name": "Chinese Unification Promotion Party",
                 "proportional_votes": 56347,
                 "constituency_seats": 0
             },
             {
                 "id": 135,
-                "name": "TCA",
-                "full_name": "Taiwan Constitution Association",
+                "short_name": "TCA",
+                "name": "Taiwan Constitution Association",
                 "proportional_votes": 15442,
                 "constituency_seats": 0
             },
             {
                 "id": 189,
-                "name": "NHSA",
-                "full_name": "National Health Service Alliance",
+                "short_name": "NHSA",
+                "name": "National Health Service Alliance",
                 "proportional_votes": 51024,
                 "constituency_seats": 0
             },
             {
                 "id": 259,
-                "name": "TP",
-                "full_name": "Trees Party",
+                "short_name": "TP",
+                "name": "Trees Party",
                 "proportional_votes": 77174,
                 "constituency_seats": 0
             },
             {
                 "id": 267,
-                "name": "NPP",
-                "full_name": "New Power Party",
+                "short_name": "NPP",
+                "name": "New Power Party",
                 "proportional_votes": 744315,
                 "constituency_seats": 3
             },
             {
                 "id": 268,
-                "name": "MKD",
-                "full_name": "Minkuotang",
+                "short_name": "MKD",
+                "name": "Minkuotang",
                 "proportional_votes": 197627,
                 "constituency_seats": 0
             },
             {
                 "id": 272,
-                "name": "FTP",
-                "full_name": "Free Taiwan Party",
+                "short_name": "FTP",
+                "name": "Free Taiwan Party",
                 "proportional_votes": 47988,
                 "constituency_seats": 0
             },
             {
                 "id": 281,
-                "name": "GSDC",
-                "full_name": "Green-Social Democratic Coalition",
+                "short_name": "GSDC",
+                "name": "Green-Social Democratic Coalition",
                 "proportional_votes": 308106,
                 "constituency_seats": 0
             },
             {
                 "id": 283,
-                "name": "FHL",
-                "full_name": "Faith And Hope League",
+                "short_name": "FHL",
+                "name": "Faith And Hope League",
                 "proportional_votes": 206629,
                 "constituency_seats": 0
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 1
             }
@@ -257,64 +257,64 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 5863379,
                 "constituency_seats": 48
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 4556526,
                 "constituency_seats": 27
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 195960,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "name": "GP",
-                "full_name": "Green Party Taiwan",
+                "short_name": "GP",
+                "name": "Green Party Taiwan",
                 "proportional_votes": 229566,
                 "constituency_seats": 0
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 722089,
                 "constituency_seats": 1
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 1178896,
                 "constituency_seats": 0
             },
             {
                 "id": 106,
-                "name": "NPSU",
-                "full_name": "Non-Partisan Solidarity Union",
+                "short_name": "NPSU",
+                "name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 0,
                 "constituency_seats": 2
             },
             {
                 "id": 189,
-                "name": "NHSA",
-                "full_name": "National Health Service Alliance",
+                "short_name": "NHSA",
+                "name": "National Health Service Alliance",
                 "proportional_votes": 163344,
                 "constituency_seats": 0
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 1
             }
@@ -329,57 +329,57 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 5010801,
                 "constituency_seats": 61
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 3610106,
                 "constituency_seats": 13
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 386660,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "name": "GP",
-                "full_name": "Green Party Taiwan",
+                "short_name": "GP",
+                "name": "Green Party Taiwan",
                 "proportional_votes": 58473,
                 "constituency_seats": 0
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 0,
                 "constituency_seats": 1
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 344887,
                 "constituency_seats": 0
             },
             {
                 "id": 106,
-                "name": "NPSU",
-                "full_name": "Non-Partisan Solidarity Union",
+                "short_name": "NPSU",
+                "name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 68527,
                 "constituency_seats": 3
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 1
             }
@@ -395,50 +395,50 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 3190081,
                 "constituency_seats": 79
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 3471429,
                 "constituency_seats": 89
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 12137,
                 "constituency_seats": 1
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 1350613,
                 "constituency_seats": 34
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 756712,
                 "constituency_seats": 12
             },
             {
                 "id": 106,
-                "name": "NPSU",
-                "full_name": "Non-Partisan Solidarity Union",
+                "short_name": "NPSU",
+                "name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 353164,
                 "constituency_seats": 6
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 4
             }
@@ -454,50 +454,50 @@
         "data": [
             {
                 "id": 1,
-                "name": "KMT",
-                "full_name": "Kuomintang",
+                "short_name": "KMT",
+                "name": "Kuomintang",
                 "proportional_votes": 2949371,
                 "constituency_seats": 68
             },
             {
                 "id": 16,
-                "name": "DPP",
-                "full_name": "Democratic Progressive Party",
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
                 "proportional_votes": 3447740,
                 "constituency_seats": 87
             },
             {
                 "id": 74,
-                "name": "NP",
-                "full_name": "New Party",
+                "short_name": "NP",
+                "name": "New Party",
                 "proportional_votes": 269620,
                 "constituency_seats": 1
             },
             {
                 "id": 90,
-                "name": "PFP",
-                "full_name": "People First Party",
+                "short_name": "PFP",
+                "name": "People First Party",
                 "proportional_votes": 1917836,
                 "constituency_seats": 46
             },
             {
                 "id": 9,
-                "name": "TNOP",
-                "full_name": "Taiwan Number One Party",
+                "short_name": "TNOP",
+                "name": "Taiwan Number One Party",
                 "proportional_votes": 12917,
                 "constituency_seats": 1
             },
             {
                 "id": 95,
-                "name": "TSU",
-                "full_name": "Taiwan Solidarity Union",
+                "short_name": "TSU",
+                "name": "Taiwan Solidarity Union",
                 "proportional_votes": 801560,
                 "constituency_seats": 13
             },
             {
                 "id": 9999,
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 9
             }
@@ -512,71 +512,71 @@
         "data": [
             {
                 "id": "-",
-                "name": "LDP",
-                "full_name": "Liberal Democratic Party",
+                "short_name": "LDP",
+                "name": "Liberal Democratic Party",
                 "proportional_votes": 19914883,
                 "constituency_seats": 187
             },
             {
                 "id": "-",
-                "name": "CDPJ",
-                "full_name": "Constitutional Democratic Party of Japan",
+                "short_name": "CDPJ",
+                "name": "Constitutional Democratic Party of Japan",
                 "proportional_votes": 11492095,
                 "constituency_seats": 57
             },
             {
                 "id": "-",
-                "name": "JIP",
-                "full_name": "Japan Innovation Party",
+                "short_name": "JIP",
+                "name": "Japan Innovation Party",
                 "proportional_votes": 8050830,
                 "constituency_seats": 16
             },
             {
                 "id": "-",
-                "name": "NKP",
-                "full_name": "Komeito",
+                "short_name": "NKP",
+                "name": "Komeito",
                 "proportional_votes": 7114282,
                 "constituency_seats": 9
             },
             {
                 "id": "-",
-                "name": "JCP",
-                "full_name": "Japanese Communist Party",
+                "short_name": "JCP",
+                "name": "Japanese Communist Party",
                 "proportional_votes": 4166076,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "DPFP",
-                "full_name": "Democratic Party for the People",
+                "short_name": "DPFP",
+                "name": "Democratic Party for the People",
                 "proportional_votes": 2593396,
                 "constituency_seats": 6
             },
             {
                 "id": "-",
-                "name": "RS",
-                "full_name": "Reiwa Shinsengumi",
+                "short_name": "RS",
+                "name": "Reiwa Shinsengumi",
                 "proportional_votes": 2215648,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "SDP",
-                "full_name": "Social Democratic Party",
+                "short_name": "SDP",
+                "name": "Social Democratic Party",
                 "proportional_votes": 796788,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "NHK Party",
-                "full_name": "The Party to Protect the People from NHK",
+                "short_name": "NHK Party",
+                "name": "The Party to Protect the People from NHK",
                 "proportional_votes": 796788,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 12
             }
@@ -591,57 +591,57 @@
         "data": [
             {
                 "id": "-",
-                "name": "LDP",
-                "full_name": "Liberal Democratic Party",
+                "short_name": "LDP",
+                "name": "Liberal Democratic Party",
                 "proportional_votes": 18555717,
                 "constituency_seats": 218
             },
             {
                 "id": "-",
-                "name": "CDPJ",
-                "full_name": "Constitutional Democratic Party of Japan",
+                "short_name": "CDPJ",
+                "name": "Constitutional Democratic Party of Japan",
                 "proportional_votes": 11084890,
                 "constituency_seats": 18
             },
             {
                 "id": "-",
-                "name": "JIP",
-                "full_name": "Japan Innovation Party",
+                "short_name": "JIP",
+                "name": "Japan Innovation Party",
                 "proportional_votes": 3387097,
                 "constituency_seats": 3
             },
             {
                 "id": "-",
-                "name": "NKP",
-                "full_name": "Komeito",
+                "short_name": "NKP",
+                "name": "Komeito",
                 "proportional_votes": 6977712,
                 "constituency_seats": 8
             },
             {
                 "id": "-",
-                "name": "JCP",
-                "full_name": "Japanese Communist Party",
+                "short_name": "JCP",
+                "name": "Japanese Communist Party",
                 "proportional_votes": 4404481,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "PH",
-                "full_name": "Party of Hope",
+                "short_name": "PH",
+                "name": "Party of Hope",
                 "proportional_votes": 9677524,
                 "constituency_seats": 18
             },
             {
                 "id": "-",
-                "name": "SDP",
-                "full_name": "Social Democratic Party",
+                "short_name": "SDP",
+                "name": "Social Democratic Party",
                 "proportional_votes": 941324,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
+                "short_name": "Independents",
                 "name": "Independents",
-                "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 22
             }
@@ -656,64 +656,64 @@
         "data": [
             {
                 "id": "-",
-                "name": "CDU",
-                "full_name": "Christian Democratic Union",
+                "short_name": "CDU",
+                "name": "Christian Democratic Union",
                 "proportional_votes": 8775471,
                 "constituency_seats": 98
             },
             {
                 "id": "-",
-                "name": "SPD",
-                "full_name": "Social Democratic Party",
+                "short_name": "SPD",
+                "name": "Social Democratic Party",
                 "proportional_votes": 11955434,
                 "constituency_seats": 121
             },
             {
                 "id": "-",
-                "name": "AfD",
-                "full_name": "Alternative for Germany",
+                "short_name": "AfD",
+                "name": "Alternative for Germany",
                 "proportional_votes": 4803902,
                 "constituency_seats": 16
             },
             {
                 "id": "-",
-                "name": "FDP",
-                "full_name": "Free Democratic Party",
+                "short_name": "FDP",
+                "name": "Free Democratic Party",
                 "proportional_votes": 5319952,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "DIE LINKE",
-                "full_name": "The Left",
+                "short_name": "DIE LINKE",
+                "name": "The Left",
                 "proportional_votes": 2270906,
                 "constituency_seats": 3
             },
             {
                 "id": "-",
-                "name": "GRÜNE",
-                "full_name": "Alliance 90/The Greens",
+                "short_name": "GRÜNE",
+                "name": "Alliance 90/The Greens",
                 "proportional_votes": 6852206,
                 "constituency_seats": 16
             },
             {
                 "id": "-",
-                "name": "CSU",
-                "full_name": "Christian Social Union",
+                "short_name": "CSU",
+                "name": "Christian Social Union",
                 "proportional_votes": 2402827,
                 "constituency_seats": 45
             },
             {
                 "id": "-",
-                "name": "FREIE WÄHLER",
-                "full_name": "Free Voters",
+                "short_name": "FREIE WÄHLER",
+                "name": "Free Voters",
                 "proportional_votes": 1127784,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "SSW",
-                "full_name": "South Schleswig Voters' Association",
+                "short_name": "SSW",
+                "name": "South Schleswig Voters' Association",
                 "proportional_votes": 55578,
                 "constituency_seats": 0,
                 "always_qualified_on_proportional_votes": true
@@ -729,57 +729,57 @@
         "data": [
             {
                 "id": "-",
-                "name": "CDU",
-                "full_name": "Christian Democratic Union",
+                "short_name": "CDU",
+                "name": "Christian Democratic Union",
                 "proportional_votes": 12447656,
                 "constituency_seats": 185
             },
             {
                 "id": "-",
-                "name": "SPD",
-                "full_name": "Social Democratic Party",
+                "short_name": "SPD",
+                "name": "Social Democratic Party",
                 "proportional_votes": 9539381,
                 "constituency_seats": 59
             },
             {
                 "id": "-",
-                "name": "AfD",
-                "full_name": "Alternative for Germany",
+                "short_name": "AfD",
+                "name": "Alternative for Germany",
                 "proportional_votes": 5878115,
                 "constituency_seats": 3
             },
             {
                 "id": "-",
-                "name": "FDP",
-                "full_name": "Free Democratic Party",
+                "short_name": "FDP",
+                "name": "Free Democratic Party",
                 "proportional_votes": 4999449,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "DIE LINKE",
-                "full_name": "The Left",
+                "short_name": "DIE LINKE",
+                "name": "The Left",
                 "proportional_votes": 4297270,
                 "constituency_seats": 5
             },
             {
                 "id": "-",
-                "name": "GRÜNE",
-                "full_name": "Alliance 90/The Greens",
+                "short_name": "GRÜNE",
+                "name": "Alliance 90/The Greens",
                 "proportional_votes": 4158400,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "CSU",
-                "full_name": "Christian Social Union",
+                "short_name": "CSU",
+                "name": "Christian Social Union",
                 "proportional_votes": 2869688,
                 "constituency_seats": 46
             },
             {
                 "id": "-",
-                "name": "FREIE WÄHLER",
-                "full_name": "Free Voters",
+                "short_name": "FREIE WÄHLER",
+                "name": "Free Voters",
                 "proportional_votes": 463292,
                 "constituency_seats": 0
             }
@@ -794,57 +794,57 @@
         "data": [
             {
                 "id": "-",
-                "name": "CDU",
-                "full_name": "Christian Democratic Union",
+                "short_name": "CDU",
+                "name": "Christian Democratic Union",
                 "proportional_votes": 14921877,
                 "constituency_seats": 191
             },
             {
                 "id": "-",
-                "name": "SPD",
-                "full_name": "Social Democratic Party",
+                "short_name": "SPD",
+                "name": "Social Democratic Party",
                 "proportional_votes": 11252215,
                 "constituency_seats": 58
             },
             {
                 "id": "-",
-                "name": "AfD",
-                "full_name": "Alternative for Germany",
+                "short_name": "AfD",
+                "name": "Alternative for Germany",
                 "proportional_votes": 2056985,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "FDP",
-                "full_name": "Free Democratic Party",
+                "short_name": "FDP",
+                "name": "Free Democratic Party",
                 "proportional_votes": 2083533,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "DIE LINKE",
-                "full_name": "The Left",
+                "short_name": "DIE LINKE",
+                "name": "The Left",
                 "proportional_votes": 3755699,
                 "constituency_seats": 4
             },
             {
                 "id": "-",
-                "name": "GRÜNE",
-                "full_name": "Alliance 90/The Greens",
+                "short_name": "GRÜNE",
+                "name": "Alliance 90/The Greens",
                 "proportional_votes": 3694057,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "CSU",
-                "full_name": "Christian Social Union",
+                "short_name": "CSU",
+                "name": "Christian Social Union",
                 "proportional_votes": 3243569,
                 "constituency_seats": 45
             },
             {
                 "id": "-",
-                "name": "FREIE WÄHLER",
-                "full_name": "Free Voters",
+                "short_name": "FREIE WÄHLER",
+                "name": "Free Voters",
                 "proportional_votes": 423977,
                 "constituency_seats": 0
             }
@@ -859,43 +859,43 @@
         "data": [
             {
                 "id": "-",
-                "name": "CDU",
-                "full_name": "Christian Democratic Union",
+                "short_name": "CDU",
+                "name": "Christian Democratic Union",
                 "proportional_votes": 11828277,
                 "constituency_seats": 173
             },
             {
                 "id": "-",
-                "name": "SPD",
-                "full_name": "Social Democratic Party",
+                "short_name": "SPD",
+                "name": "Social Democratic Party",
                 "proportional_votes": 9990488,
                 "constituency_seats": 64
             },
             {
                 "id": "-",
-                "name": "FDP",
-                "full_name": "Free Democratic Party",
+                "short_name": "FDP",
+                "name": "Free Democratic Party",
                 "proportional_votes": 6316080,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "DIE LINKE",
-                "full_name": "The Left",
+                "short_name": "DIE LINKE",
+                "name": "The Left",
                 "proportional_votes": 5155933,
                 "constituency_seats": 16
             },
             {
                 "id": "-",
-                "name": "GRÜNE",
-                "full_name": "Alliance 90/The Greens",
+                "short_name": "GRÜNE",
+                "name": "Alliance 90/The Greens",
                 "proportional_votes": 4643272,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "CSU",
-                "full_name": "Christian Social Union",
+                "short_name": "CSU",
+                "name": "Christian Social Union",
                 "proportional_votes": 2830238,
                 "constituency_seats": 45
             }
@@ -910,43 +910,43 @@
         "data": [
             {
                 "id": "-",
-                "name": "CDU",
-                "full_name": "Christian Democratic Union",
+                "short_name": "CDU",
+                "name": "Christian Democratic Union",
                 "proportional_votes": 13136740,
                 "constituency_seats": 106
             },
             {
                 "id": "-",
-                "name": "SPD",
-                "full_name": "Social Democratic Party",
+                "short_name": "SPD",
+                "name": "Social Democratic Party",
                 "proportional_votes": 16194665,
                 "constituency_seats": 145
             },
             {
                 "id": "-",
-                "name": "FDP",
-                "full_name": "Free Democratic Party",
+                "short_name": "FDP",
+                "name": "Free Democratic Party",
                 "proportional_votes": 4648144,
                 "constituency_seats": 0
             },
             {
                 "id": "-",
-                "name": "DIE LINKE",
-                "full_name": "The Left",
+                "short_name": "DIE LINKE",
+                "name": "The Left",
                 "proportional_votes": 4118194,
                 "constituency_seats": 3
             },
             {
                 "id": "-",
-                "name": "GRÜNE",
-                "full_name": "Alliance 90/The Greens",
+                "short_name": "GRÜNE",
+                "name": "Alliance 90/The Greens",
                 "proportional_votes": 3838326,
                 "constituency_seats": 1
             },
             {
                 "id": "-",
-                "name": "CSU",
-                "full_name": "Christian Social Union",
+                "short_name": "CSU",
+                "name": "Christian Social Union",
                 "proportional_votes": 3494309,
                 "constituency_seats": 44
             }

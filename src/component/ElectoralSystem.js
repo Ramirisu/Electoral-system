@@ -55,7 +55,7 @@ export const ElectoralSystem = () => {
         },
         {
             Header: 'Party',
-            accessor: 'full_name',
+            accessor: 'name',
             className: 'header-party',
             sortType: sortTypeHandler,
         },
