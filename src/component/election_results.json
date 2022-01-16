@@ -648,6 +648,129 @@
         ]
     },
     {
+        "name": "2020 South Korean Legislative Election",
+        "year": 2020,
+        "total_seats": 300,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 27899864,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "DPK",
+                "name": "Democratic Party of Korea",
+                "proportional_votes": 9307112,
+                "constituency_seats": 163
+            },
+            {
+                "id": "-",
+                "short_name": "UFP",
+                "name": "United Future Party",
+                "proportional_votes": 9441520,
+                "constituency_seats": 84
+            },
+            {
+                "id": "-",
+                "short_name": "JP",
+                "name": "Justice Party",
+                "proportional_votes": 2697956,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "People Party",
+                "name": "People Party",
+                "proportional_votes": 1896719,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "MP",
+                "name": "Minsaeng Party",
+                "proportional_votes": 758778,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CLUP",
+                "name": "Christian Liberty Unification Party",
+                "proportional_votes": 513159,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Progressive Party",
+                "name": "Progressive Party",
+                "proportional_votes": 295612,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 5
+            }
+        ]
+    },
+    {
+        "name": "2016 South Korean Legislative Election",
+        "year": 2016,
+        "total_seats": 300,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 23760977,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "DPK",
+                "name": "Democratic Party of Korea",
+                "proportional_votes": 6069744,
+                "constituency_seats": 110
+            },
+            {
+                "id": "-",
+                "short_name": "JP",
+                "name": "Justice Party",
+                "proportional_votes": 1719891,
+                "constituency_seats": 2
+            },
+            {
+                "id": "-",
+                "short_name": "People Party",
+                "name": "People Party",
+                "proportional_votes": 6355572,
+                "constituency_seats": 25
+            },
+            {
+                "id": "-",
+                "short_name": "LKP",
+                "name": "Liberty Korea Party",
+                "proportional_votes": 7960272,
+                "constituency_seats": 105
+            },
+            {
+                "id": "-",
+                "short_name": "CLUP",
+                "name": "Christian Liberal Party",
+                "proportional_votes": 626853,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Democratic Party",
+                "name": "Democratic Party",
+                "proportional_votes": 209872,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 11
+            }
+        ]
+    },
+    {
         "name": "2021 German Federal Election",
         "year": 2021,
         "total_seats": 598,
