@@ -14,8 +14,9 @@ const ELECTORAL_SYSTEMS = [
     { name: 'Japan (1994 ~ Present) (MMM) (DHondt)', handler: electoralSystem.japan1994 },
     { name: 'South Korea (2004 ~ 2015) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2004 },
     { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2016 },
-    { name: 'Germany (1949 ~ 2008) (MMPR) (Hare Quota)', handler: electoralSystem.germany1949 },
-    { name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2009 },
+    { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt)', handler: electoralSystem.germany1949 },
+    { name: 'Germany (1986 ~ 2007) (MMPR) (Hare Quota)', handler: electoralSystem.germany1986 },
+    { name: 'Germany (2008 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2008 },
     { name: 'Germany (2013 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
     { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2021 },
 ];
