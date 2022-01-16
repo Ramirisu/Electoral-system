@@ -3,7 +3,6 @@
         "name": "2020 Taiwanese Legislative Election",
         "year": 2020,
         "total_seats": 113,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 14160138,
         "data": [
             {
@@ -124,7 +123,6 @@
         "name": "2016 Taiwanese Legislative Election",
         "year": 2016,
         "total_seats": 113,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 12190139,
         "data": [
             {
@@ -252,7 +250,6 @@
         "name": "2012 Taiwanese Legislative Election",
         "year": 2012,
         "total_seats": 113,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 13162373,
         "data": [
             {
@@ -324,7 +321,6 @@
         "name": "2008 Taiwanese Legislative Election",
         "year": 2008,
         "total_seats": 113,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 9780573,
         "data": [
             {
@@ -390,7 +386,6 @@
         "year": 2005,
         "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 225,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 9717359,
         "data": [
             {
@@ -449,7 +444,6 @@
         "year": 2001,
         "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 225,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 10327855,
         "data": [
             {
@@ -507,7 +501,6 @@
         "name": "2021 Japanese General Election",
         "year": 2021,
         "total_seats": 465,
-        "qualified_threshold": 0.00,
         "total_proportional_votes": 57465979,
         "data": [
             {
@@ -586,7 +579,6 @@
         "name": "2017 Japanese General Election",
         "year": 2017,
         "total_seats": 465,
-        "qualified_threshold": 0.00,
         "total_proportional_votes": 55757552,
         "data": [
             {
@@ -651,7 +643,6 @@
         "name": "2020 South Korean Legislative Election",
         "year": 2020,
         "total_seats": 300,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 27899864,
         "data": [
             {
@@ -716,7 +707,6 @@
         "name": "2016 South Korean Legislative Election",
         "year": 2016,
         "total_seats": 300,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 23760977,
         "data": [
             {
@@ -774,7 +764,6 @@
         "name": "2012 South Korean Legislative Election",
         "year": 2012,
         "total_seats": 300,
-        "qualified_threshold": 0.03,
         "total_proportional_votes": 21332061,
         "data": [
             {
@@ -832,7 +821,6 @@
         "name": "2021 German Federal Election",
         "year": 2021,
         "total_seats": 598,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 46442023,
         "data": [
             {
@@ -905,7 +893,6 @@
         "name": "2017 German Federal Election",
         "year": 2017,
         "total_seats": 598,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 46515492,
         "data": [
             {
@@ -970,7 +957,6 @@
         "name": "2013 German Federal Election",
         "year": 2013,
         "total_seats": 598,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 43726856,
         "data": [
             {
@@ -1035,7 +1021,6 @@
         "name": "2009 German Federal Election",
         "year": 2009,
         "total_seats": 598,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 43371190,
         "data": [
             {
@@ -1086,7 +1071,6 @@
         "name": "2005 German Federal Election",
         "year": 2005,
         "total_seats": 598,
-        "qualified_threshold": 0.05,
         "total_proportional_votes": 47287988,
         "data": [
             {

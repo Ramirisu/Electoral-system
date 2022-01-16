@@ -12,7 +12,8 @@ const formatPercentage = (value) => {
 const ELECTORAL_SYSTEMS = [
     { name: 'Taiwan (2008 ~ Present) (MMM) (Hare Quota)', handler: electoralSystem.taiwan2008 },
     { name: 'Japan (1994 ~ Present) (MMM) (DHondt)', handler: electoralSystem.japan1994 },
-    { name: 'South Korea (2004 ~ 2019) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2004 },
+    { name: 'South Korea (2004 ~ 2015) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2004 },
+    { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2016 },
     { name: 'Germany (1949 ~ 2008) (MMPR) (Hare Quota)', handler: electoralSystem.germany1949 },
     { name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2009 },
     { name: 'Germany (2013 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
@@ -33,7 +34,7 @@ export const ElectoralSystem = () => {
 
     const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
     const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
-    const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
+    const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes']); }
 
     const [state, setState] = React.useState(() => {
         const selectedDataIndex = 0;
