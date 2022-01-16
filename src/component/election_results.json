@@ -14,6 +14,13 @@
                 "constituency_seats": 25
             },
             {
+                "id": 15,
+                "name": "LP",
+                "full_name": "Labor Party",
+                "proportional_votes": 19941,
+                "constituency_seats": 0
+            },
+            {
                 "id": 16,
                 "name": "DPP",
                 "full_name": "Democratic Progressive Party",
@@ -77,6 +84,13 @@
                 "constituency_seats": 1
             },
             {
+                "id": 341,
+                "name": "CPA",
+                "full_name": "Congress Party Alliance",
+                "proportional_votes": 40331,
+                "constituency_seats": 0
+            },
+            {
                 "id": 348,
                 "name": "FA",
                 "full_name": "Formosa Alliance",
@@ -135,10 +149,24 @@
                 "constituency_seats": 0
             },
             {
+                "id": 82,
+                "name": "TAIP",
+                "full_name": "Taiwan Independence Party",
+                "proportional_votes": 27496,
+                "constituency_seats": 0
+            },
+            {
                 "id": 90,
                 "name": "PFP",
                 "full_name": "People First Party",
                 "proportional_votes": 794838,
+                "constituency_seats": 0
+            },
+            {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 305675,
                 "constituency_seats": 0
             },
             {
@@ -149,6 +177,34 @@
                 "constituency_seats": 1
             },
             {
+                "id": 113,
+                "name": "CUPP",
+                "full_name": "Chinese Unification Promotion Party",
+                "proportional_votes": 56347,
+                "constituency_seats": 0
+            },
+            {
+                "id": 135,
+                "name": "TCA",
+                "full_name": "Taiwan Constitution Association",
+                "proportional_votes": 15442,
+                "constituency_seats": 0
+            },
+            {
+                "id": 189,
+                "name": "NHSA",
+                "full_name": "National Health Service Alliance",
+                "proportional_votes": 51024,
+                "constituency_seats": 0
+            },
+            {
+                "id": 259,
+                "name": "TP",
+                "full_name": "Trees Party",
+                "proportional_votes": 77174,
+                "constituency_seats": 0
+            },
+            {
                 "id": 267,
                 "name": "NPP",
                 "full_name": "New Power Party",
@@ -156,10 +212,31 @@
                 "constituency_seats": 3
             },
             {
+                "id": 268,
+                "name": "MKD",
+                "full_name": "Minkuotang",
+                "proportional_votes": 197627,
+                "constituency_seats": 0
+            },
+            {
+                "id": 272,
+                "name": "FTP",
+                "full_name": "Free Taiwan Party",
+                "proportional_votes": 47988,
+                "constituency_seats": 0
+            },
+            {
                 "id": 281,
                 "name": "GSDC",
                 "full_name": "Green-Social Democratic Coalition",
                 "proportional_votes": 308106,
+                "constituency_seats": 0
+            },
+            {
+                "id": 283,
+                "name": "FHL",
+                "full_name": "Faith And Hope League",
+                "proportional_votes": 206629,
                 "constituency_seats": 0
             },
             {
@@ -226,6 +303,13 @@
                 "full_name": "Non-Partisan Solidarity Union",
                 "proportional_votes": 0,
                 "constituency_seats": 2
+            },
+            {
+                "id": 189,
+                "name": "NHSA",
+                "full_name": "National Health Service Alliance",
+                "proportional_votes": 163344,
+                "constituency_seats": 0
             },
             {
                 "id": 9999,
