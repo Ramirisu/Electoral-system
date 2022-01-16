@@ -28,16 +28,6 @@ const calculateQualifiedProportionalVotePercentage = (data, QUALIFIED_PROPORTION
     return data;
 }
 
-const calculateProportionalSeatsByDHondt = (data, SEATS) => {
-    let divider = Array(data.length).fill(1.0);
-    for (let i = 0; i < SEATS; ++i) {
-        const votes = data.map((obj, index) => obj.qualified_proportional_vote_percentage > 0 ? obj.proportional_votes / divider[index] : 0);
-        const index = votes.indexOf(Math.max(...votes));
-        divider[index]++;
-        data[index].expected_proportional_seats++;
-    }
-}
-
 const removeSummary = (data) => {
     for (let i = 0; i < data.length; ++i) {
         if (data[i].is_summary) {
@@ -110,7 +100,8 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    calculateProportionalSeatsByDHondt(data, PROPORTIONAL_SEATS);
+    seatsAllocating.hareQuota(data.map(obj => obj.proportional_votes), PROPORTIONAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
     data.forEach(obj => {

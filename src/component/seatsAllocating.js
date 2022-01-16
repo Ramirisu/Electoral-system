@@ -22,6 +22,19 @@ const hareQuota = (votes, TOTAL_SEATS) => {
     return seats;
 }
 
+const dHondt = (votes, TOTAL_SEATS) => {
+    let divisor = Array(votes.length).fill(1.0);
+    let seats = Array(votes.length).fill(0);
+    for (let i = 0; i < TOTAL_SEATS; ++i) {
+        const votesAfterDivided = votes.map((value, index) => value / divisor[index]);
+        const index = divisor.indexOf(Math.max(...votesAfterDivided));
+        divisor[index]++;
+        seats[index]++;
+    }
+
+    return seats;
+}
+
 const saintLague = (votes, TOTAL_SEATS) => {
     const TOTAL_VOTES = _.sum(votes);
     const INITIAL_DIVISOR = Math.ceil(TOTAL_VOTES / TOTAL_SEATS);
@@ -59,6 +72,7 @@ const saintLagueMinSeats = (votes, minSeats, TOTAL_SEATS) => {
 
 export const seatsAllocating = {
     hareQuota,
+    dHondt,
     saintLague,
     saintLagueMinSeats,
 };

@@ -507,7 +507,7 @@
         "name": "2021 Japanese General Election",
         "year": 2021,
         "total_seats": 465,
-        "qualified_threshold": 0.05,
+        "qualified_threshold": 0.00,
         "total_proportional_votes": 57465979,
         "data": [
             {
