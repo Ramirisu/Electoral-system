@@ -568,10 +568,82 @@
             },
             {
                 "id": "-",
+                "name": "NHK Party",
+                "full_name": "The Party to Protect the People from NHK",
+                "proportional_votes": 796788,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
                 "name": "Independents",
                 "full_name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 12
+            }
+        ]
+    },
+    {
+        "name": "2017 Japanese General Election",
+        "year": 2017,
+        "total_seats": 465,
+        "qualified_threshold": 0.00,
+        "total_proportional_votes": 55757552,
+        "data": [
+            {
+                "id": "-",
+                "name": "LDP",
+                "full_name": "Liberal Democratic Party",
+                "proportional_votes": 18555717,
+                "constituency_seats": 218
+            },
+            {
+                "id": "-",
+                "name": "CDPJ",
+                "full_name": "Constitutional Democratic Party of Japan",
+                "proportional_votes": 11084890,
+                "constituency_seats": 18
+            },
+            {
+                "id": "-",
+                "name": "JIP",
+                "full_name": "Japan Innovation Party",
+                "proportional_votes": 3387097,
+                "constituency_seats": 3
+            },
+            {
+                "id": "-",
+                "name": "NKP",
+                "full_name": "Komeito",
+                "proportional_votes": 6977712,
+                "constituency_seats": 8
+            },
+            {
+                "id": "-",
+                "name": "JCP",
+                "full_name": "Japanese Communist Party",
+                "proportional_votes": 4404481,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "PH",
+                "full_name": "Party of Hope",
+                "proportional_votes": 9677524,
+                "constituency_seats": 18
+            },
+            {
+                "id": "-",
+                "name": "SDP",
+                "full_name": "Social Democratic Party",
+                "proportional_votes": 941324,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 22
             }
         ]
     },
