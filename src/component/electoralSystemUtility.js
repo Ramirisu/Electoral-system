@@ -113,7 +113,7 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_
     return data;
 }
 
-function electoralSystemSouthKorea1987(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
+function electoralSystemSouthKorea2004(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTAL_PROPORTIONAL_VOTES) {
 
     data = refreshData(data);
     removeSummary(data);
@@ -278,7 +278,7 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, QUALIFIED_THRESHOLD, TOTA
 export const electoralSystem = {
     taiwan2008: electoralSystemTaiwan2008,
     japan1994: electoralSystemJapan1994,
-    southKorea1987: electoralSystemSouthKorea1987,
+    southKorea2004: electoralSystemSouthKorea2004,
     germany1949: electoralSystemGermany1949,
     germany2009: electoralSystemGermany2009,
     germany2013: electoralSystemGermany2013,

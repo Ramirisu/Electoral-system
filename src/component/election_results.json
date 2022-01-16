@@ -721,6 +721,13 @@
         "data": [
             {
                 "id": "-",
+                "short_name": "LKP",
+                "name": "Liberty Korea Party",
+                "proportional_votes": 7960272,
+                "constituency_seats": 105
+            },
+            {
+                "id": "-",
                 "short_name": "DPK",
                 "name": "Democratic Party of Korea",
                 "proportional_votes": 6069744,
@@ -742,14 +749,7 @@
             },
             {
                 "id": "-",
-                "short_name": "LKP",
-                "name": "Liberty Korea Party",
-                "proportional_votes": 7960272,
-                "constituency_seats": 105
-            },
-            {
-                "id": "-",
-                "short_name": "CLUP",
+                "short_name": "CLP",
                 "name": "Christian Liberal Party",
                 "proportional_votes": 626853,
                 "constituency_seats": 0
@@ -767,6 +767,64 @@
                 "name": "Independents",
                 "proportional_votes": 0,
                 "constituency_seats": 11
+            }
+        ]
+    },
+    {
+        "name": "2012 South Korean Legislative Election",
+        "year": 2012,
+        "total_seats": 300,
+        "qualified_threshold": 0.03,
+        "total_proportional_votes": 21332061,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "LKP",
+                "name": "Liberty Korea Party",
+                "proportional_votes": 9130651,
+                "constituency_seats": 127
+            },
+            {
+                "id": "-",
+                "short_name": "DUP",
+                "name": "Democratic United Party",
+                "proportional_votes": 7777123,
+                "constituency_seats": 106
+            },
+            {
+                "id": "-",
+                "short_name": "UPP",
+                "name": "Unified Progressive Party",
+                "proportional_votes": 2198405,
+                "constituency_seats": 7
+            },
+            {
+                "id": "-",
+                "short_name": "LFP",
+                "name": "Liberty Forward Party",
+                "proportional_votes": 690754,
+                "constituency_seats": 3
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Christian Party",
+                "proportional_votes": 257190,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "NPP",
+                "name": "New Progressive Party",
+                "proportional_votes": 243065,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 3
             }
         ]
     },
