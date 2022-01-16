@@ -386,6 +386,124 @@
         ]
     },
     {
+        "name": "2005 Taiwanese Legislative Election",
+        "year": 2005,
+        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
+        "total_seats": 225,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 9717359,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 3190081,
+                "constituency_seats": 79
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 3471429,
+                "constituency_seats": 89
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 12137,
+                "constituency_seats": 1
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 1350613,
+                "constituency_seats": 34
+            },
+            {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 756712,
+                "constituency_seats": 12
+            },
+            {
+                "id": 106,
+                "name": "NPSU",
+                "full_name": "Non-Partisan Solidarity Union",
+                "proportional_votes": 353164,
+                "constituency_seats": 6
+            },
+            {
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 4
+            }
+        ]
+    },
+    {
+        "name": "2001 Taiwanese Legislative Election",
+        "year": 2001,
+        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
+        "total_seats": 225,
+        "qualified_threshold": 0.05,
+        "total_proportional_votes": 10327855,
+        "data": [
+            {
+                "id": 1,
+                "name": "KMT",
+                "full_name": "Kuomintang",
+                "proportional_votes": 2949371,
+                "constituency_seats": 68
+            },
+            {
+                "id": 16,
+                "name": "DPP",
+                "full_name": "Democratic Progressive Party",
+                "proportional_votes": 3447740,
+                "constituency_seats": 87
+            },
+            {
+                "id": 74,
+                "name": "NP",
+                "full_name": "New Party",
+                "proportional_votes": 269620,
+                "constituency_seats": 1
+            },
+            {
+                "id": 90,
+                "name": "PFP",
+                "full_name": "People First Party",
+                "proportional_votes": 1917836,
+                "constituency_seats": 46
+            },
+            {
+                "id": 9,
+                "name": "TNOP",
+                "full_name": "Taiwan Number One Party",
+                "proportional_votes": 12917,
+                "constituency_seats": 1
+            },
+            {
+                "id": 95,
+                "name": "TSU",
+                "full_name": "Taiwan Solidarity Union",
+                "proportional_votes": 801560,
+                "constituency_seats": 13
+            },
+            {
+                "id": 9999,
+                "name": "Independents",
+                "full_name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 9
+            }
+        ]
+    },
+    {
         "name": "2021 Japanese General Election",
         "year": 2021,
         "total_seats": 465,
