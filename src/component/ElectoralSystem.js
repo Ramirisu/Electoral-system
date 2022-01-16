@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import { electoralSystem } from './electoralSystemUtility';
-import TW_LEGISLATIVE_ELECTION_DATA_JSON from './election_results.json';
+import ELECTION_RESULTS_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 import _ from 'lodash';
 
@@ -21,11 +21,19 @@ const ELECTORAL_SYSTEMS = [
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
 
+const sortTypeHandler = (rowA, rowB, columnId, desc) => {
+    const fn = (ascending) => (ascending ? 1 : -1);
+    if (rowA.original['is_summary']) { return fn(!desc); }
+    if (rowB.original['is_summary']) { return fn(desc); }
+    if (rowA.original[columnId] === rowB.original[columnId]) { return 0; }
+    return fn(rowA.original[columnId] > rowB.original[columnId]);
+};
+
 export const ElectoralSystem = () => {
 
-    const TW_LEGISLATIVE_ELECTION_DATA = useMemo(() => TW_LEGISLATIVE_ELECTION_DATA_JSON, []);
-    const getElectionByIndex = (index) => TW_LEGISLATIVE_ELECTION_DATA[index].data;
-    const getElectoralSystemParameter = (index) => { return _.pick(TW_LEGISLATIVE_ELECTION_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
+    const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
+    const getElectionByIndex = (index) => ELECTION_RESULTS_DATA[index].data;
+    const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'qualified_threshold', 'total_proportional_votes']); }
 
     const [state, setState] = React.useState(() => {
         const selectedDataIndex = 0;
@@ -38,14 +46,6 @@ export const ElectoralSystem = () => {
             data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(getElectionByIndex(selectedDataIndex), ...Object.values(selectedElectoralSystemParameter)),
         };
     });
-
-    const sortTypeHandler = (rowA, rowB, columnId, desc) => {
-        const fn = (ascending) => (ascending ? 1 : -1);
-        if (rowA.original['is_summary']) { return fn(!desc); }
-        if (rowB.original['is_summary']) { return fn(desc); }
-        if (rowA.original[columnId] === rowB.original[columnId]) { return 0; }
-        return fn(rowA.original[columnId] > rowB.original[columnId]);
-    };
 
     const COLUMNS = [
         {
@@ -144,7 +144,7 @@ export const ElectoralSystem = () => {
                 };
             });
         }}>
-            {TW_LEGISLATIVE_ELECTION_DATA.map((obj, index) => (
+            {ELECTION_RESULTS_DATA.map((obj, index) => (
                 <option key={index} value={index}>
                     {obj.name}
                 </option>
