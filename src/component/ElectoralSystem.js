@@ -15,8 +15,8 @@ const ELECTORAL_SYSTEMS = [
     { name: 'South Korea (2004 ~ 2019) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2004 },
     { name: 'Germany (1949 ~ 2008) (MMPR) (Hare Quota)', handler: electoralSystem.germany1949 },
     { name: 'Germany (2009 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2009 },
-    { name: 'Germany (2013 ~ 2020) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2013 },
-    { name: 'Germany (2021 ~ Present) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2021 },
+    { name: 'Germany (2013 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2021 },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
