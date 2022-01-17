@@ -122,6 +122,7 @@ export const ElectoralSystem = () => {
 
     ];
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const columns = useMemo(() => COLUMNS, []);
 
     const {
