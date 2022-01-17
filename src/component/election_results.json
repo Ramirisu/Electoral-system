@@ -1196,6 +1196,64 @@
         ]
     },
     {
+        "name": "2000 South Korean Legislative Election",
+        "year": 2000,
+        "total_seats": 273,
+        "total_proportional_votes": 18904740,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "GNP",
+                "name": "Grand National Party",
+                "proportional_votes": 7365359,
+                "constituency_seats": 112
+            },
+            {
+                "id": "-",
+                "short_name": "MDP",
+                "name": "Millennium Democratic Party",
+                "proportional_votes": 6780625,
+                "constituency_seats": 96
+            },
+            {
+                "id": "-",
+                "short_name": "ULD",
+                "name": "United Liberal Democrats",
+                "proportional_votes": 1859331,
+                "constituency_seats": 12
+            },
+            {
+                "id": "-",
+                "short_name": "DPP",
+                "name": "Democratic People's Party",
+                "proportional_votes": 695423,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "DLP",
+                "name": "Democratic Labor Party",
+                "proportional_votes": 223261,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "NKPH",
+                "name": "New Korea Party of Hope",
+                "proportional_votes": 77498,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 5,
+                "is_independents": true
+            }
+        ]
+    },
+    {
         "name": "2021 German Federal Election",
         "year": 2021,
         "total_seats": 598,
