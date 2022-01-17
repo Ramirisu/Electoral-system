@@ -115,7 +115,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 5
+                "constituency_seats": 5,
+                "is_independents": true
             }
         ]
     },
@@ -242,7 +243,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 1
+                "constituency_seats": 1,
+                "is_independents": true
             }
         ]
     },
@@ -313,7 +315,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 1
+                "constituency_seats": 1,
+                "is_independents": true
             }
         ]
     },
@@ -377,269 +380,275 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 1
+                "constituency_seats": 1,
+                "is_independents": true
             }
         ]
     },
     {
         "name": "2005 Taiwanese Legislative Election",
         "year": 2005,
-        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 225,
-        "total_proportional_votes": 9717359,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 9717359,
         "data": [
             {
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
-                "proportional_votes": 3190081,
+                "constituency_votes": 3190081,
                 "constituency_seats": 79
             },
             {
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
-                "proportional_votes": 3471429,
+                "constituency_votes": 3471429,
                 "constituency_seats": 89
             },
             {
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
-                "proportional_votes": 12137,
+                "constituency_votes": 12137,
                 "constituency_seats": 1
             },
             {
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
-                "proportional_votes": 1350613,
+                "constituency_votes": 1350613,
                 "constituency_seats": 34
             },
             {
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
-                "proportional_votes": 756712,
+                "constituency_votes": 756712,
                 "constituency_seats": 12
             },
             {
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
-                "proportional_votes": 353164,
+                "constituency_votes": 353164,
                 "constituency_seats": 6
             },
             {
                 "id": 9999,
                 "short_name": "Independents",
                 "name": "Independents",
-                "proportional_votes": 0,
-                "constituency_seats": 4
+                "constituency_votes": 577292,
+                "constituency_seats": 4,
+                "is_independents": true
             }
         ]
     },
     {
         "name": "2001 Taiwanese Legislative Election",
         "year": 2001,
-        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 225,
-        "total_proportional_votes": 10327855,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 10327855,
         "data": [
             {
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
-                "proportional_votes": 2949371,
+                "constituency_votes": 2949371,
                 "constituency_seats": 68
             },
             {
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
-                "proportional_votes": 3447740,
+                "constituency_votes": 3447740,
                 "constituency_seats": 87
             },
             {
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
-                "proportional_votes": 269620,
+                "constituency_votes": 269620,
                 "constituency_seats": 1
             },
             {
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
-                "proportional_votes": 1917836,
+                "constituency_votes": 1917836,
                 "constituency_seats": 46
             },
             {
                 "id": 9,
                 "short_name": "TNOP",
                 "name": "Taiwan Number One Party",
-                "proportional_votes": 12917,
+                "constituency_votes": 12917,
                 "constituency_seats": 1
             },
             {
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
-                "proportional_votes": 801560,
+                "constituency_votes": 801560,
                 "constituency_seats": 13
             },
             {
                 "id": 9999,
                 "short_name": "Independents",
                 "name": "Independents",
-                "proportional_votes": 0,
-                "constituency_seats": 9
+                "constituency_votes": 899254,
+                "constituency_seats": 9,
+                "is_independents": true
             }
         ]
     },
     {
         "name": "1998 Taiwanese Legislative Election",
         "year": 1998,
-        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 225,
-        "total_proportional_votes": 10035829,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 10035829,
         "data": [
             {
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
-                "proportional_votes": 4659679,
+                "constituency_votes": 4659679,
                 "constituency_seats": 123
             },
             {
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
-                "proportional_votes": 2966834,
+                "constituency_votes": 2966834,
                 "constituency_seats": 70
             },
             {
                 "id": 66,
                 "short_name": "DNPA",
                 "name": "Democratic Non-Partisan Alliance",
-                "proportional_votes": 66033,
+                "constituency_votes": 66033,
                 "constituency_seats": 3
             },
             {
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
-                "proportional_votes": 708465,
+                "constituency_votes": 708465,
                 "constituency_seats": 11
             },
             {
                 "id": 82,
                 "short_name": "TAIP",
                 "name": "Taiwan Independence Party",
-                "proportional_votes": 145118,
+                "constituency_votes": 145118,
                 "constituency_seats": 1
             },
             {
                 "id": 85,
                 "short_name": "DUT",
                 "name": "Democratic Union of Taiwan",
-                "proportional_votes": 375118,
+                "constituency_votes": 375118,
                 "constituency_seats": 4
             },
             {
                 "id": 86,
                 "short_name": "NNA",
                 "name": "New Nation Alliance",
-                "proportional_votes": 157826,
+                "constituency_votes": 157826,
                 "constituency_seats": 1
             },
             {
                 "id": 9999,
                 "short_name": "Independents",
                 "name": "Independents",
-                "proportional_votes": 0,
-                "constituency_seats": 12
+                "constituency_votes": 946431,
+                "constituency_seats": 12,
+                "is_independents": true
             }
         ]
     },
     {
         "name": "1995 Taiwanese Legislative Election",
         "year": 1995,
-        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 164,
-        "total_proportional_votes": 9442136,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 9442136,
         "data": [
             {
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
-                "proportional_votes": 4349089,
+                "constituency_votes": 4349089,
                 "constituency_seats": 85
             },
             {
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
-                "proportional_votes": 3132156,
+                "constituency_votes": 3132156,
                 "constituency_seats": 54
             },
             {
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
-                "proportional_votes": 1222931,
+                "constituency_votes": 1222931,
                 "constituency_seats": 21
             },
             {
                 "id": 82,
                 "short_name": "TAIP",
                 "name": "Taiwan Independence Party",
-                "proportional_votes": 5707,
+                "constituency_votes": 5707,
                 "constituency_seats": 0
             },
             {
                 "id": 9999,
                 "short_name": "Independents",
                 "name": "Independents",
-                "proportional_votes": 0,
-                "constituency_seats": 4
+                "constituency_votes": 730529,
+                "constituency_seats": 4,
+                "is_independents": true
             }
         ]
     },
     {
         "name": "1992 Taiwanese Legislative Election",
         "year": 1992,
-        "note": "There is no proportional votes for this electoral system, we use constituency votes instead.",
         "total_seats": 161,
-        "total_proportional_votes": 9488772,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 9488772,
         "data": [
             {
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
-                "proportional_votes": 5030725,
+                "constituency_votes": 5030725,
                 "constituency_seats": 95
             },
             {
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
-                "proportional_votes": 2944195,
+                "constituency_votes": 2944195,
                 "constituency_seats": 51
             },
             {
                 "id": 59,
                 "short_name": "CSDP",
                 "name": "Chinese Social Democratic Party",
-                "proportional_votes": 126213,
+                "constituency_votes": 126213,
                 "constituency_seats": 1
             },
             {
                 "id": 9999,
                 "short_name": "Independents",
                 "name": "Independents",
-                "proportional_votes": 0,
-                "constituency_seats": 14
+                "constituency_votes": 1331555,
+                "constituency_seats": 14,
+                "is_independents": true
             }
         ]
     },
@@ -717,7 +726,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 12
+                "constituency_seats": 12,
+                "is_independents": true
             }
         ]
     },
@@ -781,7 +791,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 22
+                "constituency_seats": 22,
+                "is_independents": true
             }
         ]
     },
@@ -845,7 +856,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 5
+                "constituency_seats": 5,
+                "is_independents": true
             }
         ]
     },
@@ -902,7 +914,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 11
+                "constituency_seats": 11,
+                "is_independents": true
             }
         ]
     },
@@ -959,7 +972,8 @@
                 "short_name": "Independents",
                 "name": "Independents",
                 "proportional_votes": 0,
-                "constituency_seats": 3
+                "constituency_seats": 3,
+                "is_independents": true
             }
         ]
     },
@@ -1032,6 +1046,14 @@
                 "proportional_votes": 55578,
                 "constituency_seats": 0,
                 "always_qualified_on_proportional_votes": true
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
             }
         ]
     },
@@ -1096,6 +1118,14 @@
                 "name": "Free Voters",
                 "proportional_votes": 463292,
                 "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
             }
         ]
     },
@@ -1160,6 +1190,14 @@
                 "name": "Free Voters",
                 "proportional_votes": 423977,
                 "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
             }
         ]
     },
@@ -1210,6 +1248,14 @@
                 "name": "Christian Social Union",
                 "proportional_votes": 2830238,
                 "constituency_seats": 45
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
             }
         ]
     },
@@ -1260,6 +1306,14 @@
                 "name": "Christian Social Union",
                 "proportional_votes": 3494309,
                 "constituency_seats": 44
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
             }
         ]
     }

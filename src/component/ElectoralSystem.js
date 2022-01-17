@@ -36,7 +36,7 @@ export const ElectoralSystem = () => {
 
     const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
     const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
-    const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes']); }
+    const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes', 'total_constituency_votes']); }
 
     const [state, setState] = React.useState(() => {
         const selectedDataIndex = 0;
