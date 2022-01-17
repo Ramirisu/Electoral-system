@@ -429,8 +429,8 @@
         ]
     },
     {
-        "name": "2005 Taiwanese Legislative Election",
-        "year": 2005,
+        "name": "2004 Taiwanese Legislative Election",
+        "year": 2004,
         "total_seats": 225,
         "total_proportional_votes": 0,
         "total_constituency_votes": 9717359,
@@ -441,7 +441,7 @@
                 "name": "Kuomintang",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 3190081,
-                "constituency_seats": 79
+                "constituency_seats": 61
             },
             {
                 "id": 16,
@@ -449,7 +449,7 @@
                 "name": "Democratic Progressive Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 3471429,
-                "constituency_seats": 89
+                "constituency_seats": 70
             },
             {
                 "id": 74,
@@ -465,7 +465,7 @@
                 "name": "People First Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "constituency_votes": 1350613,
-                "constituency_seats": 34
+                "constituency_seats": 27
             },
             {
                 "id": 95,
@@ -473,7 +473,7 @@
                 "name": "Taiwan Solidarity Union",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "constituency_votes": 756712,
-                "constituency_seats": 12
+                "constituency_seats": 7
             },
             {
                 "id": 106,
@@ -507,7 +507,7 @@
                 "name": "Kuomintang",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 2949371,
-                "constituency_seats": 68
+                "constituency_seats": 53
             },
             {
                 "id": 9,
@@ -522,7 +522,7 @@
                 "name": "Democratic Progressive Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 3447740,
-                "constituency_seats": 87
+                "constituency_seats": 69
             },
             {
                 "id": 74,
@@ -538,7 +538,7 @@
                 "name": "People First Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "constituency_votes": 1917836,
-                "constituency_seats": 46
+                "constituency_seats": 35
             },
             {
                 "id": 95,
@@ -546,7 +546,7 @@
                 "name": "Taiwan Solidarity Union",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "constituency_votes": 801560,
-                "constituency_seats": 13
+                "constituency_seats": 8
             },
             {
                 "id": "-",
@@ -572,7 +572,7 @@
                 "name": "Kuomintang",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 4659679,
-                "constituency_seats": 123
+                "constituency_seats": 96
             },
             {
                 "id": 16,
@@ -580,7 +580,7 @@
                 "name": "Democratic Progressive Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 2966834,
-                "constituency_seats": 70
+                "constituency_seats": 52
             },
             {
                 "id": 66,
@@ -595,7 +595,7 @@
                 "name": "New Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "constituency_votes": 708465,
-                "constituency_seats": 11
+                "constituency_seats": 7
             },
             {
                 "id": 82,
@@ -642,7 +642,7 @@
                 "name": "Kuomintang",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 4349089,
-                "constituency_seats": 85
+                "constituency_seats": 67
             },
             {
                 "id": 16,
@@ -650,7 +650,7 @@
                 "name": "Democratic Progressive Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 3132156,
-                "constituency_seats": 54
+                "constituency_seats": 41
             },
             {
                 "id": 74,
@@ -658,7 +658,7 @@
                 "name": "New Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "constituency_votes": 1222931,
-                "constituency_seats": 21
+                "constituency_seats": 16
             },
             {
                 "id": 82,

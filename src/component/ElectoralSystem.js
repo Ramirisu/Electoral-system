@@ -10,17 +10,17 @@ const formatPercentage = (value) => {
 }
 
 const ELECTORAL_SYSTEMS = [
-    { name: 'Taiwan (2008 ~ Present) (MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
-    { name: 'Japan (1994 ~ Present) (MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
-    { name: 'South Korea (1988 ~ 1991) (MMM) (Hare Quota) (5)', handler: electoralSystem.southKorea1988 },
-    { name: 'South Korea (1992 ~ 2015) (MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea1992 },
-    { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
-    { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
-    { name: 'Germany (1986 ~ 2007) (MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
-    { name: 'Germany (2008 ~ 2012) (MMPR) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2008 },
-    { name: 'Germany (2013 ~ 2016) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2013 },
-    { name: 'Germany (2017 ~ 2020) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2017 },
-    { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2021 },
+    { name: 'Taiwan (2008 ~ Present) (SMD/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
+    { name: 'Japan (1994 ~ Present) (SMD/MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
+    { name: 'South Korea (1988 ~ 1991) (SMD/MMM) (Hare Quota) (5)', handler: electoralSystem.southKorea1988 },
+    { name: 'South Korea (1992 ~ 2015) (SMD/MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea1992 },
+    { name: 'South Korea (2016 ~ 2019) (SMD/MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
+    { name: 'Germany (1949 ~ 1985) (SMD/MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
+    { name: 'Germany (1986 ~ 2007) (SMD/MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
+    { name: 'Germany (2008 ~ 2012) (SMD/MMPR) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2008 },
+    { name: 'Germany (2013 ~ 2016) (SMD/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2017 ~ 2020) (SMD/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2017 },
+    { name: 'Germany (2021 ~ Present) (SMD/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2021 },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
