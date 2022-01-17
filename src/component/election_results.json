@@ -899,6 +899,13 @@
             },
             {
                 "id": "-",
+                "short_name": "ODP",
+                "name": "Open Democratic Party",
+                "proportional_votes": 1512763,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
                 "short_name": "MP",
                 "name": "Minsaeng Party",
                 "proportional_votes": 758778,
