@@ -11,7 +11,7 @@ const formatPercentage = (value) => {
 
 const ELECTORAL_SYSTEMS = [
     { name: 'Taiwan (2008 ~ Present) (MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
-    { name: 'Japan (1994 ~ Present) (MMM) (DHondt) (None)', handler: electoralSystem.japan1994 },
+    { name: 'Japan (1994 ~ Present) (MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
     { name: 'South Korea (2004 ~ 2015) (MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea2004 },
     { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
     { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },

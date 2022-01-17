@@ -27,7 +27,7 @@ const dHondt = (votes, TOTAL_SEATS) => {
     let seats = Array(votes.length).fill(0);
     for (let i = 0; i < TOTAL_SEATS; ++i) {
         const votesAfterDivided = votes.map((value, index) => value / divisor[index]);
-        const index = divisor.indexOf(Math.max(...votesAfterDivided));
+        const index = votesAfterDivided.indexOf(Math.max(...votesAfterDivided));
         divisor[index]++;
         seats[index]++;
     }
