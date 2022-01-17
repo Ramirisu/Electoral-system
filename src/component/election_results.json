@@ -9,6 +9,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "proportional_votes": 4723504,
                 "constituency_seats": 25
             },
@@ -16,6 +17,7 @@
                 "id": 15,
                 "short_name": "LP",
                 "name": "Labor Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Labor_Party_%28Taiwan%29_emblem.svg",
                 "proportional_votes": 19941,
                 "constituency_seats": 0
             },
@@ -23,6 +25,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "proportional_votes": 4811241,
                 "constituency_seats": 48
             },
@@ -30,13 +33,15 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "proportional_votes": 147373,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "short_name": "GP",
+                "short_name": "GPT",
                 "name": "Green Party Taiwan",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/db/Green_circle.svg",
                 "proportional_votes": 341465,
                 "constituency_seats": 0
             },
@@ -44,6 +49,7 @@
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "proportional_votes": 518921,
                 "constituency_seats": 0
             },
@@ -51,6 +57,7 @@
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "proportional_votes": 50435,
                 "constituency_seats": 0
             },
@@ -58,6 +65,7 @@
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Grey_and_red.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 0
             },
@@ -72,6 +80,7 @@
                 "id": 267,
                 "short_name": "NPP",
                 "name": "New Power Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/29/Black_Lik_Gold_Circle.svg",
                 "proportional_votes": 1098100,
                 "constituency_seats": 0
             },
@@ -79,6 +88,7 @@
                 "id": 303,
                 "short_name": "TSP",
                 "name": "Taiwan Statebuilding Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/77/Daijish%C5%8D_in_brown.svg",
                 "proportional_votes": 447286,
                 "constituency_seats": 1
             },
@@ -86,6 +96,7 @@
                 "id": 341,
                 "short_name": "CPA",
                 "name": "Congress Party Alliance",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%9C%8B%E6%9C%83%E6%94%BF%E9%BB%A8%E8%81%AF%E7%9B%9F%E9%BB%A8%E5%BE%BD.svg",
                 "proportional_votes": 40331,
                 "constituency_seats": 0
             },
@@ -100,6 +111,7 @@
                 "id": 350,
                 "short_name": "TPP",
                 "name": "Taiwan People's Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Emblem_of_Taiwan_People%27s_Party_2019_Logo_Only.svg",
                 "proportional_votes": 1588806,
                 "constituency_seats": 0
             },
@@ -111,9 +123,10 @@
                 "constituency_seats": 0
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 5,
                 "is_independents": true
@@ -130,6 +143,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "proportional_votes": 3280949,
                 "constituency_seats": 24
             },
@@ -137,6 +151,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "proportional_votes": 5370953,
                 "constituency_seats": 50
             },
@@ -144,6 +159,7 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "proportional_votes": 510074,
                 "constituency_seats": 0
             },
@@ -158,6 +174,7 @@
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "proportional_votes": 794838,
                 "constituency_seats": 0
             },
@@ -165,6 +182,7 @@
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "proportional_votes": 305675,
                 "constituency_seats": 0
             },
@@ -172,6 +190,7 @@
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Grey_and_red.svg",
                 "proportional_votes": 77672,
                 "constituency_seats": 1
             },
@@ -186,6 +205,7 @@
                 "id": 135,
                 "short_name": "TCA",
                 "name": "Taiwan Constitution Association",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/27/Red_heart_tw.svg",
                 "proportional_votes": 15442,
                 "constituency_seats": 0
             },
@@ -193,6 +213,7 @@
                 "id": 189,
                 "short_name": "NHSA",
                 "name": "National Health Service Alliance",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E5%81%A5%E4%BF%9D%E5%85%8D%E8%B2%BBLOGO1000906-CMYK.jpg",
                 "proportional_votes": 51024,
                 "constituency_seats": 0
             },
@@ -200,6 +221,7 @@
                 "id": 259,
                 "short_name": "TP",
                 "name": "Trees Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5e/TWN_Tree_Party_Emblem.svg",
                 "proportional_votes": 77174,
                 "constituency_seats": 0
             },
@@ -207,6 +229,7 @@
                 "id": 267,
                 "short_name": "NPP",
                 "name": "New Power Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/29/Black_Lik_Gold_Circle.svg",
                 "proportional_votes": 744315,
                 "constituency_seats": 3
             },
@@ -215,12 +238,14 @@
                 "short_name": "MKD",
                 "name": "Minkuotang",
                 "proportional_votes": 197627,
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/da/Emblem_of_the_Kuomintang_on_a_yellow_circle.png",
                 "constituency_seats": 0
             },
             {
                 "id": 272,
                 "short_name": "FTP",
                 "name": "Free Taiwan Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/94/Free_Taiwan_Party_paper_crane_red_bg_20150529.png",
                 "proportional_votes": 47988,
                 "constituency_seats": 0
             },
@@ -239,9 +264,10 @@
                 "constituency_seats": 0
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 1,
                 "is_independents": true
@@ -258,6 +284,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "proportional_votes": 5863379,
                 "constituency_seats": 48
             },
@@ -265,6 +292,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "proportional_votes": 4556526,
                 "constituency_seats": 27
             },
@@ -272,13 +300,15 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "proportional_votes": 195960,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "short_name": "GP",
+                "short_name": "GPT",
                 "name": "Green Party Taiwan",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/db/Green_circle.svg",
                 "proportional_votes": 229566,
                 "constituency_seats": 0
             },
@@ -286,6 +316,7 @@
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "proportional_votes": 722089,
                 "constituency_seats": 1
             },
@@ -293,6 +324,7 @@
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "proportional_votes": 1178896,
                 "constituency_seats": 0
             },
@@ -300,6 +332,7 @@
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Grey_and_red.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 2
             },
@@ -307,13 +340,15 @@
                 "id": 189,
                 "short_name": "NHSA",
                 "name": "National Health Service Alliance",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E5%81%A5%E4%BF%9D%E5%85%8D%E8%B2%BBLOGO1000906-CMYK.jpg",
                 "proportional_votes": 163344,
                 "constituency_seats": 0
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 1,
                 "is_independents": true
@@ -330,6 +365,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "proportional_votes": 5010801,
                 "constituency_seats": 61
             },
@@ -337,6 +373,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "proportional_votes": 3610106,
                 "constituency_seats": 13
             },
@@ -344,13 +381,15 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "proportional_votes": 386660,
                 "constituency_seats": 0
             },
             {
                 "id": 79,
-                "short_name": "GP",
+                "short_name": "GPT",
                 "name": "Green Party Taiwan",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/db/Green_circle.svg",
                 "proportional_votes": 58473,
                 "constituency_seats": 0
             },
@@ -358,6 +397,7 @@
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 1
             },
@@ -365,6 +405,7 @@
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "proportional_votes": 344887,
                 "constituency_seats": 0
             },
@@ -372,13 +413,15 @@
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Grey_and_red.svg",
                 "proportional_votes": 68527,
                 "constituency_seats": 3
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 1,
                 "is_independents": true
@@ -396,6 +439,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 3190081,
                 "constituency_seats": 79
             },
@@ -403,6 +447,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 3471429,
                 "constituency_seats": 89
             },
@@ -410,6 +455,7 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "constituency_votes": 12137,
                 "constituency_seats": 1
             },
@@ -417,6 +463,7 @@
                 "id": 90,
                 "short_name": "PFP",
                 "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
                 "constituency_votes": 1350613,
                 "constituency_seats": 34
             },
@@ -424,6 +471,7 @@
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "constituency_votes": 756712,
                 "constituency_seats": 12
             },
@@ -431,13 +479,15 @@
                 "id": 106,
                 "short_name": "NPSU",
                 "name": "Non-Partisan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Grey_and_red.svg",
                 "constituency_votes": 353164,
                 "constituency_seats": 6
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "constituency_votes": 577292,
                 "constituency_seats": 4,
                 "is_independents": true
@@ -455,29 +505,9 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 2949371,
                 "constituency_seats": 68
-            },
-            {
-                "id": 16,
-                "short_name": "DPP",
-                "name": "Democratic Progressive Party",
-                "constituency_votes": 3447740,
-                "constituency_seats": 87
-            },
-            {
-                "id": 74,
-                "short_name": "NP",
-                "name": "New Party",
-                "constituency_votes": 269620,
-                "constituency_seats": 1
-            },
-            {
-                "id": 90,
-                "short_name": "PFP",
-                "name": "People First Party",
-                "constituency_votes": 1917836,
-                "constituency_seats": 46
             },
             {
                 "id": 9,
@@ -487,16 +517,42 @@
                 "constituency_seats": 1
             },
             {
+                "id": 16,
+                "short_name": "DPP",
+                "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
+                "constituency_votes": 3447740,
+                "constituency_seats": 87
+            },
+            {
+                "id": 74,
+                "short_name": "NP",
+                "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
+                "constituency_votes": 269620,
+                "constituency_seats": 1
+            },
+            {
+                "id": 90,
+                "short_name": "PFP",
+                "name": "People First Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LogoPFP.svg",
+                "constituency_votes": 1917836,
+                "constituency_seats": 46
+            },
+            {
                 "id": 95,
                 "short_name": "TSU",
                 "name": "Taiwan Solidarity Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Taiwan_orange.svg",
                 "constituency_votes": 801560,
                 "constituency_seats": 13
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "constituency_votes": 899254,
                 "constituency_seats": 9,
                 "is_independents": true
@@ -514,6 +570,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 4659679,
                 "constituency_seats": 123
             },
@@ -521,6 +578,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 2966834,
                 "constituency_seats": 70
             },
@@ -535,6 +593,7 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "constituency_votes": 708465,
                 "constituency_seats": 11
             },
@@ -560,9 +619,10 @@
                 "constituency_seats": 1
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "constituency_votes": 946431,
                 "constituency_seats": 12,
                 "is_independents": true
@@ -580,6 +640,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 4349089,
                 "constituency_seats": 85
             },
@@ -587,6 +648,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 3132156,
                 "constituency_seats": 54
             },
@@ -594,6 +656,7 @@
                 "id": 74,
                 "short_name": "NP",
                 "name": "New Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/LogoCNP.svg",
                 "constituency_votes": 1222931,
                 "constituency_seats": 21
             },
@@ -605,9 +668,10 @@
                 "constituency_seats": 0
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "constituency_votes": 730529,
                 "constituency_seats": 4,
                 "is_independents": true
@@ -625,6 +689,7 @@
                 "id": 1,
                 "short_name": "KMT",
                 "name": "Kuomintang",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 5030725,
                 "constituency_seats": 95
             },
@@ -632,6 +697,7 @@
                 "id": 16,
                 "short_name": "DPP",
                 "name": "Democratic Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 2944195,
                 "constituency_seats": 51
             },
@@ -643,9 +709,10 @@
                 "constituency_seats": 1
             },
             {
-                "id": 9999,
+                "id": "-",
                 "short_name": "Independents",
                 "name": "Independents",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Independent_candidate_icon_3200001.svg",
                 "constituency_votes": 1331555,
                 "constituency_seats": 14,
                 "is_independents": true

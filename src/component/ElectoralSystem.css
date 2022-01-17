@@ -35,6 +35,14 @@ label {
   width: 30%;
 }
 
+img {
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 20px;
+  vertical-align: middle;
+}
+
 table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;

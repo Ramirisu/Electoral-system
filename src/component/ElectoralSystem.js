@@ -62,6 +62,8 @@ export const ElectoralSystem = () => {
             accessor: 'name',
             className: 'header-party',
             sortType: sortTypeHandler,
+            Cell: ({ value, row }) => (<div><img src={row.original.icon} alt='' /><span>{value}</span></div>),
+
         },
         {
             Header: 'Proportional Vote (%)',
