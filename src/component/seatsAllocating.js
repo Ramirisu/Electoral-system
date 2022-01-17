@@ -56,23 +56,21 @@ const saintLague = (votes, TOTAL_SEATS) => {
     return seats;
 }
 
-const saintLagueMinSeats = (votes, minSeats, TOTAL_SEATS) => {
-    const TOTAL_VOTES = _.sum(votes);
-    const INITIAL_DIVISOR = Math.ceil(TOTAL_VOTES / Math.max(1, TOTAL_SEATS - votes.length));
+const saintLagueMinSeatsRequired = (votes, minSeats, TOTAL_SEATS, MINIMUM_EXTRA_SEATS_INCREASED) => {
+    const SUBTRAHEND = MINIMUM_EXTRA_SEATS_INCREASED ? 0.5 : 0.0;
+    const seats = saintLague(votes, TOTAL_SEATS).map((value, index) => Math.max(value, minSeats[index]));
+    const minDivisor = Math.min(
+        ...votes
+            .map((value, index) => ({ vote: value, seat: seats[index] }))
+            .filter(obj => obj.vote > 0 && obj.seat > 0).map(obj => obj.vote / (obj.seat - SUBTRAHEND))
+    );
 
-    let seats = votes.map(value => Math.round(value / INITIAL_DIVISOR));
-    for (let divisor = INITIAL_DIVISOR - 1;
-        _.sum(seats) < TOTAL_SEATS || seats.map((value, index) => value < minSeats[index]).reduce((prev, curr) => prev || curr);
-        divisor--) {
-        seats = votes.map(value => Math.round(value / divisor));
-    }
-
-    return seats;
+    return votes.map(value => Math.round(value / minDivisor));
 }
 
 export const seatsAllocating = {
     hareQuota,
     dHondt,
     saintLague,
-    saintLagueMinSeats,
+    saintLagueMinSeatsRequired,
 };

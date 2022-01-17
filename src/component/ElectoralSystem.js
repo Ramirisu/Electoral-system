@@ -17,7 +17,8 @@ const ELECTORAL_SYSTEMS = [
     { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt)', handler: electoralSystem.germany1949 },
     { name: 'Germany (1986 ~ 2007) (MMPR) (Hare Quota)', handler: electoralSystem.germany1986 },
     { name: 'Germany (2008 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2008 },
-    { name: 'Germany (2013 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2013 ~ 2016) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2017 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2017 },
     { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2021 },
 ];
 
