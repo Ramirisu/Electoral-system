@@ -10,16 +10,16 @@ const formatPercentage = (value) => {
 }
 
 const ELECTORAL_SYSTEMS = [
-    { name: 'Taiwan (2008 ~ Present) (MMM) (Hare Quota)', handler: electoralSystem.taiwan2008 },
-    { name: 'Japan (1994 ~ Present) (MMM) (DHondt)', handler: electoralSystem.japan1994 },
-    { name: 'South Korea (2004 ~ 2015) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2004 },
-    { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota)', handler: electoralSystem.southKorea2016 },
-    { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt)', handler: electoralSystem.germany1949 },
-    { name: 'Germany (1986 ~ 2007) (MMPR) (Hare Quota)', handler: electoralSystem.germany1986 },
-    { name: 'Germany (2008 ~ 2012) (MMPR) (Saint-Lague)', handler: electoralSystem.germany2008 },
-    { name: 'Germany (2013 ~ 2016) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2013 },
-    { name: 'Germany (2017 ~ 2020) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2017 },
-    { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague)', handler: electoralSystem.germany2021 },
+    { name: 'Taiwan (2008 ~ Present) (MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
+    { name: 'Japan (1994 ~ Present) (MMM) (DHondt) (None)', handler: electoralSystem.japan1994 },
+    { name: 'South Korea (2004 ~ 2015) (MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea2004 },
+    { name: 'South Korea (2016 ~ 2019) (MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
+    { name: 'Germany (1949 ~ 1985) (MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
+    { name: 'Germany (1986 ~ 2007) (MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
+    { name: 'Germany (2008 ~ 2012) (MMPR) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2008 },
+    { name: 'Germany (2013 ~ 2016) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2017 ~ 2020) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2017 },
+    { name: 'Germany (2021 ~ Present) (MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2021 },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
