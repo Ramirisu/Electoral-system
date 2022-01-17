@@ -1052,6 +1052,150 @@
         ]
     },
     {
+        "name": "2008 South Korean Legislative Election",
+        "year": 2008,
+        "total_seats": 299,
+        "total_proportional_votes": 17131537,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "GNP",
+                "name": "Grand National Party",
+                "proportional_votes": 6421727,
+                "constituency_seats": 131
+            },
+            {
+                "id": "-",
+                "short_name": "UDP",
+                "name": "United Democratic Party",
+                "proportional_votes": 4313645,
+                "constituency_seats": 66
+            },
+            {
+                "id": "-",
+                "short_name": "PPA",
+                "name": "Pro-Park Alliance",
+                "proportional_votes": 2258750,
+                "constituency_seats": 6
+            },
+            {
+                "id": "-",
+                "short_name": "LFP",
+                "name": "Liberty Forward Party",
+                "proportional_votes": 1173463,
+                "constituency_seats": 14
+            },
+            {
+                "id": "-",
+                "short_name": "DLP",
+                "name": "Democratic Labor Party",
+                "proportional_votes": 973445,
+                "constituency_seats": 2
+            },
+            {
+                "id": "-",
+                "short_name": "CKP",
+                "name": "Creative Korea Party",
+                "proportional_votes": 651993,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "NPP",
+                "name": "New Progressive Party",
+                "proportional_votes": 504466,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Christian Party",
+                "proportional_votes": 443775,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "PPUF",
+                "name": "Party for Peaceful Unification and Family",
+                "proportional_votes": 180857,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 25,
+                "is_independents": true
+            }
+        ]
+    },
+    {
+        "name": "2004 South Korean Legislative Election",
+        "year": 2004,
+        "total_seats": 299,
+        "total_proportional_votes": 21285984,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "UriP",
+                "name": "Uri Party",
+                "proportional_votes": 8145824,
+                "constituency_seats": 129
+            },
+            {
+                "id": "-",
+                "short_name": "GNP",
+                "name": "Grand National Party",
+                "proportional_votes": 7613660,
+                "constituency_seats": 100
+            },
+            {
+                "id": "-",
+                "short_name": "DLP",
+                "name": "Democratic Labor Party",
+                "proportional_votes": 2774061,
+                "constituency_seats": 2
+            },
+            {
+                "id": "-",
+                "short_name": "MDP",
+                "name": "Millennium Democratic Party",
+                "proportional_votes": 1510178,
+                "constituency_seats": 5
+            },
+            {
+                "id": "-",
+                "short_name": "ULD",
+                "name": "United Liberal Democrats",
+                "proportional_votes": 600462,
+                "constituency_seats": 4
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Christian Party",
+                "proportional_votes": 228837,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "NI21",
+                "name": "National Integration 21",
+                "proportional_votes": 119746,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 2,
+                "is_independents": true
+            }
+        ]
+    },
+    {
         "name": "2021 German Federal Election",
         "year": 2021,
         "total_seats": 598,
