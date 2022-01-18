@@ -25,13 +25,6 @@ const initData = (data) => {
     });
 }
 
-const tryUseConstituencyVotesInstead = (data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) => {
-    if (!TOTAL_PROPORTIONAL_VOTES) {
-        data.forEach(obj => { obj.proportional_votes = obj.constituency_votes; })
-    }
-    return TOTAL_PROPORTIONAL_VOTES ? TOTAL_PROPORTIONAL_VOTES : TOTAL_CONSTITUENCY_VOTES;
-}
-
 const calculateProportionalVotePercentage = (data, TOTAL_PROPORTIONAL_VOTES) => {
     data.forEach(obj => { obj.proportional_vote_percentage = obj.proportional_votes / TOTAL_PROPORTIONAL_VOTES });
     return data;
@@ -63,7 +56,6 @@ const getSummary = (data) => {
 function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -91,7 +83,6 @@ function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, 
 function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.02;
@@ -119,7 +110,6 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, T
 function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const isQualified = (obj) => !obj.is_independents && (obj.constituency_seats >= 5)
@@ -146,7 +136,6 @@ function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.03;
@@ -174,7 +163,6 @@ function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -202,7 +190,6 @@ function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -236,7 +223,6 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -270,7 +256,6 @@ function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -303,7 +288,6 @@ function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -343,7 +327,6 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
@@ -383,7 +366,6 @@ function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
 
     initData(data);
-    TOTAL_PROPORTIONAL_VOTES = tryUseConstituencyVotesInstead(data, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;

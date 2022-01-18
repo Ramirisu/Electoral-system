@@ -7,6 +7,18 @@ import _ from 'lodash';
 
 const formatPercentage = (value) => (100 * parseFloat(value)).toFixed(2) + ' %'
 
+const parsePercentage = (value) => parseFloat(value) / 100.0
+
+// some electoral systems directly use constituency votes to allocate proportional seats, so use constituency votes instead
+const tryUseConstituencyVotesInstead = (election) => {
+    if (!election.total_proportional_votes) {
+        election.total_proportional_votes = election.total_constituency_votes;
+        election.data.forEach(obj => { obj.proportional_votes = obj.constituency_votes; })
+    }
+
+    return election;
+}
+
 const ELECTORAL_SYSTEMS = [
     { name: 'Taiwan (2008 ~ Present) (SMD/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
     { name: 'Japan (1994 ~ Present) (SMD/MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
@@ -33,7 +45,7 @@ const sortTypeHandler = (rowA, rowB, columnId, desc) => {
 
 export const ElectoralSystem = () => {
 
-    const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
+    const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON.map(obj => tryUseConstituencyVotesInstead(obj)), []);
     const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
     const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes', 'total_constituency_votes']); }
     const getNewData = (selectedDataIndex, selectedElectoralSystemParameter, selectedElectoralSystemIndex, data) => {
@@ -51,19 +63,66 @@ export const ElectoralSystem = () => {
         return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
     });
 
+    const modifyData = (rowIndex, columnId, value) => {
+        setState(old => {
+            const newData = old.data.map((row, index) => {
+                if (index === rowIndex) {
+                    console.log(columnId, value)
+                    if (columnId === 'proportional_vote_percentage') {
+                        columnId = 'proportional_votes';
+                        value *= Math.round(old.selectedElectoralSystemParameter.total_proportional_votes);
+                        console.log(columnId, value)
+                    }
+                    return {
+                        ...old.data[rowIndex],
+                        [columnId]: value,
+                    }
+                }
+                return row;
+            });
+            console.log(newData);
+            return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, old.selectedElectoralSystemIndex, _.cloneDeep(newData));
+        })
+    }
+
+    const PercentageEditableCell = ({
+        value: initialValue,
+        row: { index },
+        column: { id },
+    }) => {
+        const [value, setValue] = React.useState(formatPercentage(initialValue))
+        const onChange = e => { setValue(e.target.value) }
+        const onBlur = () => { modifyData(index, id, parsePercentage(value)) }
+        React.useEffect(() => { setValue(formatPercentage(initialValue)) }, [initialValue])
+        return <input className='editablecell' value={value} onChange={onChange} onBlur={onBlur} />
+    }
+
+    const NumberEditableCell = ({
+        value: initialValue,
+        row: { index },
+        column: { id },
+    }) => {
+        const [value, setValue] = React.useState(initialValue)
+        const onChange = e => { setValue(e.target.value) }
+        const onBlur = () => { modifyData(index, id, parseInt(value)) }
+        React.useEffect(() => { setValue(initialValue) }, [initialValue])
+        return <input className='editablecell' value={value} onChange={onChange} onBlur={onBlur} />
+    }
+
     const COLUMNS = [
         {
             Header: 'Id',
             accessor: 'id',
             className: 'header-party',
             sortType: sortTypeHandler,
+            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
         },
         {
             Header: 'Party',
             accessor: 'name',
             className: 'header-party',
             sortType: sortTypeHandler,
-            Cell: ({ value, row }) => (<div><img src={row.original.icon} alt='' /><span>{value}</span></div>),
+            Cell: ({ value, row }) => (<div className='textonlycell'><img src={row.original.icon} alt='' /><span>{value}</span></div>),
 
         },
         {
@@ -72,7 +131,7 @@ export const ElectoralSystem = () => {
             className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => formatPercentage(value),
+            Cell: PercentageEditableCell,
         },
         {
             Header: 'Qualified (%)',
@@ -80,7 +139,7 @@ export const ElectoralSystem = () => {
             className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => (value > 0) ? formatPercentage(value) : '-',
+            Cell: ({ value }) => <div className='textonlycell'>{(value > 0) ? formatPercentage(value) : '-'}</div>,
         },
         {
             Header: 'Constituency Seats',
@@ -88,6 +147,7 @@ export const ElectoralSystem = () => {
             className: 'header-seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
+            Cell: NumberEditableCell,
         },
         {
             Header: 'Proportional Seats',
@@ -95,6 +155,7 @@ export const ElectoralSystem = () => {
             className: 'header-seats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
+            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
         },
         {
             Header: 'Total Seats',
@@ -102,6 +163,7 @@ export const ElectoralSystem = () => {
             className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
+            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
         },
 
         {
@@ -110,7 +172,7 @@ export const ElectoralSystem = () => {
             className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => formatPercentage(value),
+            Cell: ({ value }) => <div className='textonlycell'>{formatPercentage(value)}</div>,
         },
         {
             Header: 'Overhang',
@@ -118,7 +180,7 @@ export const ElectoralSystem = () => {
             className: 'header-overhangseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => (value > 0) ? "+" + value : "-",
+            Cell: ({ value }) => <div className='textonlycell'>{(value > 0) ? "+" + value : "-"}</div>,
         },
 
     ];
