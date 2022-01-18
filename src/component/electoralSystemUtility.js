@@ -206,7 +206,8 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
@@ -239,7 +240,8 @@ function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
@@ -272,13 +274,15 @@ function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
     seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
+    console.log(data.map(obj => obj.expected_proportional_seats));
 
     // total seats
     data.forEach(obj => {
@@ -303,7 +307,8 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
@@ -342,7 +347,8 @@ function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
@@ -381,7 +387,8 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
 
     const QUALIFIED_THRESHOLD = 0.05;
-    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
+    const isQualified = (obj) => !obj.is_independents &&
+        (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 3 || obj.always_qualified_on_proportional_votes)
     const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
@@ -390,6 +397,7 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     const ALLOWED_OVERHANG_SEATS = 3;
     seatsAllocating.saintLague(data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
+    console.log(data.map(obj => obj.original_expected_proportional_seats));
     seatsAllocating.saintLagueMinSeatsRequired(
         data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? obj.proportional_votes : 0),
         data.map(obj => obj.qualified_proportional_vote_percentage > 0.0 ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
