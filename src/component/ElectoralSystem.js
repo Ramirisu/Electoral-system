@@ -67,11 +67,9 @@ export const ElectoralSystem = () => {
         setState(old => {
             const newData = old.data.map((row, index) => {
                 if (index === rowIndex) {
-                    console.log(columnId, value)
                     if (columnId === 'proportional_vote_percentage') {
                         columnId = 'proportional_votes';
                         value *= Math.round(old.selectedElectoralSystemParameter.total_proportional_votes);
-                        console.log(columnId, value)
                     }
                     return {
                         ...old.data[rowIndex],
@@ -80,7 +78,6 @@ export const ElectoralSystem = () => {
                 }
                 return row;
             });
-            console.log(newData);
             return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, old.selectedElectoralSystemIndex, _.cloneDeep(newData));
         })
     }
