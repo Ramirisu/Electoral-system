@@ -1,5 +1,6 @@
 import './App.css';
 import { ElectoralSystem } from './component/ElectoralSystem';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

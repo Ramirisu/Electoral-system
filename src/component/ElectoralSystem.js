@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 import { electoralSystem } from './electoralSystemUtility';
 import ELECTION_RESULTS_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
@@ -49,11 +50,15 @@ export const ElectoralSystem = () => {
     const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
     const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes', 'total_constituency_votes']); }
     const getNewData = (selectedDataIndex, selectedElectoralSystemParameter, selectedElectoralSystemIndex, data) => {
+        data = getElectoralSystemByIndex(selectedElectoralSystemIndex)(data, ...Object.values(selectedElectoralSystemParameter));
         return {
             selectedDataIndex,
             selectedElectoralSystemParameter,
             selectedElectoralSystemIndex,
-            data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(data, ...Object.values(selectedElectoralSystemParameter)),
+            data,
+            constituency_seats: data.find(obj => obj.is_summary).constituency_seats,
+            proportional_seats: data.find(obj => obj.is_summary).proportional_seats,
+            total_seats: data.find(obj => obj.is_summary).total_seats,
         }
     }
 
@@ -141,7 +146,7 @@ export const ElectoralSystem = () => {
         {
             Header: 'Constituency Seats',
             accessor: 'constituency_seats',
-            className: 'header-seats',
+            className: 'header-constituencyseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: NumberEditableCell,
@@ -149,7 +154,7 @@ export const ElectoralSystem = () => {
         {
             Header: 'Proportional Seats',
             accessor: 'proportional_seats',
-            className: 'header-seats',
+            className: 'header-proportionalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
@@ -223,6 +228,12 @@ export const ElectoralSystem = () => {
                 </option>
             ))}
         </select>
+        <div className='progressbar'>
+            <ProgressBar>
+                <ProgressBar variant="constituencyseats" label={state.constituency_seats} now={state.constituency_seats} key={2} min={0} max={state.total_seats} />
+                <ProgressBar variant="proportionalseats" label={state.proportional_seats} now={state.proportional_seats} key={1} min={0} max={state.total_seats} />
+            </ProgressBar>
+        </div>
         <table {...getTableProps()}>
             <thead>
                 {headerGroups.map(group => (
