@@ -5,9 +5,7 @@ import ELECTION_RESULTS_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 import _ from 'lodash';
 
-const formatPercentage = (value) => {
-    return (100 * parseFloat(value)).toFixed(2) + ' %';
-}
+const formatPercentage = (value) => (100 * parseFloat(value)).toFixed(2) + ' %'
 
 const ELECTORAL_SYSTEMS = [
     { name: 'Taiwan (2008 ~ Present) (SMD/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
@@ -38,17 +36,19 @@ export const ElectoralSystem = () => {
     const ELECTION_RESULTS_DATA = useMemo(() => ELECTION_RESULTS_DATA_JSON, []);
     const getElectionByIndex = (index) => _.cloneDeep(ELECTION_RESULTS_DATA[index].data);
     const getElectoralSystemParameter = (index) => { return _.pick(ELECTION_RESULTS_DATA[index], ['total_seats', 'total_proportional_votes', 'total_constituency_votes']); }
-
-    const [state, setState] = React.useState(() => {
-        const selectedDataIndex = 0;
-        const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
-        const selectedElectoralSystemIndex = 0;
+    const getNewData = (selectedDataIndex, selectedElectoralSystemParameter, selectedElectoralSystemIndex, data) => {
         return {
             selectedDataIndex,
             selectedElectoralSystemParameter,
             selectedElectoralSystemIndex,
-            data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(getElectionByIndex(selectedDataIndex), ...Object.values(selectedElectoralSystemParameter)),
-        };
+            data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(data, ...Object.values(selectedElectoralSystemParameter)),
+        }
+    }
+
+    const [state, setState] = React.useState(() => {
+        const selectedDataIndex = 0;
+        const selectedElectoralSystemIndex = 0;
+        return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
     });
 
     const COLUMNS = [
@@ -140,16 +140,9 @@ export const ElectoralSystem = () => {
     return (<div>
         <label>Election</label>
         <select className='electionselect' onChange={e => {
-            const index = e.target.value;
             setState(old => {
-                const selectedDataIndex = index;
-                const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
-                return {
-                    selectedDataIndex,
-                    selectedElectoralSystemParameter,
-                    selectedElectoralSystemIndex: old.selectedElectoralSystemIndex,
-                    data: getElectoralSystemByIndex(old.selectedElectoralSystemIndex)(getElectionByIndex(selectedDataIndex), ...Object.values(selectedElectoralSystemParameter)),
-                };
+                const selectedDataIndex = e.target.value;
+                return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), old.selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
             });
         }}>
             {ELECTION_RESULTS_DATA.map((obj, index) => (
@@ -160,15 +153,9 @@ export const ElectoralSystem = () => {
         </select>
         <label>Electoral System</label>
         <select className='electoralsystemselect' onChange={e => {
-            const index = e.target.value;
             setState(old => {
-                const selectedElectoralSystemIndex = index;
-                return {
-                    selectedDataIndex: old.selectedDataIndex,
-                    selectedElectoralSystemParameter: old.selectedElectoralSystemParameter,
-                    selectedElectoralSystemIndex,
-                    data: getElectoralSystemByIndex(selectedElectoralSystemIndex)(_.cloneDeep(old.data), ...Object.values(old.selectedElectoralSystemParameter)),
-                };
+                const selectedElectoralSystemIndex = e.target.value;
+                return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, selectedElectoralSystemIndex, _.cloneDeep(old.data));
             })
         }}>
             {ELECTORAL_SYSTEMS.map((obj, index) => (
