@@ -236,11 +236,14 @@ export const ElectoralSystem = () => {
                 <ProgressBar variant="proportionalseats" label={state.proportional_seats} now={state.proportional_seats} min={0} max={state.total_seats} />
             </ProgressBar>
         </div>
-        <div className='progressbarbottom'>
+        <div className='progressbarmiddle'>
             <ProgressBar>
                 <ProgressBar variant="originalseats" label={state.original_total_seats} now={state.original_total_seats} min={0} max={state.total_seats} />
                 <ProgressBar variant="overhangseats" label={state.overhang_seats} now={state.overhang_seats} min={0} max={state.total_seats} />
             </ProgressBar>
+        </div>
+        <div className='progressbarbottom'>
+            <ProgressBar variant="totalseats" label={state.total_seats} now={state.total_seats} min={0} max={state.total_seats} />
         </div>
         <table {...getTableProps()}>
             <thead>
