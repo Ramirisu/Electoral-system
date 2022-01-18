@@ -99,6 +99,14 @@ table th {
   color: black;
 }
 
+.header-overhangseats {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: red;
+  color: black;
+}
+
 .editable-cell {
   text-align: right;
 }

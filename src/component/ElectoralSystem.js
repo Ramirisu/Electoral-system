@@ -103,14 +103,7 @@ export const ElectoralSystem = () => {
             sortDescFirst: true,
             sortType: sortTypeHandler,
         },
-        {
-            Header: 'Overhang',
-            accessor: 'overhang_seats',
-            className: 'header-totalseats',
-            sortDescFirst: true,
-            sortType: sortTypeHandler,
-            Cell: ({ value }) => (value > 0) ? "+" + value : "-",
-        },
+
         {
             Header: 'Total Seats (%)',
             accessor: 'total_seats_percentage',
@@ -118,6 +111,14 @@ export const ElectoralSystem = () => {
             sortDescFirst: true,
             sortType: sortTypeHandler,
             Cell: ({ value }) => formatPercentage(value),
+        },
+        {
+            Header: 'Overhang',
+            accessor: 'overhang_seats',
+            className: 'header-overhangseats',
+            sortDescFirst: true,
+            sortType: sortTypeHandler,
+            Cell: ({ value }) => (value > 0) ? "+" + value : "-",
         },
 
     ];
