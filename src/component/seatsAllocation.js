@@ -68,7 +68,7 @@ const saintLagueMinSeatsRequired = (votes, minSeats, TOTAL_SEATS, MINIMUM_EXTRA_
     return votes.map(value => Math.round(value / minDivisor));
 }
 
-export const seatsAllocating = {
+export const seatsAllocation = {
     hareQuota,
     dHondt,
     saintLague,

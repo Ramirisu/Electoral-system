@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { seatsAllocating } from './seatsAllocating';
+import { seatsAllocation } from './seatsAllocation';
 
 const removeSummary = (data) => {
     for (let i = 0; i < data.length; ++i) {
@@ -68,7 +68,7 @@ function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, 
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    seatsAllocating.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -95,7 +95,7 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, T
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    seatsAllocating.dHondt(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+    seatsAllocation.dHondt(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -121,7 +121,7 @@ function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    seatsAllocating.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -148,7 +148,7 @@ function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    seatsAllocating.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -175,7 +175,7 @@ function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 
     // proportional seats
     const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
-    seatsAllocating.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -202,7 +202,7 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    seatsAllocating.dHondt(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.dHondt(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
@@ -235,7 +235,7 @@ function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    seatsAllocating.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     data.forEach(obj => { obj.proportional_seats = Math.max(0, obj.expected_proportional_seats - obj.constituency_seats) });
@@ -268,7 +268,7 @@ function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    seatsAllocating.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
     console.log(data.map(obj => obj.expected_proportional_seats));
 
@@ -302,9 +302,9 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     // proportional seats
     const MINIMUM_EXTRA_SETAS_INCREASED = true;
     const ALLOWED_OVERHANG_SEATS = 0;
-    seatsAllocating.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
-    seatsAllocating.saintLagueMinSeatsRequired(
+    seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
         data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
@@ -341,9 +341,9 @@ function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     // proportional seats
     const MINIMUM_EXTRA_SETAS_INCREASED = false;
     const ALLOWED_OVERHANG_SEATS = 0;
-    seatsAllocating.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
-    seatsAllocating.saintLagueMinSeatsRequired(
+    seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
         data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
@@ -380,10 +380,10 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     // proportional seats
     const MINIMUM_EXTRA_SETAS_INCREASED = true;
     const ALLOWED_OVERHANG_SEATS = 3;
-    seatsAllocating.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
+    seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
     console.log(data.map(obj => obj.original_expected_proportional_seats));
-    seatsAllocating.saintLagueMinSeatsRequired(
+    seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
         data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
