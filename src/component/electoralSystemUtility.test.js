@@ -95,6 +95,77 @@ test('2008 Taiwanese Legislative Election', () => {
     });
 });
 
+test('2016 South Korean Legislative Election', () => {
+    const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.southKorea2016(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    const expectedSeatsAllocation = [
+        { name: 'Liberty Korea Party', proportional_seats: 17, total_seats: 122, overhang_seats: 0 },
+        { name: 'People Party', proportional_seats: 13, total_seats: 38, overhang_seats: 0 },
+        { name: 'Democratic Party of Korea', proportional_seats: 13, total_seats: 123, overhang_seats: 0 },
+        { name: 'Justice Party', proportional_seats: 4, total_seats: 6, overhang_seats: 0 },
+        { name: 'Christian Liberal Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Democratic Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 11, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 47, total_seats: 300, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});
+
+test('2012 South Korean Legislative Election', () => {
+    const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    const expectedSeatsAllocation = [
+        { name: 'Liberty Korea Party', proportional_seats: 25, total_seats: 152, overhang_seats: 0 },
+        { name: 'Democratic United Party', proportional_seats: 21, total_seats: 127, overhang_seats: 0 },
+        { name: 'Unified Progressive Party', proportional_seats: 6, total_seats: 13, overhang_seats: 0 },
+        { name: 'Liberty Forward Party', proportional_seats: 2, total_seats: 5, overhang_seats: 0 },
+        { name: 'Christian Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'New Progressive Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 3, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 54, total_seats: 300, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});
+
+test('2008 South Korean Legislative Election', () => {
+    const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    const expectedSeatsAllocation = [
+        { name: 'Grand National Party', proportional_seats: 22, total_seats: 153, overhang_seats: 0 },
+        { name: 'United Democratic Party', proportional_seats: 15, total_seats: 81, overhang_seats: 0 },
+        { name: 'Pro-Park Coalition', proportional_seats: 8, total_seats: 14, overhang_seats: 0 },
+        { name: 'Liberty Forward Party', proportional_seats: 4, total_seats: 18, overhang_seats: 0 },
+        { name: 'Democratic Labor Party', proportional_seats: 3, total_seats: 5, overhang_seats: 0 },
+        { name: 'Creative Korea Party', proportional_seats: 2, total_seats: 3, overhang_seats: 0 },
+        { name: 'New Progressive Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Christian Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 25, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 54, total_seats: 299, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});
+
 test('2021 German Federal Election', () => {
     const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
