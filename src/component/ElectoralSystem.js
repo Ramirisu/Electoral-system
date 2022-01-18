@@ -58,7 +58,9 @@ export const ElectoralSystem = () => {
             data,
             constituency_seats: data.find(obj => obj.is_summary).constituency_seats,
             proportional_seats: data.find(obj => obj.is_summary).proportional_seats,
+            original_total_seats: selectedElectoralSystemParameter.total_seats,
             total_seats: data.find(obj => obj.is_summary).total_seats,
+            overhang_seats: data.find(obj => obj.is_summary).overhang_seats,
         }
     }
 
@@ -228,10 +230,16 @@ export const ElectoralSystem = () => {
                 </option>
             ))}
         </select>
-        <div className='progressbar'>
+        <div className='progressbartop'>
             <ProgressBar>
-                <ProgressBar variant="constituencyseats" label={state.constituency_seats} now={state.constituency_seats} key={2} min={0} max={state.total_seats} />
-                <ProgressBar variant="proportionalseats" label={state.proportional_seats} now={state.proportional_seats} key={1} min={0} max={state.total_seats} />
+                <ProgressBar variant="constituencyseats" label={state.constituency_seats} now={state.constituency_seats} min={0} max={state.total_seats} />
+                <ProgressBar variant="proportionalseats" label={state.proportional_seats} now={state.proportional_seats} min={0} max={state.total_seats} />
+            </ProgressBar>
+        </div>
+        <div className='progressbarbottom'>
+            <ProgressBar>
+                <ProgressBar variant="originalseats" label={state.original_total_seats} now={state.original_total_seats} min={0} max={state.total_seats} />
+                <ProgressBar variant="overhangseats" label={state.overhang_seats} now={state.overhang_seats} min={0} max={state.total_seats} />
             </ProgressBar>
         </div>
         <table {...getTableProps()}>
