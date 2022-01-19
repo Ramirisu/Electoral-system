@@ -8,6 +8,7 @@ function App() {
       <header>
         <h1>Electoral Systems</h1>
       </header>
+      <hr />
       <ElectoralSystem />
     </div>
   );
