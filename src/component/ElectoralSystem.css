@@ -146,6 +146,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: 10%;
   background-color: #04aa6d;
   color: white;
 }
@@ -154,6 +155,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: 12%;
   background-color: #e06000;
   color: white;
 }
@@ -162,6 +164,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: 12%;
   background-color: #046daa;
   color: white;
 }
@@ -170,6 +173,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: 8%;
   background-color: #ffff00;
   color: black;
 }
