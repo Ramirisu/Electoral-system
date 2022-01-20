@@ -202,33 +202,37 @@ export const ElectoralSystem = () => {
         data: state.data,
     }, useSortBy);
 
-    return (<div>
-        <label>Election</label>
-        <select className='electionselect' onChange={e => {
-            setState(old => {
-                const selectedDataIndex = e.target.value;
-                return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), old.selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
-            });
-        }}>
-            {ELECTION_RESULTS_DATA.map((obj, index) => (
-                <option key={index} value={index}>
-                    {obj.name}
-                </option>
-            ))}
-        </select>
-        <label>Electoral System</label>
-        <select className='electoralsystemselect' onChange={e => {
-            setState(old => {
-                const selectedElectoralSystemIndex = e.target.value;
-                return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, selectedElectoralSystemIndex, _.cloneDeep(old.data));
-            })
-        }}>
-            {ELECTORAL_SYSTEMS.map((obj, index) => (
-                <option key={index} value={index}>
-                    {obj.name}
-                </option>
-            ))}
-        </select>
+    return (<div className='outter'>
+        <div>
+            <label>Election</label>
+            <select className='electionselect' onChange={e => {
+                setState(old => {
+                    const selectedDataIndex = e.target.value;
+                    return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), old.selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
+                });
+            }}>
+                {ELECTION_RESULTS_DATA.map((obj, index) => (
+                    <option key={index} value={index}>
+                        {obj.name}
+                    </option>
+                ))}
+            </select>
+        </div>
+        <div>
+            <label>Electoral System</label>
+            <select className='electoralsystemselect' onChange={e => {
+                setState(old => {
+                    const selectedElectoralSystemIndex = e.target.value;
+                    return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, selectedElectoralSystemIndex, _.cloneDeep(old.data));
+                })
+            }}>
+                {ELECTORAL_SYSTEMS.map((obj, index) => (
+                    <option key={index} value={index}>
+                        {obj.name}
+                    </option>
+                ))}
+            </select>
+        </div>
         <div className='progressbartop'>
             <ProgressBar>
                 <ProgressBar variant="constituencyseats" label={state.constituency_seats} now={state.constituency_seats} min={0} max={state.total_seats} />

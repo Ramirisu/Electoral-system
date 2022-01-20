@@ -1,35 +1,42 @@
+.outter {
+  width: 100%;
+  margin: auto;
+}
+
 label {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 50px;
+  margin-left: 5px;
   margin-right: 5px;
 }
 
 .electionselect {
   font-family: Arial, Helvetica, sans-serif;
+  width: 20%;
+  min-width: 320px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5px;
-  margin-right: 5px;
-  width: 28%;
+  margin-right: 10px;
 }
 
 .electoralsystemselect {
   font-family: Arial, Helvetica, sans-serif;
+  width: 30%;
+  min-width: 480px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5px;
-  margin-right: 5px;
-  width: 45%;
+  margin-right: 10px;
 }
 
 .progressbartop {
@@ -128,6 +135,7 @@ table th {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: transparent;
+  width: 100%;
   padding: 0;
   margin: 0;
   border: 0;
@@ -145,7 +153,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
-  width: 10%;
+  width: 12%;
   background-color: #04aa6d;
   color: white;
 }
@@ -172,7 +180,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
-  width: 8%;
+  width: 12%;
   background-color: #ffff00;
   color: black;
 }

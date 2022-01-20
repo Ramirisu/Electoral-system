@@ -3,7 +3,9 @@
   background-color: #202020;
   text-align: center;
   width: 100%;
+  min-width: 1600px;
+  overflow: scroll;
   margin: auto;
   padding-top: 20px;
-  padding-bottom: 1000px;
+  padding-bottom: 4320px;
 }
