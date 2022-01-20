@@ -248,47 +248,49 @@ export const ElectoralSystem = () => {
         <div className='progressbarbottom'>
             <ProgressBar variant="totalseats" label={state.total_seats} now={state.total_seats} min={0} max={state.total_seats} />
         </div>
-        <table {...getTableProps()}>
-            <thead>
-                {headerGroups.map(group => (
-                    <tr {...group.getHeaderGroupProps()}>
-                        {group.headers.map(column => (
-                            <th {...column.getHeaderProps([
-                                column.getSortByToggleProps(),
-                                {
-                                    className: column.className,
-                                    style: column.style,
-                                }])}>{column.render('Header')}</th>
-                        ))}
-                    </tr>
-                ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-                {rows.map(row => {
-                    prepareRow(row);
-                    return (
-                        <tr {...row.getRowProps()}>
-                            {row.cells.map(cell => {
-                                return (<td {...cell.getCellProps()}>{cell.render('Cell')}</td>)
-                            })}
+        <div className='tablewrap'>
+            <table {...getTableProps()}>
+                <thead>
+                    {headerGroups.map(group => (
+                        <tr {...group.getHeaderGroupProps()}>
+                            {group.headers.map(column => (
+                                <th {...column.getHeaderProps([
+                                    column.getSortByToggleProps(),
+                                    {
+                                        className: column.className,
+                                        style: column.style,
+                                    }])}>{column.render('Header')}</th>
+                            ))}
                         </tr>
-                    )
-                })}
-            </tbody>
-            <tfoot>
-                {headerGroups.map(group => (
-                    <tr {...group.getHeaderGroupProps()}>
-                        {group.headers.map(column => (
-                            <th {...column.getHeaderProps([
-                                {
-                                    className: column.className,
-                                    style: column.style,
-                                }
-                            ])}>{column.render('Header')}</th>
-                        ))}
-                    </tr>
-                ))}
-            </tfoot>
-        </table>
+                    ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                    {rows.map(row => {
+                        prepareRow(row);
+                        return (
+                            <tr {...row.getRowProps()}>
+                                {row.cells.map(cell => {
+                                    return (<td {...cell.getCellProps()}>{cell.render('Cell')}</td>)
+                                })}
+                            </tr>
+                        )
+                    })}
+                </tbody>
+                <tfoot>
+                    {headerGroups.map(group => (
+                        <tr {...group.getHeaderGroupProps()}>
+                            {group.headers.map(column => (
+                                <th {...column.getHeaderProps([
+                                    {
+                                        className: column.className,
+                                        style: column.style,
+                                    }
+                                ])}>{column.render('Header')}</th>
+                            ))}
+                        </tr>
+                    ))}
+                </tfoot>
+            </table>
+        </div>
     </div>)
 };
