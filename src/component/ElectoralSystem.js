@@ -237,7 +237,7 @@ export const ElectoralSystem = () => {
                 onChange={e => { setState(old => { return { ...old, inputTotalSeats: e.target.value } }) }}
                 onBlur={() => {
                     let inputTotalSeats = parseInt(state.inputTotalSeats);
-                    inputTotalSeats = isNaN(inputTotalSeats) ? 0 : inputTotalSeats;
+                    inputTotalSeats = Math.max(isNaN(inputTotalSeats) ? 0 : inputTotalSeats, state.constituency_seats);
                     setState(old => {
                         const selectedElectoralSystemParameter = { ...old.selectedElectoralSystemParameter, total_seats: inputTotalSeats };
                         return {
