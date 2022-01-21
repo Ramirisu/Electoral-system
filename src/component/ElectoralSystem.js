@@ -217,6 +217,13 @@ export const ElectoralSystem = () => {
                     </option>
                 ))}
             </select>
+            <label>Seats</label>
+            <input className='electionseatsinput' value={state.selectedElectoralSystemParameter.total_seats}
+                onChange={e => {
+                    setState(old => {
+                        return getNewData(old.selectedDataIndex, { ...old.selectedElectoralSystemParameter, total_seats: parseInt(e.target.value) }, old.selectedElectoralSystemIndex, _.cloneDeep(old.data));
+                    })
+                }} />
         </div>
         <div>
             <label>Electoral System</label>

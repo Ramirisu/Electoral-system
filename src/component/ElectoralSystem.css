@@ -26,6 +26,19 @@ label {
   margin-right: 10px;
 }
 
+.electionseatsinput {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 10%;
+  min-width: 160px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
 .electoralsystemselect {
   font-family: Arial, Helvetica, sans-serif;
   width: 30%;
