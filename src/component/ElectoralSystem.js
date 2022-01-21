@@ -52,9 +52,6 @@ export const ElectoralSystem = () => {
     const getNewData = (selectedDataIndex, selectedElectoralSystemParameter, selectedElectoralSystemIndex, data) => {
         data = getElectoralSystemByIndex(selectedElectoralSystemIndex)(data, ...Object.values(selectedElectoralSystemParameter));
         return {
-            selectedDataIndex,
-            selectedElectoralSystemParameter,
-            selectedElectoralSystemIndex,
             data,
             constituency_seats: data.find(obj => obj.is_summary).constituency_seats,
             proportional_seats: data.find(obj => obj.is_summary).proportional_seats,
@@ -66,8 +63,16 @@ export const ElectoralSystem = () => {
 
     const [state, setState] = React.useState(() => {
         const selectedDataIndex = 0;
+        const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
         const selectedElectoralSystemIndex = 0;
-        return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
+        const inputTotalSeats = selectedElectoralSystemParameter.total_seats;
+        return {
+            selectedDataIndex,
+            selectedElectoralSystemParameter,
+            selectedElectoralSystemIndex,
+            inputTotalSeats,
+            ...getNewData(selectedDataIndex, selectedElectoralSystemParameter, selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
+        }
     });
 
     const modifyData = (rowIndex, columnId, value) => {
@@ -85,7 +90,10 @@ export const ElectoralSystem = () => {
                 }
                 return row;
             });
-            return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, old.selectedElectoralSystemIndex, _.cloneDeep(newData));
+            return {
+                ...old,
+                ...getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, old.selectedElectoralSystemIndex, _.cloneDeep(newData))
+            };
         })
     }
 
@@ -208,7 +216,14 @@ export const ElectoralSystem = () => {
             <select className='electionselect' onChange={e => {
                 setState(old => {
                     const selectedDataIndex = e.target.value;
-                    return getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), old.selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
+                    const selectedElectoralSystemParameter = getElectoralSystemParameter(selectedDataIndex);
+                    return {
+                        ...old,
+                        selectedDataIndex,
+                        selectedElectoralSystemParameter,
+                        inputTotalSeats: selectedElectoralSystemParameter.total_seats,
+                        ...getNewData(selectedDataIndex, getElectoralSystemParameter(selectedDataIndex), old.selectedElectoralSystemIndex, getElectionByIndex(selectedDataIndex))
+                    }
                 });
             }}>
                 {ELECTION_RESULTS_DATA.map((obj, index) => (
@@ -218,10 +233,19 @@ export const ElectoralSystem = () => {
                 ))}
             </select>
             <label>Seats</label>
-            <input className='electionseatsinput' value={state.selectedElectoralSystemParameter.total_seats}
-                onChange={e => {
+            <input className='electionseatsinput' value={state.inputTotalSeats}
+                onChange={e => { setState(old => { return { ...old, inputTotalSeats: e.target.value } }) }}
+                onBlur={() => {
+                    let inputTotalSeats = parseInt(state.inputTotalSeats);
+                    inputTotalSeats = isNaN(inputTotalSeats) ? 0 : inputTotalSeats;
                     setState(old => {
-                        return getNewData(old.selectedDataIndex, { ...old.selectedElectoralSystemParameter, total_seats: parseInt(e.target.value) }, old.selectedElectoralSystemIndex, _.cloneDeep(old.data));
+                        const selectedElectoralSystemParameter = { ...old.selectedElectoralSystemParameter, total_seats: inputTotalSeats };
+                        return {
+                            ...old,
+                            selectedElectoralSystemParameter,
+                            inputTotalSeats,
+                            ...getNewData(old.selectedDataIndex, selectedElectoralSystemParameter, old.selectedElectoralSystemIndex, _.cloneDeep(old.data))
+                        };
                     })
                 }} />
         </div>
@@ -230,7 +254,11 @@ export const ElectoralSystem = () => {
             <select className='electoralsystemselect' onChange={e => {
                 setState(old => {
                     const selectedElectoralSystemIndex = e.target.value;
-                    return getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, selectedElectoralSystemIndex, _.cloneDeep(old.data));
+                    return {
+                        ...old,
+                        selectedElectoralSystemIndex,
+                        ...getNewData(old.selectedDataIndex, old.selectedElectoralSystemParameter, selectedElectoralSystemIndex, _.cloneDeep(old.data))
+                    };
                 })
             }}>
                 {ELECTORAL_SYSTEMS.map((obj, index) => (
@@ -299,5 +327,5 @@ export const ElectoralSystem = () => {
                 </tfoot>
             </table>
         </div>
-    </div>)
+    </div >)
 };
