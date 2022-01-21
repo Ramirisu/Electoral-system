@@ -382,7 +382,6 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     const ALLOWED_OVERHANG_SEATS = 3;
     seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
-    console.log(data.map(obj => obj.original_expected_proportional_seats));
     seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
         data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
