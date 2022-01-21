@@ -2,13 +2,13 @@
 
 ![Linux CI](https://github.com/Ramirisu/Electoral-system/actions/workflows/linux.yml/badge.svg)
 
-**Electoral system** can help you calculate seats allocation of parliament by different electoral systems.
+[**Electoral system**](https://ramirisu.github.io/Electoral-system/) can help you calculate seats allocation of parliament by different electoral systems.
 
 ## Available Electoral Systems
 
 - Taiwan (2008 ~ Present)
 - Japan (1994 ~ Present)
-- South Korea (1988 ~ Present)
+- South Korea (1988 ~ 2019)
 - Germany (1949 ~ Present)
 
 ## Disclaimer
