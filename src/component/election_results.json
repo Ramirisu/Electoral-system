@@ -873,15 +873,29 @@
                 "id": "-",
                 "short_name": "DPK",
                 "name": "Democratic Party of Korea",
-                "proportional_votes": 9307112,
+                "proportional_votes": 0,
                 "constituency_seats": 163
+            },
+            {
+                "id": "-",
+                "short_name": "PP",
+                "name": "Platform Party",
+                "proportional_votes": 9307112,
+                "constituency_seats": 0
             },
             {
                 "id": "-",
                 "short_name": "UFP",
                 "name": "United Future Party",
-                "proportional_votes": 9441520,
+                "proportional_votes": 0,
                 "constituency_seats": 84
+            },
+            {
+                "id": "-",
+                "short_name": "FKP",
+                "name": "Future Korea Party",
+                "proportional_votes": 9441520,
+                "constituency_seats": 0
             },
             {
                 "id": "-",
