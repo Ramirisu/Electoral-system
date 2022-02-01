@@ -1606,5 +1606,192 @@
                 "is_independents": true
             }
         ]
+    },
+    {
+        "name": "2020 United States House of Representatives Election",
+        "year": 2020,
+        "total_seats": 435,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 152576055,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "D",
+                "name": "Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/US_Democratic_Party_Logo.svg",
+                "constituency_votes": 77529619,
+                "constituency_seats": 222
+            },
+            {
+                "id": "-",
+                "short_name": "GOP",
+                "name": "Republican Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/63/GOP_logo.svg",
+                "constituency_votes": 72760036,
+                "constituency_seats": 213
+            },
+            {
+                "id": "-",
+                "short_name": "LP",
+                "name": "Libertarian Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/5/5b/Libertarian_Party_%28United_States%29_Banner_Logo.svg",
+                "constituency_votes": 1098989,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "GPUS",
+                "name": "Green Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/09/Green_Party_of_the_United_States_Logo_%282014%29.svg",
+                "constituency_votes": 90121,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Constitution Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/d/db/Constitution_Party_%28USA%29_logo.svg",
+                "constituency_votes": 82567,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "LMN",
+                "name": "Legal Marijuana Now Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/1/19/LegalMarijuanaNow.jpg",
+                "constituency_votes": 80440,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "G-LC",
+                "name": "Grassroots—Legalize Cannabis Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/3/3a/Grassroots-Legalize_Cannabis_Party.jpg",
+                "constituency_votes": 79674,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "constituency_votes": 434003,
+                "constituency_seats": 0,
+                "is_independents": true
+            }
+        ]
+    },
+    {
+        "name": "2018 United States House of Representatives Election",
+        "year": 2018,
+        "total_seats": 435,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 113412989,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "D",
+                "name": "Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/US_Democratic_Party_Logo.svg",
+                "constituency_votes": 60572245,
+                "constituency_seats": 235
+            },
+            {
+                "id": "-",
+                "short_name": "GOP",
+                "name": "Republican Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/63/GOP_logo.svg",
+                "constituency_votes": 50861970,
+                "constituency_seats": 199
+            },
+            {
+                "id": "-",
+                "short_name": "LP",
+                "name": "Libertarian Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/5/5b/Libertarian_Party_%28United_States%29_Banner_Logo.svg",
+                "constituency_votes": 758492,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "GPUS",
+                "name": "Green Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/09/Green_Party_of_the_United_States_Logo_%282014%29.svg",
+                "constituency_votes": 247231,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Constitution Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/d/db/Constitution_Party_%28USA%29_logo.svg",
+                "constituency_votes": 59972,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "constituency_votes": 569502,
+                "constituency_seats": 0,
+                "is_independents": true
+            }
+        ]
+    },
+    {
+        "name": "2016 United States House of Representatives Election",
+        "year": 2016,
+        "total_seats": 435,
+        "total_proportional_votes": 0,
+        "total_constituency_votes": 128627010,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "D",
+                "name": "Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/US_Democratic_Party_Logo.svg",
+                "constituency_votes": 61765832,
+                "constituency_seats": 194
+            },
+            {
+                "id": "-",
+                "short_name": "GOP",
+                "name": "Republican Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/63/GOP_logo.svg",
+                "constituency_votes": 63182073,
+                "constituency_seats": 241
+            },
+            {
+                "id": "-",
+                "short_name": "LP",
+                "name": "Libertarian Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/5/5b/Libertarian_Party_%28United_States%29_Banner_Logo.svg",
+                "constituency_votes": 1661199,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "GPUS",
+                "name": "Green Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/09/Green_Party_of_the_United_States_Logo_%282014%29.svg",
+                "constituency_votes": 491095,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Constitution Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/d/db/Constitution_Party_%28USA%29_logo.svg",
+                "constituency_votes": 127374,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "constituency_votes": 878234,
+                "constituency_seats": 0,
+                "is_independents": true
+            }
+        ]
     }
 ]
