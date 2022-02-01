@@ -2,7 +2,7 @@ import _ from 'lodash'
 
 const hareQuota = (votes, TOTAL_SEATS) => {
     const TOTAL_VOTES = _.sum(votes);
-    const DIVISOR = Math.ceil(TOTAL_VOTES / TOTAL_SEATS);
+    const DIVISOR = TOTAL_VOTES / TOTAL_SEATS;
 
     let seats = [];
     let remainder = [];
