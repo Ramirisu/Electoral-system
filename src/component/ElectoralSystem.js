@@ -143,7 +143,7 @@ export const ElectoralSystem = () => {
             Cell: ({ value, row }) => (<div className='textonlycell'><img src={row.original.icon} alt='' /><span>{value}</span></div>),
         },
         {
-            Header: 'Proportional Vote (%)',
+            Header: 'Vote (%)',
             accessor: 'proportional_vote_percentage',
             className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
@@ -159,7 +159,7 @@ export const ElectoralSystem = () => {
             Cell: ({ value }) => <div className='textonlycell'>{(value > 0) ? formatPercentage(value) : '-'}</div>,
         },
         {
-            Header: 'Constituency Seats',
+            Header: 'Constituency',
             accessor: 'constituency_seats',
             className: 'header-constituencyseats',
             sortDescFirst: true,
@@ -167,7 +167,7 @@ export const ElectoralSystem = () => {
             Cell: NumberEditableCell,
         },
         {
-            Header: 'Proportional Seats',
+            Header: 'Proportional',
             accessor: 'proportional_seats',
             className: 'header-proportionalseats',
             sortDescFirst: true,
@@ -175,7 +175,7 @@ export const ElectoralSystem = () => {
             Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
         },
         {
-            Header: 'Total Seats',
+            Header: 'Total',
             accessor: 'total_seats',
             className: 'header-totalseats',
             sortDescFirst: true,
@@ -184,7 +184,7 @@ export const ElectoralSystem = () => {
         },
 
         {
-            Header: 'Total Seats (%)',
+            Header: 'Total (%)',
             accessor: 'total_seats_percentage',
             className: 'header-totalseats',
             sortDescFirst: true,
@@ -213,6 +213,7 @@ export const ElectoralSystem = () => {
         prepareRow,
     } = useTable({
         columns,
+        initialState: { hiddenColumns: ['id'] },
         data: state.data,
     }, useSortBy);
 
