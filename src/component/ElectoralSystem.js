@@ -104,7 +104,12 @@ export const ElectoralSystem = () => {
     }) => {
         const [value, setValue] = React.useState(formatPercentage(initialValue))
         const onChange = e => { setValue(e.target.value) }
-        const onBlur = () => { modifyData(index, id, parsePercentage(value)) }
+        const onBlur = () => {
+            const roundingValue = parsePercentage(value);
+            if (roundingValue !== parsePercentage(formatPercentage(initialValue))) {
+                modifyData(index, id, parsePercentage(value))
+            }
+        }
         React.useEffect(() => { setValue(formatPercentage(initialValue)) }, [initialValue])
         return <input className='editablecell' value={value} onChange={onChange} onBlur={onBlur} />
     }
