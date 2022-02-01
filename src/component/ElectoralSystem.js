@@ -131,7 +131,7 @@ export const ElectoralSystem = () => {
         {
             Header: 'Id',
             accessor: 'id',
-            className: 'header-party',
+            className: 'header-id',
             sortType: sortTypeHandler,
             Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
         },

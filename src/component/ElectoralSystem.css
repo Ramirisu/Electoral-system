@@ -161,10 +161,20 @@ table th {
   border: 0;
 }
 
+.header-id {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  width: 2%;
+  background-color: #101010;
+  color: white;
+}
+
 .header-party {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: auto;
   background-color: #101010;
   color: white;
 }
@@ -209,6 +219,7 @@ table th {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: center;
+  width: 6%;
   background-color: red;
   color: white;
 }
