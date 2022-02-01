@@ -1277,6 +1277,7 @@
                 "id": "-",
                 "short_name": "CDU",
                 "name": "Christian Democratic Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cdu-logo.svg",
                 "proportional_votes": 8775471,
                 "constituency_seats": 98
             },
@@ -1284,6 +1285,7 @@
                 "id": "-",
                 "short_name": "SPD",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg",
                 "proportional_votes": 11955434,
                 "constituency_seats": 121
             },
@@ -1291,6 +1293,7 @@
                 "id": "-",
                 "short_name": "AfD",
                 "name": "Alternative for Germany",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/AfD-Logo-2017.svg",
                 "proportional_votes": 4803902,
                 "constituency_seats": 16
             },
@@ -1298,6 +1301,7 @@
                 "id": "-",
                 "short_name": "FDP",
                 "name": "Free Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_der_Freien_Demokraten.svg",
                 "proportional_votes": 5319952,
                 "constituency_seats": 0
             },
@@ -1305,6 +1309,7 @@
                 "id": "-",
                 "short_name": "DIE LINKE",
                 "name": "The Left",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/45/Die_Linke_logo.svg",
                 "proportional_votes": 2270906,
                 "constituency_seats": 3
             },
@@ -1312,6 +1317,7 @@
                 "id": "-",
                 "short_name": "GRÜNE",
                 "name": "Alliance 90/The Greens",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/B%C3%BCndnis_90_-_Die_Gr%C3%BCnen_Logo_%28transparent%29.svg",
                 "proportional_votes": 6852206,
                 "constituency_seats": 16
             },
@@ -1319,6 +1325,7 @@
                 "id": "-",
                 "short_name": "CSU",
                 "name": "Christian Social Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CSU_Logo_since_2016.svg",
                 "proportional_votes": 2402827,
                 "constituency_seats": 45
             },
@@ -1326,6 +1333,7 @@
                 "id": "-",
                 "short_name": "FREIE WÄHLER",
                 "name": "Free Voters",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/3/39/Logo_of_the_Free_Voters.svg",
                 "proportional_votes": 1127784,
                 "constituency_seats": 0
             },
@@ -1357,6 +1365,7 @@
                 "id": "-",
                 "short_name": "CDU",
                 "name": "Christian Democratic Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cdu-logo.svg",
                 "proportional_votes": 12447656,
                 "constituency_seats": 185
             },
@@ -1364,6 +1373,7 @@
                 "id": "-",
                 "short_name": "SPD",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg",
                 "proportional_votes": 9539381,
                 "constituency_seats": 59
             },
@@ -1371,6 +1381,7 @@
                 "id": "-",
                 "short_name": "AfD",
                 "name": "Alternative for Germany",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/AfD-Logo-2017.svg",
                 "proportional_votes": 5878115,
                 "constituency_seats": 3
             },
@@ -1378,6 +1389,7 @@
                 "id": "-",
                 "short_name": "FDP",
                 "name": "Free Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_der_Freien_Demokraten.svg",
                 "proportional_votes": 4999449,
                 "constituency_seats": 0
             },
@@ -1385,6 +1397,7 @@
                 "id": "-",
                 "short_name": "DIE LINKE",
                 "name": "The Left",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/45/Die_Linke_logo.svg",
                 "proportional_votes": 4297270,
                 "constituency_seats": 5
             },
@@ -1392,6 +1405,7 @@
                 "id": "-",
                 "short_name": "GRÜNE",
                 "name": "Alliance 90/The Greens",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/B%C3%BCndnis_90_-_Die_Gr%C3%BCnen_Logo_%28transparent%29.svg",
                 "proportional_votes": 4158400,
                 "constituency_seats": 1
             },
@@ -1399,6 +1413,7 @@
                 "id": "-",
                 "short_name": "CSU",
                 "name": "Christian Social Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CSU_Logo_since_2016.svg",
                 "proportional_votes": 2869688,
                 "constituency_seats": 46
             },
@@ -1406,6 +1421,7 @@
                 "id": "-",
                 "short_name": "FREIE WÄHLER",
                 "name": "Free Voters",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/3/39/Logo_of_the_Free_Voters.svg",
                 "proportional_votes": 463292,
                 "constituency_seats": 0
             },
@@ -1429,6 +1445,7 @@
                 "id": "-",
                 "short_name": "CDU",
                 "name": "Christian Democratic Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cdu-logo.svg",
                 "proportional_votes": 14921877,
                 "constituency_seats": 191
             },
@@ -1436,6 +1453,7 @@
                 "id": "-",
                 "short_name": "SPD",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg",
                 "proportional_votes": 11252215,
                 "constituency_seats": 58
             },
@@ -1443,6 +1461,7 @@
                 "id": "-",
                 "short_name": "AfD",
                 "name": "Alternative for Germany",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/AfD-Logo-2017.svg",
                 "proportional_votes": 2056985,
                 "constituency_seats": 0
             },
@@ -1450,6 +1469,7 @@
                 "id": "-",
                 "short_name": "FDP",
                 "name": "Free Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_der_Freien_Demokraten.svg",
                 "proportional_votes": 2083533,
                 "constituency_seats": 0
             },
@@ -1457,6 +1477,7 @@
                 "id": "-",
                 "short_name": "DIE LINKE",
                 "name": "The Left",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/45/Die_Linke_logo.svg",
                 "proportional_votes": 3755699,
                 "constituency_seats": 4
             },
@@ -1464,6 +1485,7 @@
                 "id": "-",
                 "short_name": "GRÜNE",
                 "name": "Alliance 90/The Greens",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/B%C3%BCndnis_90_-_Die_Gr%C3%BCnen_Logo_%28transparent%29.svg",
                 "proportional_votes": 3694057,
                 "constituency_seats": 1
             },
@@ -1471,6 +1493,7 @@
                 "id": "-",
                 "short_name": "CSU",
                 "name": "Christian Social Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CSU_Logo_since_2016.svg",
                 "proportional_votes": 3243569,
                 "constituency_seats": 45
             },
@@ -1478,6 +1501,7 @@
                 "id": "-",
                 "short_name": "FREIE WÄHLER",
                 "name": "Free Voters",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/3/39/Logo_of_the_Free_Voters.svg",
                 "proportional_votes": 423977,
                 "constituency_seats": 0
             },
@@ -1501,6 +1525,7 @@
                 "id": "-",
                 "short_name": "CDU",
                 "name": "Christian Democratic Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cdu-logo.svg",
                 "proportional_votes": 11828277,
                 "constituency_seats": 173
             },
@@ -1508,6 +1533,7 @@
                 "id": "-",
                 "short_name": "SPD",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg",
                 "proportional_votes": 9990488,
                 "constituency_seats": 64
             },
@@ -1515,6 +1541,7 @@
                 "id": "-",
                 "short_name": "FDP",
                 "name": "Free Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_der_Freien_Demokraten.svg",
                 "proportional_votes": 6316080,
                 "constituency_seats": 0
             },
@@ -1522,6 +1549,7 @@
                 "id": "-",
                 "short_name": "DIE LINKE",
                 "name": "The Left",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/45/Die_Linke_logo.svg",
                 "proportional_votes": 5155933,
                 "constituency_seats": 16
             },
@@ -1529,6 +1557,7 @@
                 "id": "-",
                 "short_name": "GRÜNE",
                 "name": "Alliance 90/The Greens",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/B%C3%BCndnis_90_-_Die_Gr%C3%BCnen_Logo_%28transparent%29.svg",
                 "proportional_votes": 4643272,
                 "constituency_seats": 1
             },
@@ -1536,6 +1565,7 @@
                 "id": "-",
                 "short_name": "CSU",
                 "name": "Christian Social Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CSU_Logo_since_2016.svg",
                 "proportional_votes": 2830238,
                 "constituency_seats": 45
             },
@@ -1559,6 +1589,7 @@
                 "id": "-",
                 "short_name": "CDU",
                 "name": "Christian Democratic Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cdu-logo.svg",
                 "proportional_votes": 13136740,
                 "constituency_seats": 106
             },
@@ -1566,6 +1597,7 @@
                 "id": "-",
                 "short_name": "SPD",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg",
                 "proportional_votes": 16194665,
                 "constituency_seats": 145
             },
@@ -1573,6 +1605,7 @@
                 "id": "-",
                 "short_name": "FDP",
                 "name": "Free Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo_der_Freien_Demokraten.svg",
                 "proportional_votes": 4648144,
                 "constituency_seats": 0
             },
@@ -1580,6 +1613,7 @@
                 "id": "-",
                 "short_name": "DIE LINKE",
                 "name": "The Left",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/45/Die_Linke_logo.svg",
                 "proportional_votes": 4118194,
                 "constituency_seats": 3
             },
@@ -1587,6 +1621,7 @@
                 "id": "-",
                 "short_name": "GRÜNE",
                 "name": "Alliance 90/The Greens",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/B%C3%BCndnis_90_-_Die_Gr%C3%BCnen_Logo_%28transparent%29.svg",
                 "proportional_votes": 3838326,
                 "constituency_seats": 1
             },
@@ -1594,6 +1629,7 @@
                 "id": "-",
                 "short_name": "CSU",
                 "name": "Christian Social Union",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CSU_Logo_since_2016.svg",
                 "proportional_votes": 3494309,
                 "constituency_seats": 44
             },
