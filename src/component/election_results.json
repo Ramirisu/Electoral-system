@@ -729,6 +729,7 @@
                 "id": "-",
                 "short_name": "LDP",
                 "name": "Liberal Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Liberal_Democratic_Party_of_Japan_logo.svg",
                 "proportional_votes": 19914883,
                 "constituency_seats": 187
             },
@@ -736,6 +737,7 @@
                 "id": "-",
                 "short_name": "CDPJ",
                 "name": "Constitutional Democratic Party of Japan",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/06/Constitutional_Democratic_Party_of_Japan_%282020%29.svg",
                 "proportional_votes": 11492095,
                 "constituency_seats": 57
             },
@@ -743,6 +745,7 @@
                 "id": "-",
                 "short_name": "JIP",
                 "name": "Japan Innovation Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/4/4f/Nippon_Ishin_no_Kai.png",
                 "proportional_votes": 8050830,
                 "constituency_seats": 16
             },
@@ -750,6 +753,7 @@
                 "id": "-",
                 "short_name": "NKP",
                 "name": "Komeito",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/38/Komeito_Logo_%28Japan%29.svg",
                 "proportional_votes": 7114282,
                 "constituency_seats": 9
             },
@@ -757,6 +761,7 @@
                 "id": "-",
                 "short_name": "JCP",
                 "name": "Japanese Communist Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Nihon_Ky%C5%8Dsant%C5%8D_Logo.svg",
                 "proportional_votes": 4166076,
                 "constituency_seats": 1
             },
@@ -764,6 +769,7 @@
                 "id": "-",
                 "short_name": "DPFP",
                 "name": "Democratic Party for the People",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Logo_of_Democratic_Party_For_the_People.svg",
                 "proportional_votes": 2593396,
                 "constituency_seats": 6
             },
@@ -771,6 +777,7 @@
                 "id": "-",
                 "short_name": "RS",
                 "name": "Reiwa Shinsengumi",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/6/6e/Reiwa_Shinsengumi_logo.svg",
                 "proportional_votes": 2215648,
                 "constituency_seats": 0
             },
@@ -778,6 +785,7 @@
                 "id": "-",
                 "short_name": "SDP",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/5/5e/Social_Democratic_Party_of_Japan.svg",
                 "proportional_votes": 796788,
                 "constituency_seats": 1
             },
@@ -785,6 +793,7 @@
                 "id": "-",
                 "short_name": "NHK Party",
                 "name": "The Party to Protect the People from NHK",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/60/The_Party_that_Teaches_How_to_Not_Pay_the_NHK_License_Fee_logo.svg",
                 "proportional_votes": 796788,
                 "constituency_seats": 0
             },
@@ -808,6 +817,7 @@
                 "id": "-",
                 "short_name": "LDP",
                 "name": "Liberal Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Liberal_Democratic_Party_of_Japan_logo.svg",
                 "proportional_votes": 18555717,
                 "constituency_seats": 218
             },
@@ -815,6 +825,7 @@
                 "id": "-",
                 "short_name": "CDPJ",
                 "name": "Constitutional Democratic Party of Japan",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/06/Constitutional_Democratic_Party_of_Japan_%282020%29.svg",
                 "proportional_votes": 11084890,
                 "constituency_seats": 18
             },
@@ -822,6 +833,7 @@
                 "id": "-",
                 "short_name": "JIP",
                 "name": "Japan Innovation Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/4/4f/Nippon_Ishin_no_Kai.png",
                 "proportional_votes": 3387097,
                 "constituency_seats": 3
             },
@@ -829,6 +841,7 @@
                 "id": "-",
                 "short_name": "NKP",
                 "name": "Komeito",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/38/Komeito_Logo_%28Japan%29.svg",
                 "proportional_votes": 6977712,
                 "constituency_seats": 8
             },
@@ -836,6 +849,7 @@
                 "id": "-",
                 "short_name": "JCP",
                 "name": "Japanese Communist Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Nihon_Ky%C5%8Dsant%C5%8D_Logo.svg",
                 "proportional_votes": 4404481,
                 "constituency_seats": 1
             },
@@ -850,6 +864,7 @@
                 "id": "-",
                 "short_name": "SDP",
                 "name": "Social Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/5/5e/Social_Democratic_Party_of_Japan.svg",
                 "proportional_votes": 941324,
                 "constituency_seats": 1
             },
