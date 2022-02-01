@@ -95,6 +95,32 @@ test('2008 Taiwanese Legislative Election', () => {
     });
 });
 
+test('2020 South Korean Legislative Election', () => {
+    const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.southKorea2020(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    const expectedSeatsAllocation = [
+        { name: 'Democratic Party of Korea', proportional_seats: 0, total_seats: 163, overhang_seats: 0 },
+        { name: 'Platform Party', proportional_seats: 17, total_seats: 17, overhang_seats: 0 },
+        { name: 'United Future Party', proportional_seats: 0, total_seats: 84, overhang_seats: 0 },
+        { name: 'Future Korea Party', proportional_seats: 19, total_seats: 19, overhang_seats: 0 },
+        { name: 'Justice Party', proportional_seats: 5, total_seats: 6, overhang_seats: 0 },
+        { name: 'People Party', proportional_seats: 3, total_seats: 3, overhang_seats: 0 },
+        { name: 'Open Democratic Party', proportional_seats: 3, total_seats: 3, overhang_seats: 0 },
+        { name: 'Minsaeng Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Progressive Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 5, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 47, total_seats: 300, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});
+
 test('2016 South Korean Legislative Election', () => {
     const election = ELECTION_RESULTS_DATA_JSON.find(element => element.name === expect.getState().currentTestName);
     expect(election).not.toBeUndefined();

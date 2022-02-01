@@ -14,6 +14,7 @@ const removeSummary = (data) => {
 const initData = (data) => {
     removeSummary(data);
     data.forEach(obj => {
+        obj.is_qualified = false;
         obj.qualified_proportional_vote_percentage = 0.0;
         obj.remaining_proportional_seats = 0;
         obj.original_expected_proportional_seats = 0;
@@ -181,6 +182,37 @@ function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     // total seats
     data.forEach(obj => {
         obj.proportional_seats = obj.expected_proportional_seats;
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
+    });
+
+    data.push(getSummary(data));
+
+    return data;
+}
+
+function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+
+    initData(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
+
+    const QUALIFIED_THRESHOLD = 0.03;
+    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD || obj.constituency_seats >= 5)
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
+
+    // proportional seats
+    const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
+    const TOTAL_AMS_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 30 / 47); // additional member system
+    const TOTAL_PV_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 17 / 47); // parallel voting
+    const TOTAL_SEATS_FOR_PR_ALLOCATION = TOTAL_SEATS - _.sum(data.filter(obj => !obj.is_qualified).map(obj => obj.constituency_seats));
+    const EXPECTED_AMS_SEATS = data.map(obj => Math.max(0, Math.round(0.5 * (TOTAL_SEATS_FOR_PR_ALLOCATION * obj.qualified_proportional_vote_percentage - obj.constituency_seats))));
+    const ams_seats = seatsAllocation.hareQuota(EXPECTED_AMS_SEATS, TOTAL_AMS_SEATS);
+    const pv_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PV_SEATS + Math.max(0, TOTAL_AMS_SEATS - _.sum(EXPECTED_AMS_SEATS)));
+    data.forEach((obj, index) => { obj.proportional_seats = ams_seats[index] + pv_seats[index]; });
+
+    // total seats
+    data.forEach(obj => {
         obj.total_seats = obj.proportional_seats + obj.constituency_seats;
         obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
     });
@@ -411,6 +443,7 @@ export const electoralSystem = {
     southKorea1988: electoralSystemSouthKorea1988,
     southKorea1992: electoralSystemSouthKorea1992,
     southKorea2016: electoralSystemSouthKorea2016,
+    southKorea2020: electoralSystemSouthKorea2020,
     germany1949: electoralSystemGermany1949,
     germany1986: electoralSystemGermany1986,
     germany2008: electoralSystemGermany2008,

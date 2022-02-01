@@ -8,7 +8,7 @@
 
 - Taiwan (2008 ~ Present)
 - Japan (1994 ~ Present)
-- South Korea (1988 ~ 2019)
+- South Korea (1988 ~ Present)
 - Germany (1949 ~ Present)
 
 ## Disclaimer
