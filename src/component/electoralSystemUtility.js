@@ -207,7 +207,7 @@ function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     const TOTAL_PV_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 17 / 47); // parallel voting
     const TOTAL_SEATS_FOR_PR_ALLOCATION = TOTAL_SEATS - _.sum(data.filter(obj => !obj.is_qualified).map(obj => obj.constituency_seats));
     const EXPECTED_AMS_SEATS = data.map(obj => Math.max(0, Math.round(0.5 * (TOTAL_SEATS_FOR_PR_ALLOCATION * obj.qualified_proportional_vote_percentage - obj.constituency_seats))));
-    const ams_seats = seatsAllocation.hareQuota(EXPECTED_AMS_SEATS, TOTAL_AMS_SEATS);
+    const ams_seats = seatsAllocation.hareQuota(EXPECTED_AMS_SEATS, Math.min(_.sum(EXPECTED_AMS_SEATS), TOTAL_AMS_SEATS));
     const pv_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PV_SEATS + Math.max(0, TOTAL_AMS_SEATS - _.sum(ams_seats)));
     data.forEach((obj, index) => { obj.proportional_seats = ams_seats[index] + pv_seats[index]; });
 
