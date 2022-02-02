@@ -126,7 +126,7 @@ test('2016 South Korean Legislative Election', () => {
     expect(election).not.toBeUndefined();
     electoralSystem.southKorea2016(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
     const expectedSeatsAllocation = [
-        { name: 'Liberty Korea Party', proportional_seats: 17, total_seats: 122, overhang_seats: 0 },
+        { name: 'Saenuri Party', proportional_seats: 17, total_seats: 122, overhang_seats: 0 },
         { name: 'People Party', proportional_seats: 13, total_seats: 38, overhang_seats: 0 },
         { name: 'Democratic Party of Korea', proportional_seats: 13, total_seats: 123, overhang_seats: 0 },
         { name: 'Justice Party', proportional_seats: 4, total_seats: 6, overhang_seats: 0 },
@@ -149,7 +149,7 @@ test('2012 South Korean Legislative Election', () => {
     expect(election).not.toBeUndefined();
     electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
     const expectedSeatsAllocation = [
-        { name: 'Liberty Korea Party', proportional_seats: 25, total_seats: 152, overhang_seats: 0 },
+        { name: 'Saenuri Party', proportional_seats: 25, total_seats: 152, overhang_seats: 0 },
         { name: 'Democratic United Party', proportional_seats: 21, total_seats: 127, overhang_seats: 0 },
         { name: 'Unified Progressive Party', proportional_seats: 6, total_seats: 13, overhang_seats: 0 },
         { name: 'Liberty Forward Party', proportional_seats: 2, total_seats: 5, overhang_seats: 0 },

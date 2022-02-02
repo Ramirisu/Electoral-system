@@ -888,6 +888,7 @@
                 "id": "-",
                 "short_name": "DPK",
                 "name": "Democratic Party of Korea",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Logo_of_the_Minjoo_Party_of_Korea.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 163
             },
@@ -895,6 +896,7 @@
                 "id": "-",
                 "short_name": "PP",
                 "name": "Platform Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Platform_Party_Logo.png",
                 "proportional_votes": 9307112,
                 "constituency_seats": 0
             },
@@ -902,6 +904,7 @@
                 "id": "-",
                 "short_name": "UFP",
                 "name": "United Future Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Logo_of_the_United_Future_Party.svg",
                 "proportional_votes": 0,
                 "constituency_seats": 84
             },
@@ -909,6 +912,7 @@
                 "id": "-",
                 "short_name": "FKP",
                 "name": "Future Korea Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/zh/e/e6/Logo_of_Future_Korea_Party.svg",
                 "proportional_votes": 9441520,
                 "constituency_seats": 0
             },
@@ -916,6 +920,7 @@
                 "id": "-",
                 "short_name": "JP",
                 "name": "Justice Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Jeongeuidang_logo.svg",
                 "proportional_votes": 2697956,
                 "constituency_seats": 1
             },
@@ -923,6 +928,7 @@
                 "id": "-",
                 "short_name": "People Party",
                 "name": "People Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_People_Party_of_Korea_%282020%29.svg",
                 "proportional_votes": 1896719,
                 "constituency_seats": 0
             },
@@ -930,6 +936,7 @@
                 "id": "-",
                 "short_name": "ODP",
                 "name": "Open Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_of_Open_Democratic_Party_Korea.svg",
                 "proportional_votes": 1512763,
                 "constituency_seats": 0
             },
@@ -937,6 +944,7 @@
                 "id": "-",
                 "short_name": "MP",
                 "name": "Minsaeng Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Logo_of_the_Minsaeng_Party.svg",
                 "proportional_votes": 758778,
                 "constituency_seats": 0
             },
@@ -972,8 +980,9 @@
         "data": [
             {
                 "id": "-",
-                "short_name": "LKP",
-                "name": "Liberty Korea Party",
+                "short_name": "SP",
+                "name": "Saenuri Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/03/Saenuri_party_logo.png",
                 "proportional_votes": 7960272,
                 "constituency_seats": 105
             },
@@ -981,6 +990,7 @@
                 "id": "-",
                 "short_name": "DPK",
                 "name": "Democratic Party of Korea",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Logo_of_the_Minjoo_Party_of_Korea.svg",
                 "proportional_votes": 6069744,
                 "constituency_seats": 110
             },
@@ -988,6 +998,7 @@
                 "id": "-",
                 "short_name": "JP",
                 "name": "Justice Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Jeongeuidang_logo.svg",
                 "proportional_votes": 1719891,
                 "constituency_seats": 2
             },
@@ -995,6 +1006,7 @@
                 "id": "-",
                 "short_name": "People Party",
                 "name": "People Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_People_Party_of_Korea_%282020%29.svg",
                 "proportional_votes": 6355572,
                 "constituency_seats": 25
             },
@@ -1030,8 +1042,9 @@
         "data": [
             {
                 "id": "-",
-                "short_name": "LKP",
-                "name": "Liberty Korea Party",
+                "short_name": "SP",
+                "name": "Saenuri Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/03/Saenuri_party_logo.png",
                 "proportional_votes": 9130651,
                 "constituency_seats": 127
             },
@@ -1039,6 +1052,7 @@
                 "id": "-",
                 "short_name": "DUP",
                 "name": "Democratic United Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Minjoodang_logo.png",
                 "proportional_votes": 7777123,
                 "constituency_seats": 106
             },
@@ -1046,6 +1060,7 @@
                 "id": "-",
                 "short_name": "UPP",
                 "name": "Unified Progressive Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d0/TonghapJinbodang_logo.png",
                 "proportional_votes": 2198405,
                 "constituency_seats": 7
             },
