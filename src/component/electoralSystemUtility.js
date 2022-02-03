@@ -400,15 +400,15 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES)
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    const MINIMUM_EXTRA_SETAS_INCREASED = true;
-    const ALLOWED_OVERHANG_SEATS = 0;
+    const MIN_EXTRA_SEATS_INCREASED = true;
+    const MAX_ALLOWED_OVERHANG_SEATS = 0;
     seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
     seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
-        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
+        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - MAX_ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
-        MINIMUM_EXTRA_SETAS_INCREASED
+        MIN_EXTRA_SEATS_INCREASED
     ).forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -439,15 +439,15 @@ function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES)
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    const MINIMUM_EXTRA_SETAS_INCREASED = false;
-    const ALLOWED_OVERHANG_SEATS = 0;
+    const MIN_EXTRA_SEATS_INCREASED = false;
+    const MAX_ALLOWED_OVERHANG_SEATS = 0;
     seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
     seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
-        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
+        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - MAX_ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
-        MINIMUM_EXTRA_SETAS_INCREASED
+        MIN_EXTRA_SEATS_INCREASED
     ).forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
@@ -478,15 +478,15 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES)
     calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
 
     // proportional seats
-    const MINIMUM_EXTRA_SETAS_INCREASED = true;
-    const ALLOWED_OVERHANG_SEATS = 3;
+    const MIN_EXTRA_SEATS_INCREASED = true;
+    const MAX_ALLOWED_OVERHANG_SEATS = 3;
     seatsAllocation.saintLague(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_SEATS)
         .forEach((seats, index) => { data[index].original_expected_proportional_seats = seats; });
     seatsAllocation.saintLagueMinSeatsRequired(
         data.map(obj => obj.is_qualified ? obj.proportional_votes : 0),
-        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - ALLOWED_OVERHANG_SEATS) : 0),
+        data.map(obj => obj.is_qualified ? Math.max(0, obj.constituency_seats - MAX_ALLOWED_OVERHANG_SEATS) : 0),
         TOTAL_SEATS,
-        MINIMUM_EXTRA_SETAS_INCREASED
+        MIN_EXTRA_SEATS_INCREASED
     ).forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
 
     // total seats
