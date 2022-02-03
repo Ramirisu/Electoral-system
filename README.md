@@ -6,7 +6,7 @@
 
 ## Available Electoral Systems
 
-- Taiwan (2008 ~ Present)
+- Taiwan (1992 ~ Present)
 - Japan (1994 ~ Present)
 - South Korea (1988 ~ Present)
 - Germany (1949 ~ Present)
