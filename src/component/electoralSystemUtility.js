@@ -67,7 +67,7 @@ const getSummary = (data) => {
     };
 }
 
-function electoralSystemTaiwan1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemTaiwan1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -96,7 +96,7 @@ function electoralSystemTaiwan1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, 
     return data;
 }
 
-function electoralSystemTaiwan1998(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemTaiwan1998(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -125,7 +125,7 @@ function electoralSystemTaiwan1998(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, 
     return data;
 }
 
-function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -152,7 +152,7 @@ function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, 
     return data;
 }
 
-function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -179,7 +179,7 @@ function electoralSystemJapan1994(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, T
     return data;
 }
 
-function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -205,7 +205,7 @@ function electoralSystemSouthKorea1988(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     return data;
 }
 
-function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -232,7 +232,7 @@ function electoralSystemSouthKorea1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     return data;
 }
 
-function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -259,7 +259,7 @@ function electoralSystemSouthKorea2016(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     return data;
 }
 
-function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -290,7 +290,7 @@ function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
     return data;
 }
 
-function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -323,7 +323,7 @@ function electoralSystemGermany1949(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     return data;
 }
 
-function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -356,7 +356,7 @@ function electoralSystemGermany1986(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     return data;
 }
 
-function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -388,7 +388,7 @@ function electoralSystemGermany2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     return data;
 }
 
-function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -427,7 +427,7 @@ function electoralSystemGermany2013(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     return data;
 }
 
-function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
@@ -466,7 +466,7 @@ function electoralSystemGermany2017(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
     return data;
 }
 
-function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
 
     initData(data);
     calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);

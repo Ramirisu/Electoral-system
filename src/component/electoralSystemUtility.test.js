@@ -8,7 +8,7 @@ const getElection = (name) => {
 test('2020 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 13, total_seats: 38, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 13, total_seats: 61, overhang_seats: 0 },
@@ -33,7 +33,7 @@ test('2020 Taiwanese Legislative Election', () => {
 test('2016 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 11, total_seats: 35, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 18, total_seats: 68, overhang_seats: 0 },
@@ -56,7 +56,7 @@ test('2016 Taiwanese Legislative Election', () => {
 test('2012 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 16, total_seats: 64, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 13, total_seats: 40, overhang_seats: 0 },
@@ -79,7 +79,7 @@ test('2012 Taiwanese Legislative Election', () => {
 test('2008 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan2008(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 20, total_seats: 81, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 14, total_seats: 27, overhang_seats: 0 },
@@ -102,7 +102,7 @@ test('2008 Taiwanese Legislative Election', () => {
 test('1998 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan1998(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan1998(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 27, total_seats: 123, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 18, total_seats: 70, overhang_seats: 0 },
@@ -126,7 +126,7 @@ test('1998 Taiwanese Legislative Election', () => {
 test('1995 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan1992(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 18, total_seats: 85, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 13, total_seats: 54, overhang_seats: 0 },
@@ -146,7 +146,7 @@ test('1995 Taiwanese Legislative Election', () => {
 test('1992 Taiwanese Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.taiwan1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.taiwan1992(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Kuomintang', proportional_seats: 23, total_seats: 95, overhang_seats: 0 },
         { name: 'Democratic Progressive Party', proportional_seats: 13, total_seats: 51, overhang_seats: 0 },
@@ -166,7 +166,7 @@ test('1992 Taiwanese Legislative Election', () => {
 test('2020 South Korean Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.southKorea2020(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.southKorea2020(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Democratic Party of Korea', proportional_seats: 0, total_seats: 163, overhang_seats: 0 },
         { name: 'Platform Party', proportional_seats: 17, total_seats: 17, overhang_seats: 0 },
@@ -192,7 +192,7 @@ test('2020 South Korean Legislative Election', () => {
 test('2016 South Korean Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.southKorea2016(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.southKorea2016(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Saenuri Party', proportional_seats: 17, total_seats: 122, overhang_seats: 0 },
         { name: 'People Party', proportional_seats: 13, total_seats: 38, overhang_seats: 0 },
@@ -215,7 +215,7 @@ test('2016 South Korean Legislative Election', () => {
 test('2012 South Korean Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Saenuri Party', proportional_seats: 25, total_seats: 152, overhang_seats: 0 },
         { name: 'Democratic United Party', proportional_seats: 21, total_seats: 127, overhang_seats: 0 },
@@ -238,7 +238,7 @@ test('2012 South Korean Legislative Election', () => {
 test('2008 South Korean Legislative Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.southKorea1992(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Grand National Party', proportional_seats: 22, total_seats: 153, overhang_seats: 0 },
         { name: 'United Democratic Party', proportional_seats: 15, total_seats: 81, overhang_seats: 0 },
@@ -263,7 +263,7 @@ test('2008 South Korean Legislative Election', () => {
 test('2021 German Federal Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.germany2021(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.germany2021(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Social Democratic Party', proportional_seats: 85, total_seats: 206, overhang_seats: 38 },
         { name: 'Christian Democratic Union', proportional_seats: 54, total_seats: 152, overhang_seats: 28 },
@@ -288,7 +288,7 @@ test('2021 German Federal Election', () => {
 test('2017 German Federal Election', () => {
     const election = getElection(expect.getState().currentTestName);
     expect(election).not.toBeUndefined();
-    electoralSystem.germany2017(election.data, election.total_seats, election.total_proportional_votes, election.total_constituency_votes);
+    electoralSystem.germany2017(election.data, election.total_seats, election.total_proportional_votes);
     const expectedSeatsAllocation = [
         { name: 'Social Democratic Party', proportional_seats: 94, total_seats: 153, overhang_seats: 24 },
         { name: 'Christian Democratic Union', proportional_seats: 15, total_seats: 200, overhang_seats: 32 },
