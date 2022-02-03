@@ -1,6 +1,16 @@
 import _ from 'lodash';
 import { seatsAllocation } from './seatsAllocation';
 
+// some electoral systems directly use constituency votes to allocate proportional seats, so use constituency votes instead
+export const tryUseConstituencyVotesInstead = (election) => {
+    if (!election.total_proportional_votes) {
+        election.total_proportional_votes = election.total_constituency_votes;
+        election.data.forEach(obj => { obj.proportional_votes = obj.constituency_votes; })
+    }
+
+    return election;
+}
+
 const removeSummary = (data) => {
     for (let i = 0; i < data.length; ++i) {
         if (data[i].is_summary) {
@@ -55,6 +65,64 @@ const getSummary = (data) => {
         overhang_seats: _.sum(data.map(obj => obj.overhang_seats)),
         total_seats_percentage: _.sum(data.map(obj => obj.total_seats_percentage)),
     };
+}
+
+function electoralSystemTaiwan1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+
+    initData(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
+
+    const QUALIFIED_THRESHOLD = 0.05;
+    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD)
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
+
+    // proportional seats
+    const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
+    const TOTAL_PR_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 30 / 36);
+    const TOTAL_ABROAD_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 6 / 36);
+    const pr_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PR_SEATS);
+    const abroad_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_ABROAD_SEATS);
+    data.forEach((obj, index) => { obj.proportional_seats = pr_seats[index] + abroad_seats[index]; });
+
+    // total seats
+    data.forEach(obj => {
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
+    });
+
+    data.push(getSummary(data));
+
+    return data;
+}
+
+function electoralSystemTaiwan1998(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
+
+    initData(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
+
+    const QUALIFIED_THRESHOLD = 0.05;
+    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD)
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
+
+    // proportional seats
+    const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
+    const TOTAL_PR_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 41 / 49);
+    const TOTAL_ABROAD_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 8 / 49);
+    const pr_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PR_SEATS);
+    const abroad_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_ABROAD_SEATS);
+    data.forEach((obj, index) => { obj.proportional_seats = pr_seats[index] + abroad_seats[index]; });
+
+    // total seats
+    data.forEach(obj => {
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
+    });
+
+    data.push(getSummary(data));
+
+    return data;
 }
 
 function electoralSystemTaiwan2008(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES, TOTAL_CONSTITUENCY_VOTES) {
@@ -438,6 +506,8 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES,
 }
 
 export const electoralSystem = {
+    taiwan1992: electoralSystemTaiwan1992,
+    taiwan1998: electoralSystemTaiwan1998,
     taiwan2008: electoralSystemTaiwan2008,
     japan1994: electoralSystemJapan1994,
     southKorea1988: electoralSystemSouthKorea1988,

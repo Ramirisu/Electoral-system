@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import ProgressBar from 'react-bootstrap/ProgressBar'
-import { electoralSystem } from './electoralSystemUtility';
+import { tryUseConstituencyVotesInstead, electoralSystem } from './electoralSystemUtility';
 import ELECTION_RESULTS_DATA_JSON from './election_results.json';
 import './ElectoralSystem.css';
 import _ from 'lodash';
@@ -10,17 +10,9 @@ const formatPercentage = (value) => (100 * parseFloat(value)).toFixed(2) + ' %'
 
 const parsePercentage = (value) => parseFloat(value) / 100.0
 
-// some electoral systems directly use constituency votes to allocate proportional seats, so use constituency votes instead
-const tryUseConstituencyVotesInstead = (election) => {
-    if (!election.total_proportional_votes) {
-        election.total_proportional_votes = election.total_constituency_votes;
-        election.data.forEach(obj => { obj.proportional_votes = obj.constituency_votes; })
-    }
-
-    return election;
-}
-
 const ELECTORAL_SYSTEMS = [
+    { name: 'Taiwan (1992 - 1997) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1992 },
+    { name: 'Taiwan (1998 - 2007) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1998 },
     { name: 'Taiwan (2008 - Present) (FPTP/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
     { name: 'Japan (1994 - Present) (FPTP/MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
     { name: 'South Korea (1988 - 1991) (FPTP/MMM) (Hare Quota) (5)', handler: electoralSystem.southKorea1988 },

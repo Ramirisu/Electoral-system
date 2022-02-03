@@ -691,7 +691,7 @@
                 "name": "Kuomintang",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Blue_Sky_White_Sun.png",
                 "constituency_votes": 5030725,
-                "constituency_seats": 95
+                "constituency_seats": 72
             },
             {
                 "id": 16,
@@ -699,7 +699,7 @@
                 "name": "Democratic Progressive Party",
                 "icon": "https://upload.wikimedia.org/wikipedia/commons/1/16/Green_Island_with_White_Cross.svg",
                 "constituency_votes": 2944195,
-                "constituency_seats": 51
+                "constituency_seats": 38
             },
             {
                 "id": 59,
