@@ -79,8 +79,7 @@ function electoralSystemTaiwan1992(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) 
 
     // proportional seats
     const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
-    const TOTAL_PR_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 30 / 36);
-    const TOTAL_ABROAD_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 6 / 36);
+    const [TOTAL_PR_SEATS, TOTAL_ABROAD_SEATS] = seatsAllocation.saintLague([30, 6], TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS);
     const pr_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PR_SEATS);
     const abroad_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_ABROAD_SEATS);
     data.forEach((obj, index) => { obj.proportional_seats = pr_seats[index] + abroad_seats[index]; });
@@ -108,8 +107,7 @@ function electoralSystemTaiwan1998(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) 
 
     // proportional seats
     const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
-    const TOTAL_PR_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 41 / 49);
-    const TOTAL_ABROAD_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 8 / 49);
+    const [TOTAL_PR_SEATS, TOTAL_ABROAD_SEATS] = seatsAllocation.saintLague([41, 8], TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS);
     const pr_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_PR_SEATS);
     const abroad_seats = seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), TOTAL_ABROAD_SEATS);
     data.forEach((obj, index) => { obj.proportional_seats = pr_seats[index] + abroad_seats[index]; });
@@ -271,8 +269,7 @@ function electoralSystemSouthKorea2020(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOT
 
     // proportional seats
     const TOTAL_CONSTITUENCY_SEATS = _.sum(data.map(obj => obj.constituency_seats));
-    const TOTAL_AMS_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 30 / 47); // additional member system
-    const TOTAL_PV_SEATS = Math.round((TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS) * 17 / 47); // parallel voting
+    const [TOTAL_AMS_SEATS, TOTAL_PV_SEATS] = seatsAllocation.saintLague([30, 17], TOTAL_SEATS - TOTAL_CONSTITUENCY_SEATS);
     const TOTAL_SEATS_FOR_AMS_ALLOCATION = TOTAL_SEATS - _.sum(data.filter(obj => !obj.is_qualified).map(obj => obj.constituency_seats));
     const expected_ams_seats = data.map(obj => Math.max(0, Math.round(0.5 * (TOTAL_SEATS_FOR_AMS_ALLOCATION * obj.qualified_proportional_vote_percentage - obj.constituency_seats))));
     const ams_seats = seatsAllocation.hareQuota(expected_ams_seats, Math.min(_.sum(expected_ams_seats), TOTAL_AMS_SEATS));
