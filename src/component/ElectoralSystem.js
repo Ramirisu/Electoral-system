@@ -11,20 +11,20 @@ const formatPercentage = (value) => (100 * parseFloat(value)).toFixed(2) + ' %'
 const parsePercentage = (value) => parseFloat(value) / 100.0
 
 const ELECTORAL_SYSTEMS = [
-    { name: 'Taiwan (1992 - 1997) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1992 },
-    { name: 'Taiwan (1998 - 2007) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1998 },
     { name: 'Taiwan (2008 - Present) (FPTP/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan2008 },
+    { name: 'Taiwan (1998 - 2007) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1998 },
+    { name: 'Taiwan (1992 - 1997) (SNTV/MMM) (Hare Quota) (5%)', handler: electoralSystem.taiwan1992 },
     { name: 'Japan (1994 - Present) (FPTP/MMM) (DHondt) (2%/2)', handler: electoralSystem.japan1994 },
-    { name: 'South Korea (1988 - 1991) (FPTP/MMM) (Hare Quota) (5)', handler: electoralSystem.southKorea1988 },
-    { name: 'South Korea (1992 - 2015) (FPTP/MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea1992 },
-    { name: 'South Korea (2016 - 2019) (FPTP/MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
     { name: 'South Korea (2020 - Present) (FPTP/Hybrid) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea2020 },
-    { name: 'Germany (1949 - 1985) (FPTP/MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
-    { name: 'Germany (1986 - 2007) (FPTP/MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
-    { name: 'Germany (2008 - 2012) (FPTP/MMPR) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2008 },
-    { name: 'Germany (2013 - 2016) (FPTP/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2013 },
-    { name: 'Germany (2017 - 2020) (FPTP/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2017 },
+    { name: 'South Korea (2016 - 2019) (FPTP/MMM) (Hare Quota) (5%/5)', handler: electoralSystem.southKorea2016 },
+    { name: 'South Korea (1992 - 2015) (FPTP/MMM) (Hare Quota) (3%/5)', handler: electoralSystem.southKorea1992 },
+    { name: 'South Korea (1988 - 1991) (FPTP/MMM) (Hare Quota) (5)', handler: electoralSystem.southKorea1988 },
     { name: 'Germany (2021 - Present) (FPTP/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2021 },
+    { name: 'Germany (2017 - 2020) (FPTP/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2017 },
+    { name: 'Germany (2013 - 2016) (FPTP/MMPR+BS) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2013 },
+    { name: 'Germany (2008 - 2012) (FPTP/MMPR) (Saint-Lague) (5%/3)', handler: electoralSystem.germany2008 },
+    { name: 'Germany (1986 - 2007) (FPTP/MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
+    { name: 'Germany (1949 - 1985) (FPTP/MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);
