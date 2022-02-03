@@ -37,21 +37,21 @@ const dHondt = (votes, TOTAL_SEATS) => {
 
 const saintLague = (votes, TOTAL_SEATS) => {
     const TOTAL_VOTES = _.sum(votes);
-    const INITIAL_DIVISOR = Math.ceil(TOTAL_VOTES / TOTAL_SEATS);
+    const minDivisor = TOTAL_VOTES / (TOTAL_SEATS + votes.length);
+    const maxDivisor = TOTAL_VOTES / Math.max(1, TOTAL_SEATS - votes.length);
+    const minSeats = votes.map(value => Math.round(value / maxDivisor));
+    const maxSeats = votes.map(value => Math.round(value / minDivisor));
+    const divisors = _.flatMap(votes.map((vote, index) => {
+        const minSeat = Math.max(1, minSeats[index]);
+        const maxSeat = maxSeats[index];
+        return _.range(minSeat, maxSeat).map(seat => {
+            return { index, divisor: vote / (seat + 0.5) };
+        });
+    })).sort((a, b) => a.divisor === b.divisor ? 0 : a.divisor < b.divisor ? 1 : -1)
 
-    let seats = [];
-    for (let divisor = INITIAL_DIVISOR; ;) {
-        seats = votes.map(value => Math.round(value / divisor));
-        const sum = _.sum(seats);
-        if (sum === TOTAL_SEATS) {
-            break;
-        }
-        if (sum < TOTAL_SEATS) {
-            divisor--;
-        } else {
-            divisor++;
-        }
-    }
+    let seats = minSeats;
+    const REMAINING_SEATS = TOTAL_SEATS - _.sum(seats);
+    _.range(0, REMAINING_SEATS).forEach(index => { seats[divisors[index].index]++ });
 
     return seats;
 }
