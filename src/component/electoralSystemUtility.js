@@ -502,6 +502,33 @@ function electoralSystemGermany2021(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES)
     return data;
 }
 
+function electoralSystemRussia1993(data, TOTAL_SEATS, TOTAL_PROPORTIONAL_VOTES) {
+
+    initData(data);
+    calculateProportionalVotePercentage(data, TOTAL_PROPORTIONAL_VOTES);
+
+    const QUALIFIED_THRESHOLD = 0.05;
+    const isQualified = (obj) => !obj.is_independents && (obj.proportional_vote_percentage >= QUALIFIED_THRESHOLD)
+    const QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE = _.sum(data.filter(obj => isQualified(obj)).map(obj => obj.proportional_vote_percentage));
+    calculateQualifiedProportionalVotePercentage(data, QUALIFIED_PROPORTIONAL_VOTE_PERCENTAGE, isQualified);
+
+    // proportional seats
+    const PROPORTIONAL_SEATS = TOTAL_SEATS - _.sum(data.map(obj => obj.constituency_seats));
+    seatsAllocation.hareQuota(data.map(obj => obj.is_qualified ? obj.proportional_votes : 0), PROPORTIONAL_SEATS)
+        .forEach((seats, index) => { data[index].expected_proportional_seats = seats; });
+
+    // total seats
+    data.forEach(obj => {
+        obj.proportional_seats = obj.expected_proportional_seats;
+        obj.total_seats = obj.proportional_seats + obj.constituency_seats;
+        obj.total_seats_percentage = obj.total_seats / TOTAL_SEATS;
+    });
+
+    data.push(getSummary(data));
+
+    return data;
+}
+
 export const electoralSystem = {
     taiwan1992: electoralSystemTaiwan1992,
     taiwan1998: electoralSystemTaiwan1998,
@@ -517,4 +544,5 @@ export const electoralSystem = {
     germany2013: electoralSystemGermany2013,
     germany2017: electoralSystemGermany2017,
     germany2021: electoralSystemGermany2021,
+    russia1993: electoralSystemRussia1993,
 };

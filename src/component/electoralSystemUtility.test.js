@@ -309,3 +309,58 @@ test('2017 German Federal Election', () => {
         expect(party.overhang_seats).toBe(obj.overhang_seats);
     });
 });
+
+test('2016 Russian Legislative Election', () => {
+    const election = getElection(expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.russia1993(election.data, election.total_seats, election.total_proportional_votes);
+    const expectedSeatsAllocation = [
+        { name: 'United Russia', proportional_seats: 140, total_seats: 343, overhang_seats: 0 },
+        { name: 'Communist Party of the Russian Federation', proportional_seats: 35, total_seats: 42, overhang_seats: 0 },
+        { name: 'Liberal Democratic Party of Russia', proportional_seats: 34, total_seats: 39, overhang_seats: 0 },
+        { name: 'A Just Russia', proportional_seats: 16, total_seats: 23, overhang_seats: 0 },
+        { name: 'Communists of Russia', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Russian United Democratic Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Russian Party of Pensioners for Justice', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'All-Russian Political Party', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Party of Growth', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Civic Platform', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 225, total_seats: 450, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});
+
+test('2021 Russian Legislative Election', () => {
+    const election = getElection(expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.russia1993(election.data, election.total_seats, election.total_proportional_votes);
+    const expectedSeatsAllocation = [
+        { name: 'United Russia', proportional_seats: 126, total_seats: 324, overhang_seats: 0 },
+        { name: 'Communist Party of the Russian Federation', proportional_seats: 48, total_seats: 57, overhang_seats: 0 },
+        { name: 'Liberal Democratic Party of Russia', proportional_seats: 19, total_seats: 21, overhang_seats: 0 },
+        { name: 'A Just Russia', proportional_seats: 19, total_seats: 27, overhang_seats: 0 },
+        { name: 'New People', proportional_seats: 13, total_seats: 13, overhang_seats: 0 },
+        { name: 'Russian Party of Pensioners for Justice', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Russian United Democratic Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Communists of Russia', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'All-Russian Political Party', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Party of Growth', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Civic Platform', proportional_seats: 0, total_seats: 1, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 5, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 225, total_seats: 450, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});

@@ -1859,5 +1859,205 @@
                 "is_independents": true
             }
         ]
+    },
+    {
+        "name": "2016 Russian Legislative Election",
+        "year": 2016,
+        "total_seats": 450,
+        "total_proportional_votes": 51649253,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "UR",
+                "name": "United Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/7/77/United_Russia_Logos.svg",
+                "proportional_votes": 28527828,
+                "constituency_seats": 203
+            },
+            {
+                "id": "-",
+                "short_name": "CPRF",
+                "name": "Communist Party of the Russian Federation",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/KPRF_Logo.svg",
+                "proportional_votes": 7019752,
+                "constituency_seats": 7
+            },
+            {
+                "id": "-",
+                "short_name": "LDPR",
+                "name": "Liberal Democratic Party of Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/0/05/Logo_for_Liberal_Democratic_Party_of_Russia.svg",
+                "proportional_votes": 6917063,
+                "constituency_seats": 5
+            },
+            {
+                "id": "-",
+                "short_name": "SRZP",
+                "name": "A Just Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/74/Logo_of_the_A_Just_Russia_%E2%80%94_Patriots_%E2%80%94_For_Truth.svg",
+                "proportional_votes": 3275053,
+                "constituency_seats": 7
+            },
+            {
+                "id": "-",
+                "short_name": "CR",
+                "name": "Communists of Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_of_the_Communists_of_Russia.svg",
+                "proportional_votes": 1192595,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Yabloko",
+                "name": "Russian United Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Yabloko_logo_2018.svg",
+                "proportional_votes": 1051335,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "RPPSJ",
+                "name": "Russian Party of Pensioners for Justice",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/b/bc/Russian_Party_of_Pensioners_for_Social_Justice.png",
+                "proportional_votes": 910843,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Rodina",
+                "name": "All-Russian Political Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Partia_logo_new.svg",
+                "proportional_votes": 792226,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "POCT",
+                "name": "Party of Growth",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo_of_the_Party_of_Growth_%282020%29.svg",
+                "proportional_votes": 679030,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Civic Platform",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/89/%D0%AD%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%9F%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0.svg",
+                "proportional_votes": 115433,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 1,
+                "is_independents": true
+            }
+        ]
+    },
+    {
+        "name": "2021 Russian Legislative Election",
+        "year": 2021,
+        "total_seats": 450,
+        "total_proportional_votes": 55158109,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "UR",
+                "name": "United Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/7/77/United_Russia_Logos.svg",
+                "proportional_votes": 28064258,
+                "constituency_seats": 198
+            },
+            {
+                "id": "-",
+                "short_name": "CPRF",
+                "name": "Communist Party of the Russian Federation",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/KPRF_Logo.svg",
+                "proportional_votes": 10660599,
+                "constituency_seats": 9
+            },
+            {
+                "id": "-",
+                "short_name": "LDPR",
+                "name": "Liberal Democratic Party of Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/0/05/Logo_for_Liberal_Democratic_Party_of_Russia.svg",
+                "proportional_votes": 4252096,
+                "constituency_seats": 2
+            },
+            {
+                "id": "-",
+                "short_name": "SRZP",
+                "name": "A Just Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/74/Logo_of_the_A_Just_Russia_%E2%80%94_Patriots_%E2%80%94_For_Truth.svg",
+                "proportional_votes": 4201715,
+                "constituency_seats": 8
+            },
+            {
+                "id": "-",
+                "short_name": "NP",
+                "name": "New People",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/9/9b/New_People_logo.svg",
+                "proportional_votes": 2997676,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "RPPSJ",
+                "name": "Russian Party of Pensioners for Justice",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/b/bc/Russian_Party_of_Pensioners_for_Social_Justice.png",
+                "proportional_votes": 1381890,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Yabloko",
+                "name": "Russian United Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Yabloko_logo_2018.svg",
+                "proportional_votes": 753280,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CR",
+                "name": "Communists of Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_of_the_Communists_of_Russia.svg",
+                "proportional_votes": 715685,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Rodina",
+                "name": "All-Russian Political Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Partia_logo_new.svg",
+                "proportional_votes": 450437,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "POCT",
+                "name": "Party of Growth",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo_of_the_Party_of_Growth_%282020%29.svg",
+                "proportional_votes": 291483,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "CP",
+                "name": "Civic Platform",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/89/%D0%AD%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%9F%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0.svg",
+                "proportional_votes": 86964,
+                "constituency_seats": 1
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 5,
+                "is_independents": true
+            }
+        ]
     }
 ]
