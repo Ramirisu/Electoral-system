@@ -364,3 +364,25 @@ test('2016 Russian Legislative Election', () => {
         expect(party.overhang_seats).toBe(obj.overhang_seats);
     });
 });
+
+test('2011 Russian Legislative Election', () => {
+    const election = getElection(expect.getState().currentTestName);
+    expect(election).not.toBeUndefined();
+    electoralSystem.russia2007(election.data, election.total_seats, election.total_proportional_votes);
+    const expectedSeatsAllocation = [
+        { name: 'United Russia', proportional_seats: 238, total_seats: 238, overhang_seats: 0 },
+        { name: 'Communist Party of the Russian Federation', proportional_seats: 92, total_seats: 92, overhang_seats: 0 },
+        { name: 'A Just Russia', proportional_seats: 64, total_seats: 64, overhang_seats: 0 },
+        { name: 'Liberal Democratic Party of Russia', proportional_seats: 56, total_seats: 56, overhang_seats: 0 },
+        { name: 'Russian United Democratic Party', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Independents', proportional_seats: 0, total_seats: 0, overhang_seats: 0 },
+        { name: 'Summary', proportional_seats: 450, total_seats: 450, overhang_seats: 0 },
+    ];
+    expectedSeatsAllocation.forEach(obj => {
+        const party = election.data.find(element => element.name === obj.name);
+        expect(party).not.toBeUndefined();
+        expect(party.proportional_seats).toBe(obj.proportional_seats);
+        expect(party.total_seats).toBe(obj.total_seats);
+        expect(party.overhang_seats).toBe(obj.overhang_seats);
+    });
+});

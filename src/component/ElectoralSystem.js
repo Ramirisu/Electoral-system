@@ -26,6 +26,7 @@ const ELECTORAL_SYSTEMS = [
     { name: 'Germany (1986 - 2007) (FPTP/MMPR) (Hare Quota) (5%/3)', handler: electoralSystem.germany1986 },
     { name: 'Germany (1949 - 1985) (FPTP/MMPR) (DHondt) (5%/3)', handler: electoralSystem.germany1949 },
     { name: 'Russia (1993 - 2006 / 2016 - Present) (FPTP/MMM) (Hare Quota) (5%)', handler: electoralSystem.russia1993 },
+    { name: 'Russia (2007 - 2015) (PR) (Hare Quota) (7%)', handler: electoralSystem.russia2007 },
 ];
 
 const getElectoralSystemByIndex = (index) => (ELECTORAL_SYSTEMS[index].handler);

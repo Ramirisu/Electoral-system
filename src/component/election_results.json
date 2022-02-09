@@ -2059,5 +2059,61 @@
                 "is_independents": true
             }
         ]
+    },
+    {
+        "name": "2011 Russian Legislative Election",
+        "year": 2011,
+        "total_seats": 450,
+        "total_proportional_votes": 64623062,
+        "data": [
+            {
+                "id": "-",
+                "short_name": "UR",
+                "name": "United Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/7/77/United_Russia_Logos.svg",
+                "proportional_votes": 32379135,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "CPRF",
+                "name": "Communist Party of the Russian Federation",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6e/KPRF_Logo.svg",
+                "proportional_votes": 12599507,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "SRZP",
+                "name": "A Just Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/74/Logo_of_the_A_Just_Russia_%E2%80%94_Patriots_%E2%80%94_For_Truth.svg",
+                "proportional_votes": 8695522,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "LDPR",
+                "name": "Liberal Democratic Party of Russia",
+                "icon": "https://upload.wikimedia.org/wikipedia/en/0/05/Logo_for_Liberal_Democratic_Party_of_Russia.svg",
+                "proportional_votes": 7664570,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Yabloko",
+                "name": "Russian United Democratic Party",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Yabloko_logo_2018.svg",
+                "proportional_votes": 2252403,
+                "constituency_seats": 0
+            },
+            {
+                "id": "-",
+                "short_name": "Independents",
+                "name": "Independents",
+                "proportional_votes": 0,
+                "constituency_seats": 0,
+                "is_independents": true
+            }
+        ]
     }
 ]
