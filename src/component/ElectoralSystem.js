@@ -92,6 +92,8 @@ export const ElectoralSystem = () => {
         })
     }
 
+    const PercentageNonEditableCell = ({ value }) => <div className='textonlycell'>{value > 0 ? formatPercentage(value) : '-'}</div>;
+
     const PercentageEditableCell = ({
         value: initialValue,
         row: { index },
@@ -108,6 +110,8 @@ export const ElectoralSystem = () => {
         React.useEffect(() => { setValue(formatPercentage(initialValue)) }, [initialValue])
         return <input className='editablecell' value={value} onChange={onChange} onBlur={onBlur} />
     }
+
+    const NumberNonEditableCell = ({ value }) => <div className='textonlycell'>{value}</div>;
 
     const NumberEditableCell = ({
         value: initialValue,
@@ -127,7 +131,7 @@ export const ElectoralSystem = () => {
             accessor: 'id',
             className: 'header-id',
             sortType: sortTypeHandler,
-            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
+            Cell: NumberNonEditableCell,
         },
         {
             Header: 'Party',
@@ -142,7 +146,7 @@ export const ElectoralSystem = () => {
             className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: PercentageEditableCell,
+            Cell: ({ value, row, column }) => row.original.is_summary ? PercentageNonEditableCell({ value }) : PercentageEditableCell({ value, row, column }),
         },
         {
             Header: 'Qualified (%)',
@@ -150,7 +154,7 @@ export const ElectoralSystem = () => {
             className: 'header-proportionalvotepercentage',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => <div className='textonlycell'>{(value > 0) ? formatPercentage(value) : '-'}</div>,
+            Cell: PercentageNonEditableCell,
         },
         {
             Header: 'Constituency',
@@ -158,7 +162,7 @@ export const ElectoralSystem = () => {
             className: 'header-constituencyseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: NumberEditableCell,
+            Cell: ({ value, row, column }) => row.original.is_summary ? NumberNonEditableCell({ value }) : NumberEditableCell({ value, row, column }),
         },
         {
             Header: 'Proportional',
@@ -166,7 +170,7 @@ export const ElectoralSystem = () => {
             className: 'header-proportionalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
+            Cell: NumberNonEditableCell,
         },
         {
             Header: 'Total',
@@ -174,16 +178,15 @@ export const ElectoralSystem = () => {
             className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => <div className='textonlycell'>{value}</div>,
+            Cell: NumberNonEditableCell,
         },
-
         {
             Header: 'Total (%)',
             accessor: 'total_seats_percentage',
             className: 'header-totalseats',
             sortDescFirst: true,
             sortType: sortTypeHandler,
-            Cell: ({ value }) => <div className='textonlycell'>{formatPercentage(value)}</div>,
+            Cell: PercentageNonEditableCell,
         },
         {
             Header: 'Overhang',
@@ -193,7 +196,6 @@ export const ElectoralSystem = () => {
             sortType: sortTypeHandler,
             Cell: ({ value }) => <div className='textonlycell'>{(value > 0) ? "+" + value : "-"}</div>,
         },
-
     ];
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
