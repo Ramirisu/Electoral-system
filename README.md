@@ -10,6 +10,7 @@
 - Japan (1994 ~ Present)
 - South Korea (1988 ~ Present)
 - Germany (1949 ~ Present)
+- Russia (1993 ~ Present)
 
 ## Disclaimer
 
