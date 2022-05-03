@@ -18,4 +18,4 @@ In order to make each electoral system applicable to all elections. Some algorit
 
 ## License
 
-Electoral System is distributed under the [MIT License](https://github.com/Ramirisu/Electoral-system/blob/main/LICENSE>).
+Electoral System is distributed under the [MIT License](https://github.com/Ramirisu/Electoral-system/blob/main/LICENSE).
