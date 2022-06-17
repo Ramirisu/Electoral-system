@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Electoral-system/static/css/main.4f418e43.css",
-    "main.js": "/Electoral-system/static/js/main.8569407e.js",
+    "main.css": "/Electoral-system/static/css/main.0593b489.css",
+    "main.js": "/Electoral-system/static/js/main.02a1b649.js",
     "static/js/787.bec2650b.chunk.js": "/Electoral-system/static/js/787.bec2650b.chunk.js",
     "index.html": "/Electoral-system/index.html",
-    "main.4f418e43.css.map": "/Electoral-system/static/css/main.4f418e43.css.map",
-    "main.8569407e.js.map": "/Electoral-system/static/js/main.8569407e.js.map",
+    "main.0593b489.css.map": "/Electoral-system/static/css/main.0593b489.css.map",
+    "main.02a1b649.js.map": "/Electoral-system/static/js/main.02a1b649.js.map",
     "787.bec2650b.chunk.js.map": "/Electoral-system/static/js/787.bec2650b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f418e43.css",
-    "static/js/main.8569407e.js"
+    "static/css/main.0593b489.css",
+    "static/js/main.02a1b649.js"
   ]
 }
